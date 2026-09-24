@@ -119,6 +119,14 @@
         "outer_back_z_mm": -1.0
       },
       "source": "default"
+    },
+    "folded_outline": {
+      "value": "以折叠外屏正视为基准，左侧铰链边为直边、左上左下近直角，右侧两角圆滑；前背盖采用对应非对称轮廓。",
+      "source": "user"
+    },
+    "left_corner_implementation": {
+      "value": "试配版左角采用方角名义轮廓；右侧圆角沿用现有默认，不由图片推算精确半径。",
+      "source": "default"
     }
   },
   "open_questions": []

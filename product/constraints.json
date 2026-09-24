@@ -10,7 +10,11 @@
     "rear_half_thickness": 5.2,
     "open_width": 164.6,
     "source": "user_images",
-    "mechanical_drawing_verified": false
+    "mechanical_drawing_verified": false,
+    "folded_outline": {
+      "value": "left_straight_square_corners_right_rounded",
+      "source": "user_image_and_statement"
+    }
   },
   "back": {
     "fit_clearance_per_side": 0.25,
@@ -42,7 +46,10 @@
     "bottom_opening_width": 50,
     "source": "default_image_estimate",
     "phone_seat_z": 2.4,
-    "outer_back_z": -1
+    "outer_back_z": -1,
+    "corner_radius_scope": "right_side_only",
+    "left_corner_radius": 0,
+    "left_corner_source": "default_square_interpretation_of_user_image"
   },
   "slider": {
     "sheet_thickness": 0.6,
@@ -137,7 +144,10 @@
     ],
     "bond_pocket_ceiling_z": 15.85,
     "bondline": 0.2,
-    "source": "default"
+    "source": "default",
+    "corner_radius_scope": "right_side_only",
+    "left_corner_radius": 0,
+    "left_corner_source": "default_square_interpretation_of_user_image"
   },
   "connections": [
     {

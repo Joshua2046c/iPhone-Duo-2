@@ -33,11 +33,15 @@ pin_x = param('back_cover_pin_x', -29.2)
 pin_y1 = param('back_cover_pin_y1', -30.0)
 pin_y2 = param('back_cover_pin_y2', 15.0)
 pin_tip = param('back_cover_pin_tip_z', 1.3)
+# User's folded outline: square left hinge corners; retain right radii.
+# Filling the left half is a profile construction, not added correction solids.
+def outline(w,h,r):
+ return RectangleRounded(w,h,r) + Pos(-w/4,0)*Rectangle(w/2,h)
 wi, hi = PHONE_W+2*clearance, PHONE_H+2*clearance
 wo, ho = wi+2*wall, hi+2*wall
 outside_z=seat_z-plate
-outer = RectangleRounded(wo,ho,radius+wall)
-inner = RectangleRounded(wi,hi,radius)
+outer = outline(wo,ho,radius+wall)
+inner = outline(wi,hi,radius)
 body = Pos(0,0,outside_z)*extrude(outer, amount=plate)
 ring = extrude(outer,amount=HALF_T)-extrude(inner,amount=HALF_T)
 ring -= Pos(-wo/2,0,HALF_T/2)*Box(2*wall+1, hi-2*corner_zone, HALF_T+2)
@@ -46,14 +50,14 @@ ring -= Pos(wo/2,power_y,HALF_T/2)*Box(2*wall+2,power_l,HALF_T+2)
 ring -= Pos(wo/2,shutter_y,HALF_T/2)*Box(2*wall+2,shutter_l,HALF_T+2)
 ring -= Pos(0,-ho/2,HALF_T/2)*Box(bottom_w,2*wall+2,HALF_T+2)
 body += Pos(0,0,seat_z)*ring
-lip_ring = extrude(outer,amount=lip_h)-extrude(RectangleRounded(wi-2*lip,hi-2*lip,radius-lip),amount=lip_h)
+lip_ring = extrude(outer,amount=lip_h)-extrude(outline(wi-2*lip,hi-2*lip,radius-lip),amount=lip_h)
 for sx in (-1,1):
  for sy in (-1,1):
   zone=Pos(sx*(wo/2-corner_zone/2),sy*(ho/2-corner_zone/2),lip_h/2)*Box(corner_zone,corner_zone,lip_h+2)
   body += Pos(0,0,seat_z+HALF_T-lip_h)*(lip_ring & zone)
 body -= Pos(cam_x,cam_y,outside_z-1)*extrude(SlotOverall(cam_w,cam_h),amount=plate+HALF_T+2)
 body -= Pos(cam_x,cam_y,outside_z-1)*extrude(SlotOverall(cam_w+2*(cam_land+cam_clearance),cam_h+2*(cam_land+cam_clearance)),amount=1+cam_depth)
-# Deep and shallow pockets face toward the phone. Camera ring recess faces outward.
+# Restored narrow internal slider unchanged.
 start=-wo/2-0.2
 seat_end=channel_end+seat_border
 seat_floor=seat_z-seat_depth
@@ -65,5 +69,4 @@ for yy in (pin_y1,pin_y2):
 assert plate-channel_depth >= 1.2-1e-6
 assert channel_floor < pin_tip < seat_z
 assert len(body.solids()) == 1
-print('INNER channel floor',channel_floor,'outer back',outside_z,'residual floor',plate-channel_depth)
-publish('back_cover',body,'01 弹性背盖')
+publish('back_cover',body,'01 左直边背盖')

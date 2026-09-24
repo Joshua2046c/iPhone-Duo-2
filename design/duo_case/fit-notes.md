@@ -1,43 +1,23 @@
-# 恢复上一交付版本（build52）
-
-按用户“返回上一版本”，恢复提交56f6eeb的全部产品要求、BOM、尺寸及五件CAD。原build17缓存已不在，首次重建因历史build18编号占用失败；保留历史编号顺序后重建为build52，没有更改旧版形状。
-五对象shapeHash、位置和全部参数与原build17逐项一致。当前检查5实体、10对无体积相交；独立审查No P0 or P1 findings。STEP已导出且预览刷新。
-当前STEP：manufacturing/duo_case/releases/export-dc98ff9f0ec8e83ecfeb11f378eb15e1/model.step
-当前SHA256：9323a8042f450c8aae27cf9896c80804ea108740bdf5fc79df903ecf8d829b19
-下文为恢复的旧版试配记录，其build17导出路径为历史记录；旧版行程与实机未验证限制仍然适用。
-
----
-
-# Build 17 试配交付记录
-
-2026-09-24，内侧滑轨与独立镜头圈修订。旧版build 7记录由Git保留。本页为主代理工程检查，不替代独立审查。
+# Build54 左直右圆轮廓修正
 
 ## 交付
-- duo_case build 17，五个有效独立实体。
-- STEP：manufacturing/duo_case/releases/export-1edee172f5d35ac693e1bcc62424e435/model.step
-- 导出记录：同目录receipt.json。
-- SHA256：dbf0572de90433e65c51d36fad1365e3285baed1f5d584298740e684870520e3。
-- 独立CAD审查：No P0 or P1 findings。不是实机认证。
+用户指出折叠状态左侧为直边；依据product/references/uploads/20260924T083904593Z-1-image.png修改前背盖左角，保留右侧圆角。左角名义方角是试配实现，非图片精确尺寸测量。
+STEP：manufacturing/duo_case/releases/export-541711de72f5cf1f74abd5c42d1c0a7e/model.step
+SHA256：e6e70df459fd2186df6cdac69a0ac01d93eb02a71a8f155ed2729474cd9ae687
+导出记录：同目录receipt.json；预览已更新，独立检查No P0 or P1 findings。
 
-## 视觉检查
-外背面不再出现矩形压盖，只有完整背板与摄像头孔周围凸起的独立胶囊环。隐藏前盖后可见内侧压盖低于贴合面；再隐藏压盖后可见两条水平槽、两个定位销及内侧台阶。保留四角弹性扣边与按键开口，镜头内孔不缩小。
-- 内侧压盖：.work/cache/cad-workbench/designs/duo_case/observations/93ec834b7eb930a104343c347e68a3fb4a4436f0fe388fecefabec9173aebe68/look-c94f0c2717377e41f1c9d280/workbench_iso.png
-- 内侧滑槽：.work/cache/cad-workbench/designs/duo_case/observations/93ec834b7eb930a104343c347e68a3fb4a4436f0fe388fecefabec9173aebe68/look-6497fcd20e5c12199f2cf93c/workbench_top.png
-以上图隐藏了前盖，第二图另隐藏压盖，仅证明所示结构。外背面另直接检查build17 committed iso_back图。
+## 视觉与范围
+完整装配top图显示前盖左上、左下方角及连续直边，右侧两圆角不变。隐藏前盖后的top/iso图显示背盖内腔和四角扣边同步左方右圆；内埋压盖仍为旧版窄矩形，没有新增宽腔或跨槽桥。
+证据：
+- 装配top：.work/cache/cad-workbench/designs/duo_case/builds/e68412e2d91407f17228a11b51c943f9ba84d7e010f35eabe0c3e0088c714b6a/validated/previews/workbench_top.png
+- 隐藏前盖top：.work/cache/cad-workbench/designs/duo_case/observations/e68412e2d91407f17228a11b51c943f9ba84d7e010f35eabe0c3e0088c714b6a/look-954eec82b2c132be3f7b86a3/workbench_top.png
+- 隐藏前盖iso：.work/cache/cad-workbench/designs/duo_case/observations/e68412e2d91407f17228a11b51c943f9ba84d7e010f35eabe0c3e0088c714b6a/look-954eec82b2c132be3f7b86a3/workbench_iso.png
+隐藏视图不证明被隐藏前盖的形状。
 
-## 几何检查
-五个对象10组配对无体积相交。背盖/压盖右边界名义接触，不是穿透；生产前需检验装配公差与毛刺。
-CAD带预期值的测量全部通过：
-- 压盖顶面Z2.2，手机贴合面Z2.4，低0.2mm。
-- 薄片尾段下表面Z0.45，槽底Z0.2，间隙0.25mm。
-- 薄片尾段上表面Z1.05，压盖内面Z1.4，间隙0.35mm。
-- 镜头圈顶面Z=-2.1，背盖外平面Z=-1，凸起1.1mm。
-配对距离：镜头圈/背盖0.15mm，对应设计胶层；护轴片/压盖最小0.3448mm；前盖/护轴片0.2mm。
-背板厚3.4mm（向外增加1mm），槽深2.2mm，残余槽底壁厚1.2mm。镜头圈座深0.4mm、单边0.2mm装配间隙、环宽2mm、名义环厚1.35mm。
+## 几何与保持项
+五个有效单实体，10配对无体积相交。护轴片、内压盖、镜头圈的shapeHash、参数、位置和旋转与build52逐项一致；只改前盖及背盖轮廓。前背盖包络87.8×121.5不变，左角方形，右前盖及背盖外半径11.6、背盖内半径10。
+保留原静态间隙：背盖/薄片最小0.25mm，薄片/压盖0.3448，前盖/薄片0.2，镜头圈/背盖0.15。背盖/压盖右边界原有名义接触0mm，不是体积相交；生产前需核验公差毛刺。
+槽14.5×3.2、销Ø2.4、闭合偏置5.25；相对闭合可动[-0.8,+11.3]mm，正向11.3触槽端无额外余量。没有新增完整自由片收纳能力，也未复活被撤回的16.93mm方案。
 
-## 行程与限制
-XY导向关系未变：槽14.5×3.2mm，销Ø2.4mm；闭合偏置5.25mm，销心允许±6.05mm，因此相对闭合可动[-0.8,+11.3]mm，正向11.3mm正好到槽端，无额外正向余程。纯几何容许位移不是完整铰链运动仿真；薄片弯曲形状只表示安装姿态。
-相机高出手机背面4mm是明确默认值，假定镜头顶Z=-1.6，保护圈顶再向外0.5mm。实际相机凸高、镜头视场、机身圆角和按键外廓仍需机械图/实测。没有宣称已证明保护圈高过真实镜头，也没有疲劳、跌落、粘接或折叠运动测试。
-
-## 文件检查
-需求已明确新增独立圈，定制件数量由4更新为5；六行BOM是五个定制件加胶工艺辅料。所有相关尺寸、连接和BOM已同步，采用工具返回的规范requirements_digest，最终导出无过期BOM警告。
+## 未验证边界
+机身真实微圆角、按键、摄像头位置及凸高仍需实测。四角保持、胶接、薄片摩擦、疲劳、真实铰链扫掠和自动回缩没有经过实物试验。本次是形状纠正及静态试配STEP，不是量产或打印参数放行。左角名义方角，制造后应无毛刺；若按实测做微倒钝不得再改成右侧大圆角。装配工艺见README的Making and assembly。

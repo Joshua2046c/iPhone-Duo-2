@@ -7,7 +7,7 @@
     {
       "id": "phone_fit",
       "kind": "internal_fit",
-      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，弹性四角内收及相机、按键避空。未标注的机械细节为可调默认。",
+      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，弹性四角内收及相机、按键避空。未标注的机械细节为可调默认。 折叠外屏正视：左铰链边直且左角近直角，右侧两角圆滑，前背盖及内腔一致。",
       "source": "user_requested",
       "required": true
     },
@@ -57,6 +57,12 @@
       "source": "user_requested",
       "description": "本轮红框标记，要求滑槽压盖转入背盖内侧并增加独立镜头圈",
       "path": "product/references/uploads/20260924T041432570Z-1-mark.png"
+    },
+    {
+      "id": "straight_left_image",
+      "source": "user_requested",
+      "description": "折叠外屏图：左侧直边、近直角，右侧圆角",
+      "path": "product/references/uploads/20260924T083904593Z-1-image.png"
     }
   ],
   "assembly_story": {
@@ -92,7 +98,8 @@
           "dimensions_image",
           "display_image",
           "camera_image",
-          "inner_slider_mark"
+          "inner_slider_mark",
+          "straight_left_image"
         ]
       }
     ]

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "buildNumber": 52,
-  "sourceHash": "71183063816b395e5764f8276d48eaf35ca7db0169395e84d3880f16ac2e0cd8",
+  "buildNumber": 54,
+  "sourceHash": "e68412e2d91407f17228a11b51c943f9ba84d7e010f35eabe0c3e0088c714b6a",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
   "targets": [
@@ -14,7 +14,7 @@
           "target": "back_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/back_cover/000-back_cover.py",
-          "sha256": "e394b2cd715328cde9e3c335dc7b978440e92f7b7b5c787a72ba3f19fabcd03a"
+          "sha256": "57eb003ce868f6c4d58cd5c1364ea04db37aae4bddc57180db3f54915e846439"
         }
       ],
       "dependencies": []
@@ -56,7 +56,7 @@
           "target": "front_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/front_cover/000-front_cover.py",
-          "sha256": "4100623f480f0aed700f3eeeb1ddb7e0f95dcb0923732c0ccaad5bf1ecb24f1e"
+          "sha256": "9ce9e49c185b26d6ae97479916e89970dc3c7881ea3f5be9be72b29ee96939a9"
         }
       ],
       "dependencies": []
@@ -80,9 +80,9 @@
     {
       "id": "back_cover",
       "target": "back_cover",
-      "label": "01 弹性背盖",
+      "label": "01 左直边背盖",
       "kind": "generated",
-      "shapeHash": "3eda99e206d0a359f5d54dfdff06ed1fb479ae61cc5318e4807bf97828cf87b9",
+      "shapeHash": "d46ec5ef4bc97b93e57a05ad759e9b59421812825ce2c4221e232d0639073602",
       "transform": {
         "positionMm": [
           0,
@@ -158,9 +158,9 @@
     {
       "id": "front_cover",
       "target": "front_cover",
-      "label": "04 完整前盖",
+      "label": "04 左直边前盖",
       "kind": "generated",
-      "shapeHash": "42e4f6e09621dda84dc25203f6d408748347f8c993e9f2d2b3381a081d9d4a64",
+      "shapeHash": "e7ee59c0539384a772ef35b5cc52364fce2cbb1e2fc2a8b5cc90a7f34688479b",
       "transform": {
         "positionMm": [
           0,
@@ -210,7 +210,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T08:32:07.041Z",
+  "updatedAt": "2026-09-24T08:41:53.560Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,

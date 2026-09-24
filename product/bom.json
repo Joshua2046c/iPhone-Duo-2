@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "dab0ef5f01639c0e8aee549d737ef34c6659f3a329b093f5e78c667d8c84718f",
+  "requirements_digest": "a373d358b513d2c89ba298d11979016aed0f14fab87cf2414adc6007565dc59f",
   "items": [
     {
       "id": "back_cover",
@@ -10,12 +10,12 @@
       "name": "弹性半包背盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-BACK_COVER-R2",
+      "part_number": "DUO-BACK_COVER-R4",
       "source": "default",
-      "description": "TPU95A；3.4mm背板，手机贴合面Z2.4保持不变；内侧槽深2.2mm，外侧镜头圈座深0.4mm。",
+      "description": "TPU95A；3.4mm背板，手机贴合面Z2.4保持不变；内侧槽深2.2mm，外侧镜头圈座深0.4mm。 左侧方角直边、右侧原圆角；背盖内腔及扣边同步；滑槽尺寸与位置沿用恢复版本。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "010ced1ee612cb40"
+      "part_identity": "6983e63693477151"
     },
     {
       "id": "spine",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT_COVER-R1",
+      "part_number": "DUO-FRONT_COVER-R4",
       "source": "default",
-      "description": "PETG；几何尺寸见 constraints.json，试配版，非实机认证。",
+      "description": "PETG；几何尺寸见 constraints.json，试配版，非实机认证。 左侧方角直边、右侧原圆角；背盖内腔及扣边同步；滑槽尺寸与位置沿用恢复版本。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "f6947c0ceb258e1c"
+      "part_identity": "12711fb3a1c79e9d"
     },
     {
       "id": "camera_guard",
