@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "buildNumber": 73,
-  "sourceHash": "8a192699520eb77a70477627d39c46d26957622462dfece3378eb4c600c3d255",
+  "buildNumber": 83,
+  "sourceHash": "c4ccd7dd1719eb131e65b862039ebb53924dee3df112c0221dc3ba29c1abe0b2",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
   "targets": [
@@ -14,7 +14,7 @@
           "target": "back_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/back_cover/000-back_cover.py",
-          "sha256": "e8cba9b3f053dc96fe7f68f1f0e917da9a94a3fc6f2e3633cb34c65a3d0dddcb"
+          "sha256": "350d757ebd14dd217246aafc1bbd0b62dcc6b13c8f874d41376d37719ebdf81c"
         }
       ],
       "dependencies": []
@@ -80,9 +80,9 @@
     {
       "id": "back_cover",
       "target": "back_cover",
-      "label": "01 胶接背盖",
+      "label": "01 开边胶接背盖",
       "kind": "generated",
-      "shapeHash": "005086c1adba472547ef7c11404027681a96b80a4097959e8ba639332b47d471",
+      "shapeHash": "49baa1edc26fc9c6516f8afe389099c13518d26b58006a915be9200017f743d3",
       "transform": {
         "positionMm": [
           0,
@@ -108,7 +108,7 @@
       "target": "spine",
       "label": "02 前滑后粘护轴片",
       "kind": "generated",
-      "shapeHash": "1c7da15d3d8d30a5ae0bf7fca575e2902ae3cea822f0bf1057b2a835c2396b41",
+      "shapeHash": "f3fcb4afae11a8db38d4148156da425d02630ec91732e17d227dbb06cebecebf",
       "transform": {
         "positionMm": [
           -43.9,
@@ -134,16 +134,16 @@
       "target": "retainer",
       "label": "03 滑动压盖",
       "kind": "generated",
-      "shapeHash": "cb38b10511a236df255a2ed4fc4d86f151c8f1d1e6b9e6da1873d1db6d92037e",
+      "shapeHash": "4a722963a75122eb4cd248e136b4c4c41f04931baf436ab92deab1272795e003",
       "transform": {
         "positionMm": [
-          -69.5,
+          -18.3,
           0,
-          3.45
+          15.05
         ],
         "rotationDeg": [
           0,
-          180,
+          0,
           0
         ],
         "rotationOrder": "XYZ",
@@ -160,16 +160,16 @@
       "target": "front_cover",
       "label": "04 前盖收纳腔",
       "kind": "generated",
-      "shapeHash": "dccb65d3cd9bb2b0e458d21dcc1dbe796409548b09380296f7a5f172fe6cbcf2",
+      "shapeHash": "a8166f6b8c1d3312bd3aa219852354556279e836f0dce038bf1c28ea6f34334a",
       "transform": {
         "positionMm": [
-          -87.8,
           0,
-          3.65
+          0,
+          14.85
         ],
         "rotationDeg": [
           0,
-          180,
+          0,
           0
         ],
         "rotationOrder": "XYZ",
@@ -210,7 +210,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T09:19:02.720Z",
+  "updatedAt": "2026-09-24T09:41:35.536Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -236,11 +236,12 @@
       "back_cover_camera_ring_clearance": 0.2,
       "back_cover_camera_recess_depth": 0.4,
       "back_cover_glue_recess_length": 8.3,
-      "back_cover_glue_recess_height": 85,
-      "back_cover_glue_recess_depth": 1.2
+      "back_cover_glue_recess_height": 115,
+      "back_cover_glue_recess_depth": 1.2,
+      "back_cover_hinge_edge_cut_width": 2.2
     },
     "spine": {
-      "spine_height": 84,
+      "spine_height": 114,
       "spine_thickness": 0.6,
       "spine_bridge_span": 11.9,
       "spine_bend_radius": 1.6,
@@ -251,15 +252,15 @@
       "spine_slot_center_from_bend": 17,
       "spine_slot_y1": -25,
       "spine_slot_y2": 25,
-      "spine_flat_pose": true
+      "spine_flat_pose": false
     },
     "retainer": {
       "retainer_width": 51,
-      "retainer_height": 90,
+      "retainer_height": 118.6,
       "retainer_thickness": 1,
       "retainer_roof_relief": 0.2,
       "retainer_end_bond_land": 2.3,
-      "retainer_side_bond_land": 2.1
+      "retainer_side_bond_land": 1.4
     },
     "front_cover": {
       "front_cover_width": 87.8,
@@ -268,9 +269,9 @@
       "front_cover_corner_radius": 11.6,
       "front_cover_storage_depth": 2.6,
       "front_cover_storage_length": 49,
-      "front_cover_storage_height": 85.4,
+      "front_cover_storage_height": 115.4,
       "front_cover_cap_seat_length": 51.4,
-      "front_cover_cap_seat_height": 90.6,
+      "front_cover_cap_seat_height": 119,
       "front_cover_cap_seat_depth": 1.4,
       "front_cover_pin_diameter": 2.4,
       "front_cover_pin_x": -18.9,

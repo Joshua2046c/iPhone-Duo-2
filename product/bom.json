@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "730c242b21e0345aecbff58090083f7c3f7fdb5a347897aaf2b7315499eeb4b5",
+  "requirements_digest": "8dfe64e9b7e73b666683729907feb8eb2d39ff069db34a42d7c644bf050fb973",
   "items": [
     {
       "id": "back_cover",
@@ -10,12 +10,12 @@
       "name": "弹性半包背盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-BACK_COVER-R5",
+      "part_number": "DUO-BACK_COVER-R6",
       "source": "default",
-      "description": "左直右圆TPU背盖，去掉原收纳槽/销；内侧左边8.3×85mm浅胶座深1.2，板厚3.4，四角保留。",
+      "description": "TPU背盖3.4厚；铰链侧上下残留竖边及该向内扣去除至贴机面，顶底回边与右角保留；8.3×115深1.2胶槽。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "beddbf9d2b4ab347"
+      "part_identity": "207b874ae88b7eef"
     },
     {
       "id": "spine",
@@ -23,12 +23,12 @@
       "name": "滑动护轴薄片",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-SPINE-R5",
+      "part_number": "DUO-SPINE-R6",
       "source": "default",
-      "description": "TPU0.6mm，统一宽84；背盖胶端8，滑动尾长30，双槽22.5×3.2；直立段11.9、弯曲半径1.6，展开自由料长16.926548。",
+      "description": "整片沿轴宽114，厚0.6；中性展开总长54.926548=胶端8+自由段16.926548+滑尾30；双槽22.5×3.2。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "3e9a6b7c5be2fa83"
+      "part_identity": "52aaf8eb16de8833"
     },
     {
       "id": "retainer",
@@ -36,12 +36,12 @@
       "name": "滑动压盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-RETAINER-R5",
+      "part_number": "DUO-RETAINER-R6",
       "source": "default",
-      "description": "PETG前盖内侧压盖51×90×1mm，内面减薄0.2形成三边胶座，左边开口。",
+      "description": "前盖内侧PETG压盖51×118.6×1；内面让位0.2、侧胶边1.4、端胶边2.3；三边胶接。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "336c322a1fc4db86"
+      "part_identity": "57b6476907626700"
     },
     {
       "id": "front_cover",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT_COVER-R5",
+      "part_number": "DUO-FRONT_COVER-R6",
       "source": "default",
-      "description": "左直右圆PETG前盖，厚4mm，内侧收纳腔49×85.4深2.6，双销Ø2.4，阶梯座承接独立压盖。",
+      "description": "PETG4厚；49×115.4深2.6收纳腔，51.4×119深1.4台阶，底厚1.4，外廓87.8×121.5不变。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "6a22db587e7d54dc"
+      "part_identity": "f553c44beb84f369"
     },
     {
       "id": "camera_guard",

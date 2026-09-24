@@ -7,7 +7,7 @@
     {
       "id": "phone_fit",
       "kind": "internal_fit",
-      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，弹性四角内收及相机、按键避空。未标注的机械细节为可调默认。 折叠外屏正视：左铰链边直且左角近直角，右侧两角圆滑，前背盖及内腔一致。",
+      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，按本轮要求切掉铰链侧残留竖边，保留其余弹性扣边及相机、按键避空。未标注的机械细节为可调默认。 折叠外屏正视：左铰链边直且左角近直角，右侧两角圆滑，前背盖及内腔一致。",
       "source": "user_requested",
       "required": true
     },
@@ -36,6 +36,13 @@
       "id": "open_edge_meeting",
       "kind": "internal_fit",
       "description": "打开两条直边名义零间隙并拢、无实体穿透，同时自由片及滑动尾片入前盖槽；胶端留背盖。实机连续驱动尚待验证。",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "closed_hinge_wrap",
+      "kind": "internal_fit",
+      "description": "护轴片沿铰链方向接近整机宽，助手计算闭合包覆路径和展开料长，同时保留前盖完整收纳；实际机身/铰链外廓待测。",
       "source": "user_requested",
       "required": true
     }
@@ -76,6 +83,12 @@
       "source": "user_requested",
       "description": "改为前盖收纳，背盖胶端，打开两直边并拢的用户标记",
       "path": "product/references/uploads/20260924T090840800Z-1-mark.png"
+    },
+    {
+      "id": "wide_shield_request",
+      "source": "user_requested",
+      "description": "本轮切边/加宽/长度计算的原文与标记百分比，含新截图未收到及切边默认说明",
+      "path": "product/references/hinge-widening-request.md"
     }
   ],
   "assembly_story": {
@@ -106,7 +119,8 @@
           "slider",
           "back_bond",
           "camera_guard_bond",
-          "open_edge_meeting"
+          "open_edge_meeting",
+          "closed_hinge_wrap"
         ],
         "reference_ids": [
           "dimensions_image",
@@ -114,7 +128,8 @@
           "camera_image",
           "inner_slider_mark",
           "straight_left_image",
-          "front_storage_mark"
+          "front_storage_mark",
+          "wide_shield_request"
         ]
       }
     ]

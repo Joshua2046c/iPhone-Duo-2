@@ -1,31 +1,40 @@
-# Build73 前盖收纳式护轴壳试配交付
+# Build83 加宽护轴片及闭合长度校核
 
-## 交付
-STEP：manufacturing/duo_case/releases/export-bee0dcc38eb864e3ab983913a7ee7713/model.step
-SHA256：bbb610f9b577b6a73a556006d5af0ef9bc2bba5e235e3177ca94a9ff709f67c2
-同目录receipt.json记录build73和独立检查review-73-aabfb5fe-8b3d-4038-bfdb-b9951faa25d4：No P0 or P1 findings。预览来自本次STEP，当前为直边并拢的打开端点，不是原闭合姿态。五件单实体，10配对无体积相交，流程ready。
+## 当前交付
+STEP：manufacturing/duo_case/releases/export-6fe40c2bc2554582c38b9671b93f9085/model.step
+SHA256：064c23095601343149623cf49171e3c11a269659bd961243d68c0f6541198709
+当前闭合build83；导出已刷新预览，独立审查review-83-e76981f4-93bd-4681-a06c-69edf24b262b：No P0 or P1 findings。交付仅为fit_check。
 
-## 视觉证据
-闭合build70左视显示缩窄居中护轴片及两盖；隐藏背盖/镜头圈可见前盖内埋压盖及折弯片。隐藏图不证明被隐藏物体。
-- 闭合内侧底视：.work/cache/cad-workbench/designs/duo_case/observations/b8d5295e3feb3c8e60217b630bddcd31c768786e3ca197173d37cfa307c026df/look-b4fa7f8e9eac17ca8ae83d37/workbench_bottom.png
-- 闭合内侧iso_back：.work/cache/cad-workbench/designs/duo_case/observations/b8d5295e3feb3c8e60217b630bddcd31c768786e3ca197173d37cfa307c026df/look-b4fa7f8e9eac17ca8ae83d37/workbench_iso_back.png
-打开build73顶视可见两直边贴合，压盖在左前盖、右背盖没有原收纳大腔。隐藏压盖后可以看到全自由片在前盖凹槽内、两销仍在长槽内，背盖只留8mm胶端。
-- 打开隐藏压盖top：.work/cache/cad-workbench/designs/duo_case/observations/8a192699520eb77a70477627d39c46d26957622462dfece3378eb4c600c3d255/look-2bb744ddcf2bec8af3e092d4/workbench_top.png
-- 打开隐藏压盖iso：.work/cache/cad-workbench/designs/duo_case/observations/8a192699520eb77a70477627d39c46d26957622462dfece3378eb4c600c3d255/look-2bb744ddcf2bec8af3e092d4/workbench_iso.png
-- 完整打开top：.work/cache/cad-workbench/designs/duo_case/builds/8a192699520eb77a70477627d39c46d26957622462dfece3378eb4c600c3d255/validated/previews/workbench_top.png
+## 输入及切除范围
+本轮新mark截图未到达上传目录；只有文字和百分比标记，不能可靠映射原图像素。已公开默认切除后壳铰链侧上下两段残留竖边及同向内扣，范围X[−43.9,−41.7]、Z≥2.4，顶底回边、右侧扣边及背板保留。若用户原标记另指横边，需要新图定位。没有假称已看到新标记图。原文及默认见product/references/hinge-widening-request.md。
 
-## 静态与几何推导
-闭合build70及打开build73均为5有效单实体、10对无体积相交。镜头圈形状hash、参数和刚体位置未变。四角背盖扣边保留。
-闭合最小距离：背盖/片0.2（胶层）、前盖/片0.35、压盖/片0.65、前盖/压盖0.2（胶层）；前背盖7.25。
-打开最小距离：前背盖0接触，背盖/压盖0.1，背盖/片0.2，前盖/片0.35，压盖/片0.45，前盖/压盖0.2。
-精确带预期测量measure-40630ebe71f044b5185baf9a：spine f5至front_cover f9=0.35mm，≥0.3mm通过。
+## 改动与视觉证据
+护轴整片84→114宽（Y向），端部各距117.8参考机身端1.9；胶座115、腔115.4、压盖118.6、侧胶边1.4、台阶119。其余截面料长/孔槽位置保留，镜头圈源/hash/位置未动。
+打开build80预览显示原L形铰链侧端部竖边已移除，顶底横向回边仍在。隐藏压盖top可见加宽整片在槽内、双销仍在双槽中；该图不证明被隐藏的压盖。
+- 打开完整iso：.work/cache/cad-workbench/designs/duo_case/builds/6231d9745878e0121c5c33377fbb0cd0b61588e0f14d318f5b1554789ca20e2d/validated/previews/workbench_iso.png
+- 打开隐藏压盖top：.work/cache/cad-workbench/designs/duo_case/observations/6231d9745878e0121c5c33377fbb0cd0b61588e0f14d318f5b1554789ca20e2d/look-c639343663c85755c2fe413c/workbench_top.png
+闭合build83正视可见连续U形弯曲，两端转入壳内；左视可见片沿轴接近满宽，端部有退让，没有硬把片伸到两端棱边。
+- 闭合front：.work/cache/cad-workbench/designs/duo_case/observations/c4ccd7dd1719eb131e65b862039ebb53924dee3df112c0221dc3ba29c1abe0b2/look-966b435bc88e2ef1086ddd18/workbench_front.png
+- 闭合left：.work/cache/cad-workbench/designs/duo_case/observations/c4ccd7dd1719eb131e65b862039ebb53924dee3df112c0221dc3ba29c1abe0b2/look-966b435bc88e2ef1086ddd18/workbench_left.png
+- 闭合iso_back：.work/cache/cad-workbench/designs/duo_case/builds/c4ccd7dd1719eb131e65b862039ebb53924dee3df112c0221dc3ba29c1abe0b2/validated/previews/workbench_iso_back.png
 
-来自当前参数与端点空间关系的计算（不是真实铰链运动学）：
-- 自由片中性展开长L=11.9+π×1.6=16.926548245744mm；平料总长8+L+30=54.926548245744mm。弯/平使用同一公式，无裁掉自由片。
-- 展开全片X[−90.826548,−35.9]，其中胶段X[−43.9,−35.9]固定背盖，其余X[−90.826548,−43.9]收进前盖腔X[−92.9,−43.9]。收纳腔终端余量2.073452mm，Y宽84对85.4，各侧0.7。
-- 槽总长22.5，销Ø2.4；同轴销心偏移可达±(22.5−2.4)/2=±10.05。闭合偏移8，允许退入[−2.05,18.05]；需要L，故正向余量18.05−L=1.123452mm。侧隙(3.2−2.4)/2=0.4。
-- 前盖局部片Z1.65–2.25，腔底2.6，压盖内面1.0；销端1.3至压盖内面0.3小于片厚0.6，名义防脱。没有用负间隙卡住运动。
+## 计算：为什么总长可保留
+以下为已建壳体几何的中性层假定，不是材料/官方机身证据。
+1. 背胶片中面Z1.7，前滑片中面Z16.8，D15.1。手机假定Z2.4–13.7厚11.3，余下偏移为0.7+3.1。
+2. 片厚0.6，中性半径r1.6，内/外半径1.3/1.9；两90度圆弧从总竖向高度占2r=3.2，直段S15.1−3.2=11.9。
+3. 两弧的中性弧长πr=5.026548；L自由=11.9+5.026548=16.926548mm。
+4. 胶端8+自由16.926548+滑尾30=54.926548mm总平料长；建议名义54.93，试样后校准。Y宽114，厚0.6。无需为加宽修改这个X/Z截面长度；没有假设材料拉伸来补不足。
+5. 内侧水平片Z2.0/16.5，夹持净高度14.5，高于11.3参考厚度；基面Z2.4距胶端内面0.4，机顶13.7距上片内面2.8。直段内面X−45.2，对参考机左边−42.05向外3.15；弯曲自由段整个X≤−43.9，处于机左边外。故名义包络下可以从背面绕外轴侧到前面，但真实铰链凸出未知。
+6. 114/117.8约96.77%，两端各1.9未覆盖。这里的包覆是侧面U形保护，不是整根中轴含两端的密闭包裹。
 
-## 局限与复现
-本次只证明两端静态装配和容积/料长/槽端余量，不证明中间角度可达、自动驱动、实机外形、摩擦或耐久。用户要求实机完整滑入的保证仍需手机铰链轨迹及样件验证；不能用审查通过代替该验证。前盖目前为原定义的实心遮外屏翻盖，打开时并非依据手机164.6mm展开宽构造运动。护轴片宽改为84，铰链两端不再全覆盖117.8高。
-闭合和打开三项联动设置见README的Poses and validation。材料、层高试验建议、装配顺序及拆卸注意见Making and assembly；没有制造或打印放行。
+## 端点检查
+build80打开、build83闭合均5有效单实体、10配对无体积相交。打开前后盖0接触，片到槽底0.35、背盖胶层0.2、前盖压盖胶层0.2；闭合相同，薄片到压盖0.65。打开压盖/片最小0.45。
+打开自由片+尾X[−90.826548,−43.9]在槽X[−92.9,−43.9]，端余2.073452；Y±57在腔±57.7，每侧0.7。槽销前向极限18.05，回缩16.926548，余程1.123452。宽度改变未破坏收纳。
+带预期的CAD测量：
+- measure-b0f3c780e13f3ce5225d8a43：片f11到前盖槽底f9=0.35≥0.3，通过。
+- measure-d47998da09da406912e37e08：片上下内面f8/f13的Z向距离14.5，通过。
+- measure-ffc3c462b00a759659acc56e：片胶端f8到背盖基准f4的Z向距离0.4，通过。
+- 另一次欧氏最短距离0.5含横向0.3，不应误报为垂直余量；采用上面的Z向0.4作为安装基准结论。
+
+## 尚未验证
+实际轴包络/中间开合轨迹、TPU弯曲中性层及疲劳、自动回缩、胶接、切边后的拉脱保持力均未验证。保持力风险及端部退让已记录；不能以独立检查无P0/P1替代这些实物验证。切边准确对应原标记亦须补图才能逐处核对。装配、制作和姿态复现见README，未输出打印配置或制造放行。
