@@ -1,6 +1,16 @@
-# Build83 加宽护轴片及闭合长度校核
+# Build85 独立平片交付
 
-## 当前交付
+当前STEP：manufacturing/duo_case/releases/export-b98e306649bd898b838626dff9a2f3e4/model.step
+SHA256：3d2c9644522bb3e9e4b719bc052761838f0a33b38e039f43231b3a45f516d7ee
+已按用户本轮标记将spine展平并移到[110,0,1.9]，其他四件不变，仍共五件。平片54.926548×114×0.6，双槽22.5×3.2、中心间距50；展开算法及尺寸参数不变，仅flat开关和独立摆放改变。顶视/斜视可见矩形平片和完整双槽，无新增折痕。当前不是装配位置，不能以当前分件状态直接检查胶接与导向。
+独立审查：No P0 or P1 findings；五实体，10对无穿透，STEP预览已更新。
+几何历史比较工具因旧build manifest不可用未返回比较结果，改用Git中build83的design.json和当前design.json逐对象比对：四件shapeHash/transform及所有尺寸参数保持一致，仅spine_flat_pose与spine位置不同。
+视觉证据：.work/cache/cad-workbench/designs/duo_case/observations/95ecb8ecbdebee95935b56baaa33adfe7c6635ce10467702f717c3986e24ad00/look-8f1a57969727acb6feed35ea/workbench_top.png
+本轮参考：product/references/uploads/20260924T095306161Z-1-mark.png；以下保留原闭合设计的长度计算及风险，均为build83历史证据而非当前摆放。
+
+# Build83 历史闭合长度校核
+
+## 历史交付（已被本轮平片交付替换，旧STEP可从Git追溯）
 STEP：manufacturing/duo_case/releases/export-6fe40c2bc2554582c38b9671b93f9085/model.step
 SHA256：064c23095601343149623cf49171e3c11a269659bd961243d68c0f6541198709
 当前闭合build83；导出已刷新预览，独立审查review-83-e76981f4-93bd-4681-a06c-69edf24b262b：No P0 or P1 findings。交付仅为fit_check。
