@@ -70,7 +70,10 @@
       "source": "default_interpretation_of_user_two_edges",
       "note": "去铰链侧竖边，非整个顶底横边"
     },
-    "opening_edge_radius": 0.3
+    "opening_edge_radius": 0.3,
+    "opening_turn_radius": 1,
+    "opening_extension_per_end": 1,
+    "opening_width_definition": "既有width/length为保留的矩形净空；上下轮廓R1，直立端面间距为净空尺寸+2 mm。"
   },
   "slider": {
     "location": "inside_front",

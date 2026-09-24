@@ -12,7 +12,7 @@
           "target": "back_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/back_cover/000-back_cover.py",
-          "sha256": "dc43cbe83e213ad5a9be9cf3179c7a26252288f1a3e820916c6b24e3ffcbda94"
+          "sha256": "e48fa8903fafe738d2d71500db7e20836ea4c0753f2c78c44ec2709bcec6119b"
         }
       ],
       "dependencies": []
@@ -192,7 +192,7 @@
       "target": "back_cover",
       "label": "01 开边胶接背盖",
       "kind": "generated",
-      "shapeHash": "16d0524e8f2e4aabb5461c425f8af40c31b7b33a133e932de046bfe76ae99c56",
+      "shapeHash": "c4cd282f0018739e1f179f12b74dbb241e52541d1d59c0f833a7da3500a0e77c",
       "transform": {
         "positionMm": [
           0,
@@ -673,7 +673,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T20:14:59.096Z",
+  "updatedAt": "2026-09-24T20:22:18.147Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -703,7 +703,8 @@
       "back_cover_glue_recess_depth": 1.2,
       "back_cover_hinge_edge_cut_width": 2.2,
       "back_cover_left_corner_radius": 1,
-      "back_cover_opening_edge_radius": 0.3
+      "back_cover_opening_edge_radius": 0.3,
+      "back_cover_opening_turn_radius": 1
     },
     "spine": {
       "spine_height": 114,

@@ -7,7 +7,7 @@
     {
       "id": "phone_fit",
       "kind": "internal_fit",
-      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，按本轮要求切掉铰链侧残留竖边，保留其余弹性扣边及相机、按键避空。未标注的机械细节为可调默认。 折叠外屏正视：左铰链边直且左角近直角，右侧两角圆滑，前背盖及内腔一致。 标记的四处开口触手边缘修圆；前后壳铰链侧各两角做小圆角。",
+      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，按本轮要求切掉铰链侧残留竖边，保留其余弹性扣边及相机、按键避空。未标注的机械细节为可调默认。 折叠外屏正视：左铰链边直且左角近直角，右侧两角圆滑，前背盖及内腔一致。 标记的四处开口触手边缘修圆；前后壳铰链侧各两角做小圆角。 开口上下折角圆弧稍加大，保留既有矩形避让范围。",
       "source": "user_requested",
       "required": true
     },
@@ -139,6 +139,24 @@
       "source": "user_requested",
       "description": "前后壳铰链侧小圆角标记",
       "path": "product/references/uploads/20260924T200915518Z-4-mark.png"
+    },
+    {
+      "id": "opening_turn_mark_1",
+      "source": "user_requested",
+      "description": "用户标出的开口轮廓转角，加大圆弧。",
+      "path": "product/references/uploads/20260924T202012879Z-1-mark.png"
+    },
+    {
+      "id": "opening_turn_mark_2",
+      "source": "user_requested",
+      "description": "用户标出的开口轮廓转角，加大圆弧。",
+      "path": "product/references/uploads/20260924T202012879Z-2-mark.png"
+    },
+    {
+      "id": "opening_turn_mark_3",
+      "source": "user_requested",
+      "description": "用户标出的开口轮廓转角，加大圆弧。",
+      "path": "product/references/uploads/20260924T202012879Z-3-mark.png"
     }
   ],
   "assembly_story": {
@@ -187,7 +205,10 @@
           "comfort_edge_mark_1",
           "comfort_edge_mark_2",
           "comfort_edge_mark_3",
-          "comfort_edge_mark_4"
+          "comfort_edge_mark_4",
+          "opening_turn_mark_1",
+          "opening_turn_mark_2",
+          "opening_turn_mark_3"
         ]
       }
     ]

@@ -301,7 +301,7 @@
       "source": "default"
     },
     "comfort_edges": {
-      "value": "标出的顶部、底部及两个侧面按键/接口开口边缘做圆滑小倒角，避免硌手；前后壳标出的两个直角各做小圆角。",
+      "value": "标出的顶部、底部及两个侧面按键/接口开口边缘做圆滑小倒角，避免硌手；开口轮廓上下折角弧度稍大一些；前后壳标出的两个直角各做小圆角。",
       "source": "user"
     },
     "comfort_edge_defaults": {
@@ -309,7 +309,9 @@
         "opening_edge_radius_mm": 0.3,
         "front_left_corner_radius_mm": 1,
         "back_left_corner_radius_mm": 1,
-        "method": "开口外缘、端部竖边及顶部棱边做凸圆角去料，不向按键通道添加材料；壳体四角为平面轮廓小圆角。"
+        "method": "开口轮廓上下转角R1，开口两端各拓宽1以保持原矩形避让范围；触手外侧U形边缘R0.3。壳体四角平面轮廓R1。",
+        "opening_turn_radius_mm": 1,
+        "opening_extension_per_end_mm": 1
       },
       "source": "default"
     }

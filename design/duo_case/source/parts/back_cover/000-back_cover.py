@@ -28,6 +28,7 @@ glue_h=param('back_cover_glue_recess_height',115.0)
 glue_depth=param('back_cover_glue_recess_depth',1.2)
 corner_soft=param('back_cover_left_corner_radius',1.0)
 opening_soft=param('back_cover_opening_edge_radius',0.3)
+turn=param('back_cover_opening_turn_radius',1.0)
 def outline(w,h,r):
  return RectangleRounded(w,h,r)+Pos(-w/4,0)*Rectangle(w/2,h)
 wi,hi=PHONE_W+2*clearance,PHONE_H+2*clearance
@@ -41,10 +42,10 @@ body=Pos(0,0,outside_z)*extrude(outer,amount=plate)
 ring=extrude(outer,amount=HALF_T)-extrude(inner,amount=HALF_T)
 # The continuous hinge-side cut removes both former corner wall stubs, not the back plate.
 ring-=Pos(-wo/2+(trim-1)/2,0,HALF_T/2)*Box(trim+1,ho+2,HALF_T+2)
-ring-=Pos(vol_x,ho/2,HALF_T/2)*Box(vol_w,2*wall+2,HALF_T+2)
-ring-=Pos(wo/2,power_y,HALF_T/2)*Box(2*wall+2,power_l,HALF_T+2)
-ring-=Pos(wo/2,shutter_y,HALF_T/2)*Box(2*wall+2,shutter_l,HALF_T+2)
-ring-=Pos(0,-ho/2,HALF_T/2)*Box(bottom_w,2*wall+2,HALF_T+2)
+ring-=Pos(vol_x,ho/2,HALF_T/2)*Box(vol_w+2*turn,2*wall+2,HALF_T+2)
+ring-=Pos(wo/2,power_y,HALF_T/2)*Box(2*wall+2,power_l+2*turn,HALF_T+2)
+ring-=Pos(wo/2,shutter_y,HALF_T/2)*Box(2*wall+2,shutter_l+2*turn,HALF_T+2)
+ring-=Pos(0,-ho/2,HALF_T/2)*Box(bottom_w+2*turn,2*wall+2,HALF_T+2)
 body+=Pos(0,0,seat_z)*ring
 lip_ring=extrude(outer,amount=lip_h)-extrude(outline(wi-2*lip,hi-2*lip,radius-lip),amount=lip_h)
 lip_ring-=Pos(-wo/2+(trim-1)/2,0,lip_h/2)*Box(trim+1,ho+2,lip_h+2)
@@ -56,16 +57,16 @@ body-=Pos(cam_x,cam_y,outside_z-1)*extrude(SlotOverall(cam_w,cam_h),amount=plate
 body-=Pos(cam_x,cam_y,outside_z-1)*extrude(SlotOverall(cam_w+2*(cam_land+cam_clearance),cam_h+2*(cam_land+cam_clearance)),amount=1+cam_depth)
 body-=Pos(-wo/2+(glue_l-1)/2,0,seat_z-glue_depth+(glue_depth+1)/2)*Box(glue_l+1,glue_h,glue_depth+1)
 
-# Round the exposed U-shaped opening rims and the top/inside edges of their ends.
-# Keep concave floor-to-end intersections unfilleted: no material added to the passage.
+# Profile blends are independent of the small through-thickness edge roll.
+# Widen by one turn radius at each end so the original rectangular access remains clear.
 eps=1e-5
-opening_edges=[]
-counts=[]
-for axis,outer_side,inner_side,lo,hi in (
- ('y',ho/2,hi/2,vol_x-vol_w/2,vol_x+vol_w/2),
- ('y',-ho/2,-hi/2,-bottom_w/2,bottom_w/2),
- ('x',wo/2,wi/2,power_y-power_l/2,power_y+power_l/2),
- ('x',wo/2,wi/2,shutter_y-shutter_l/2,shutter_y+shutter_l/2)):
+openings=(
+ ('y',ho/2,hi/2,vol_x-vol_w/2-turn,vol_x+vol_w/2+turn),
+ ('y',-ho/2,-hi/2,-bottom_w/2-turn,bottom_w/2+turn),
+ ('x',wo/2,wi/2,power_y-power_l/2-turn,power_y+power_l/2+turn),
+ ('x',wo/2,wi/2,shutter_y-shutter_l/2-turn,shutter_y+shutter_l/2+turn))
+turn_edges=[]
+for axis,outer_side,inner_side,lo,upper in openings:
  chosen=[]
  for e in body.edges():
   if e.geom_type!=GeomType.LINE:
@@ -73,19 +74,40 @@ for axis,outer_side,inner_side,lo,hi in (
   bb=e.bounding_box()
   amin,amax=(bb.min.X,bb.max.X) if axis=='x' else (bb.min.Y,bb.max.Y)
   bmin,bmax=(bb.min.Y,bb.max.Y) if axis=='x' else (bb.min.X,bb.max.X)
-  at_end=(abs(bmin-lo)<eps and abs(bmax-lo)<eps) or (abs(bmin-hi)<eps and abs(bmax-hi)<eps)
+  at_end=(abs(bmin-lo)<eps and abs(bmax-lo)<eps) or (abs(bmin-upper)<eps and abs(bmax-upper)<eps)
+  level=abs(bb.max.Z-bb.min.Z)<eps and (abs(bb.min.Z-seat_z)<eps or abs(bb.min.Z-seat_z-HALF_T)<eps)
+  through_wall=amin>=min(outer_side,inner_side)-eps and amax<=max(outer_side,inner_side)+eps and amax-amin>eps
+  if at_end and level and through_wall:
+   chosen.append(e)
+ assert len(chosen)==4, 'Expected two lower and two upper profile corners'
+ turn_edges.extend(chosen)
+body=fillet(turn_edges,radius=turn)
+
+# Roll the touch-facing outer U rim, including its new profile arcs.
+opening_edges=[]
+for axis,outer_side,inner_side,lo,upper in openings:
+ chosen=[]
+ for e in body.edges():
+  bb=e.bounding_box()
+  amin,amax=(bb.min.X,bb.max.X) if axis=='x' else (bb.min.Y,bb.max.Y)
+  bmin,bmax=(bb.min.Y,bb.max.Y) if axis=='x' else (bb.min.X,bb.max.X)
   on_outer=abs(amin-outer_side)<eps and abs(amax-outer_side)<eps
   on_inner=abs(amin-inner_side)<eps and abs(amax-inner_side)<eps
-  in_span=bmin>=lo-eps and bmax<=hi+eps
-  vertical=bb.max.Z-bb.min.Z>eps and amax-amin<eps and bmax-bmin<eps
-  top_end=at_end and abs(bb.min.Z-seat_z-HALF_T)<eps and abs(bb.max.Z-seat_z-HALF_T)<eps
-  if bb.min.Z>=seat_z-eps and ((on_outer and in_span) or (on_inner and at_end and vertical) or top_end):
+  in_span=bmin>=lo-turn-eps and bmax<=upper+turn+eps
+  rising=bb.max.Z-bb.min.Z>eps
+  if bb.min.Z>=seat_z-eps and in_span and on_outer:
    chosen.append(e)
- assert len(chosen)>=5, 'Opening edge selection incomplete'
- counts.append(len(chosen))
+ assert len(chosen)>=5, 'Incomplete blended rim'
  opening_edges.extend(chosen)
-print('Rounded edges per opening (volume, bottom, power, shutter):',counts)
 body=fillet(opening_edges,radius=opening_soft)
+for axis,outer_side,inner_side,lo,upper in openings:
+ center=(lo+upper)/2
+ span=upper-lo-2*turn
+ if axis=='x':
+  access=Pos(outer_side,center,seat_z+HALF_T/2)*Box(2*wall+2,span,HALF_T)
+ else:
+  access=Pos(center,outer_side,seat_z+HALF_T/2)*Box(span,2*wall+2,HALF_T)
+ assert (body & access).volume<1e-6, 'Original rectangular button passage obstructed'
 
 assert plate-glue_depth>=1.2
 assert len(body.solids())==1
