@@ -67,7 +67,7 @@
       "source": "default"
     },
     "travel_mm": {
-      "value": 11.3,
+      "value": 16.926548,
       "source": "default"
     },
     "materials": {
@@ -118,6 +118,18 @@
         "retainer_top_z_mm": 2.2,
         "outer_back_z_mm": -1.0
       },
+      "source": "default"
+    },
+    "flush_hinge_ends": {
+      "value": "去掉侧视标记两端凸起，铰链侧盖体端面与护轴片端面齐平",
+      "source": "user"
+    },
+    "full_retraction": {
+      "value": "加宽护轴片、背盖内侧凹槽及压盖，手机打开时护轴片向右滑动收进背盖预留空间",
+      "source": "user"
+    },
+    "retraction_interpretation": {
+      "value": "收纳完整自由护轴段和滑动尾片；胶粘端仍与前盖连接。用闭合和等展开料长摊平状态检查容积，不把它当作实机铰链运动认证。",
       "source": "default"
     }
   },

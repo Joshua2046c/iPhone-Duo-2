@@ -14,7 +14,7 @@
     {
       "id": "slider",
       "kind": "sliding_fit",
-      "description": "背盖内侧双凸点、双槽与内埋压盖；名义11.3mm行程；外背面不留压盖，压盖不占用手机安装空间。",
+      "description": "内侧加宽阶梯腔、宽尾片与压盖；自由护轴段摊平后完整容纳，胶接端保留前盖；按16.926548mm收纳位移检查，实机连续运动待测。",
       "source": "user_requested",
       "required": true
     },
@@ -29,6 +29,13 @@
       "id": "camera_guard_bond",
       "kind": "adhesive_joint",
       "description": "独立胶囊保护圈粘入背盖外侧浅凹座，略高于摄像头；凸高按4mm可调假设加0.5mm余高，需实测核验。",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "flush_hinge_ends",
+      "kind": "external_fit",
+      "description": "标记两处铰链侧端部凸出移除，端面与护轴片齐平。",
       "source": "user_requested",
       "required": true
     }
@@ -57,6 +64,12 @@
       "source": "user_requested",
       "description": "本轮红框标记，要求滑槽压盖转入背盖内侧并增加独立镜头圈",
       "path": "product/references/uploads/20260924T041432570Z-1-mark.png"
+    },
+    {
+      "id": "retract_mark",
+      "source": "user_requested",
+      "description": "两端齐平及宽幅收纳要求",
+      "path": "product/references/uploads/20260924T042734284Z-1-mark.png"
     }
   ],
   "assembly_story": {
@@ -86,13 +99,15 @@
           "phone_fit",
           "slider",
           "front_bond",
-          "camera_guard_bond"
+          "camera_guard_bond",
+          "flush_hinge_ends"
         ],
         "reference_ids": [
           "dimensions_image",
           "display_image",
           "camera_image",
-          "inner_slider_mark"
+          "inner_slider_mark",
+          "retract_mark"
         ]
       }
     ]

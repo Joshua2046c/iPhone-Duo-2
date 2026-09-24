@@ -1,0 +1,144 @@
+{
+  "designId": "duo_case",
+  "buildNumber": 51,
+  "sourceHash": "e348f56e636cbdd5657625ccb38b4e8b72496ee14f7c1c418c3bb24bbe39b9da",
+  "schemaVersion": 2,
+  "exportId": "export-918aa6f49da74b740285597a907058db",
+  "generatedAt": "2026-09-24T05:03:47.071Z",
+  "designSha256": "296b65e53e0b8dc54c0be9b12c762f3c56ffe3871a4a09ad6c8547f47b681ca1",
+  "role": "phone_case",
+  "stateHash": "59a7b91d842784386b7c96b9745928cd5ee7d5d5f58d0f42b1d55ef423dee033",
+  "stateManifest": {
+    "schemaVersion": 2,
+    "designId": "duo_case",
+    "role": "phone_case",
+    "design": {
+      "buildNumber": 51,
+      "sourceHash": "e348f56e636cbdd5657625ccb38b4e8b72496ee14f7c1c418c3bb24bbe39b9da",
+      "designSha256": "8ab7e28286cd0111635ac605f02ff5ee23252e899970eb75e3d9a6144857feab",
+      "manifestSha256": "cc746fb5b93cc1751d70730c751d4c25c0506683bc12ea78aa1ca07f8d5d2bd2",
+      "stepSha256": "377342c95519326018f42ce518b01cf0b34588085c27bfab6a8b06d8a827f906",
+      "pcbReleases": []
+    },
+    "brief": {
+      "path": "design/duo_case/README.md",
+      "sha256": "6de83ab5832dc401fa21e4a5055eb1aac4b8c41c632ad94600c6a7c7362b778e"
+    },
+    "requirement": {
+      "artifactContractPath": "product/contract.json",
+      "artifactContractSha256": "42f45d985d456b6e35c694eb25d2b83cd8a476aeb9b04673050f372143444e50",
+      "designRequirementSha256": "3236ee607e94a4df1942e4a37d8332044b029af8262fdfaec24f46be5571508b",
+      "inputs": [
+        {
+          "role": "external-reference",
+          "id": "camera_image",
+          "path": "product/references/uploads/20260924T033602794Z-3-ishot-2026-09-24-11-27-23.png",
+          "sha256": "f4452964392359fcba2b8cba0a82c98b5ddf1cddcfe69b9217347b159529d83b",
+          "sizeBytes": 114818
+        },
+        {
+          "role": "external-reference",
+          "id": "dimensions_image",
+          "path": "product/references/uploads/20260924T033602794Z-1-ishot-2026-09-24-11-17-13.png",
+          "sha256": "8f23ca89ae44d83f6e5fe8191739144497e094a7f307ebd7a659af18441456e7",
+          "sizeBytes": 77162
+        },
+        {
+          "role": "external-reference",
+          "id": "display_image",
+          "path": "product/references/uploads/20260924T033602794Z-2-ishot-2026-09-24-11-17-19.png",
+          "sha256": "3cd0c76b2f4e4e25ca73901e9e3ca58b776705c801057a30c9e69e620c1150f6",
+          "sizeBytes": 94709
+        },
+        {
+          "role": "external-reference",
+          "id": "inner_slider_mark",
+          "path": "product/references/uploads/20260924T041432570Z-1-mark.png",
+          "sha256": "7676c60fc40387acbc58928d1b794236ce757887a397a5658465dc59eeda8a7a",
+          "sizeBytes": 58390
+        },
+        {
+          "role": "external-reference",
+          "id": "retract_mark",
+          "path": "product/references/uploads/20260924T042734284Z-1-mark.png",
+          "sha256": "479cc843c387b0f9093e468d90015f3908c9e1f699f4cd92b30c2de578b99b51",
+          "sizeBytes": 34835
+        }
+      ]
+    },
+    "delivery": {
+      "target": "fit_check",
+      "formats": [
+        "step"
+      ]
+    },
+    "stateHash": "59a7b91d842784386b7c96b9745928cd5ee7d5d5f58d0f42b1d55ef423dee033"
+  },
+  "buildArtifacts": {
+    "manifestSha256": "cc746fb5b93cc1751d70730c751d4c25c0506683bc12ea78aa1ca07f8d5d2bd2",
+    "stepSha256": "377342c95519326018f42ce518b01cf0b34588085c27bfab6a8b06d8a827f906"
+  },
+  "exportAlgorithm": {
+    "version": 1,
+    "bootstrapSha256": "2bf557334c52ec5d092ce927635d10591a87b85e6c441c3f4aa3411ff2379a39"
+  },
+  "sourceHashes": {
+    "back_cover/back_cover": "ce485bea37c5cd70e244cb0d2086333448c2cdf7f1bef3f9061ce3706c3a8f31",
+    "camera_guard/camera_guard": "cb9cb22b359d7f54f8899dee81bc1be78aa93c5a6cde4f7d9dbc3329dd23b3b6",
+    "front_cover/front_cover": "e78f26f0c5b7df4c6e7e0e43f62198502fa1bf9ce2f024fe9eb5c5873d59c916",
+    "retainer/retainer": "537538f7f226fffc455c977bf805d957cce8ec480106f54df564c1c3c33190e7",
+    "spine/spine": "f90c6c993e0d2e6def4d4afa9a66a4cfabfc8b05a2031713324988d1ec16f7fd"
+  },
+  "assetHashes": {},
+  "shapeHashes": {
+    "back_cover": "c1d859414863b4d825149b3ae82174d4c7a6b1619efc9de8737992b43d31f1dc",
+    "camera_guard": "b88f43a91d9eda71dab1ce5599e73e62b838c3d5e63b97aaf40d87d2532e1baf",
+    "front_cover": "99f4d4d8b44a822805d527c714b14a1ca1baaf772fb4c7dab7ba32b3c50e1033",
+    "retainer": "20c91d89b805fcd6dd2f9c35bd5bbfa5e45e8efc119d0aefce6e30daefbb3edf",
+    "spine": "8c07eb65382a6a7c223b9dc665cc16e2a19fb4630b782cac0146d37c37c5e10e"
+  },
+  "runtime": {
+    "manifestHash": "db7eda9ca0f7599605893eccbedbf9d7a2eb682bb80418080536971a776aab33",
+    "pythonVersion": "3.12.13",
+    "build123dVersion": "0.10.0",
+    "ocpVersion": "7.8.1.1.post1",
+    "cadpyHash": "74f250de9b3dff3b5e0b94523625dd13c3710d3f81c487102225650971b064a6"
+  },
+  "artifacts": [
+    {
+      "path": "manufacturing/duo_case/releases/export-918aa6f49da74b740285597a907058db/model.step",
+      "role": "model/step",
+      "sha256": "377342c95519326018f42ce518b01cf0b34588085c27bfab6a8b06d8a827f906",
+      "sizeBytes": 563566
+    }
+  ],
+  "interference": {
+    "summary": "No interference across 10 object pairs.",
+    "counts": {
+      "objects": 5,
+      "pairs": 10,
+      "exact": 0,
+      "cached": 5,
+      "interference": 0,
+      "undeclared": 0,
+      "over_budget": 0,
+      "undetermined": 0
+    },
+    "overlaps": []
+  },
+  "authority": {
+    "version": 1,
+    "algorithm": "hmac-sha256",
+    "keyId": "6293cb717f4fe34d12238dabee613b05",
+    "projectId": "991d92af-8dfa-49d2-9edb-b9c884fc07c9",
+    "receiptPath": "manufacturing/duo_case/releases/export-918aa6f49da74b740285597a907058db/receipt.json",
+    "payloadSha256": "c7ec893ac57466115fb18f010e3e874ccde97e9868a726b35fab9029c4a0e259",
+    "mac": "f48c2357142367ea99efad0c71ce65ada46edd2f04f08cc2e7c799e47fdb6e66"
+  },
+  "status": "reviewed",
+  "review": {
+    "reviewId": "review-51-4e1d6136-2d7c-4c07-88b6-f5a1cc9635f6",
+    "path": ".work/builds/cad/duo_case/reviews/review-51-4e1d6136-2d7c-4c07-88b6-f5a1cc9635f6/receipt.json",
+    "sha256": "c2a6880123f0bcae29a8d8437bb7fc8244d36d409b82d1806785f0ad78c2e2df"
+  }
+}

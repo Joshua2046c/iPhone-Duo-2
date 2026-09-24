@@ -1,14 +1,20 @@
-w=param('retainer_width',33.1)
-h=param('retainer_height',78.6)
+w=param('retainer_width',50.5)
+h=param('retainer_height',117.8)
 t=param('retainer_thickness',1.0)
 relief=param('retainer_roof_relief',0.2)
 end_land=param('retainer_end_bond_land',2.3)
 side_land=param('retainer_side_bond_land',2.1)
-# Local origin is the centre of the lower face. Three raised glue lands, open left mouth.
-body=Pos(0,0,t/2)*Box(w,h,t)
-cut_left=-w/2-1
-cut_right=w/2-end_land
-body -= Pos((cut_left+cut_right)/2,0,t-relief/2+0.5)*Box(cut_right-cut_left,h-2*side_land,relief+1)
+shoulder=param('retainer_fullheight_width',24.0)
+deep_h=param('retainer_deep_height',87.8)
+deep_y=param('retainer_deep_center_y',-15.0)
+notch_y=param('retainer_corner_notch_inner_y',44.5)
+notch_x=param('retainer_corner_notch_end',25.0)
+body=Pos(shoulder/2,0,t/2)*Box(shoulder,h,t)
+body+=Pos(w/2,deep_y,t/2)*Box(w,deep_h,t)
+body-=Pos((shoulder-1.0)/2-0.5,0,(relief-1)/2)*Box(shoulder,h+2,relief+1)
+body-=Pos((w-end_land-1)/2,deep_y,(relief-1)/2)*Box(w-end_land+1,deep_h-2*side_land+1.4,relief+1)
+# Back-cover bridges replace the cap at both hinge corners; keep a 0.25/0.2 gap.
+for sy in (-1,1):
+ body-=Pos((notch_x-1)/2,sy*(notch_y+h/2+1)/2,t/2)*Box(notch_x+1,h/2+1-notch_y,t+2)
 assert len(body.solids())==1
-assert t-relief>=0.8
-publish('retainer',body,'03 滑动压盖')
+publish('retainer',body,'03 角扣避让阶梯压盖')

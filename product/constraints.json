@@ -42,43 +42,70 @@
     "bottom_opening_width": 50,
     "source": "default_image_estimate",
     "phone_seat_z": 2.4,
-    "outer_back_z": -1
+    "outer_back_z": -1,
+    "hinge_end_flush_y": 58.9,
+    "hinge_end_trim_to_x": 50,
+    "finished_height": 117.8,
+    "corner_bridges": {
+      "source": "default",
+      "x": [
+        -43.9,
+        -19
+      ],
+      "abs_y": [
+        44.75,
+        58.9
+      ],
+      "z": [
+        1.4,
+        2.4
+      ],
+      "anchor_x": [
+        -21.3,
+        -19
+      ],
+      "anchor_abs_y": [
+        57.7,
+        58.9
+      ],
+      "restores_hinge_corner_hooks": true
+    }
   },
   "slider": {
     "sheet_thickness": 0.6,
-    "nominal_travel": 11.3,
-    "slot_length": 14.5,
+    "nominal_travel": 16.926548,
+    "slot_length": 21.5,
     "slot_width": 3.2,
     "pin_diameter": 2.4,
-    "pin_center_x": -29.2,
+    "pin_center_x": -17.7,
     "pin_y": [
-      -30,
-      15
+      -35,
+      12
     ],
-    "slot_center_x": -34.45,
+    "slot_center_x": -26.7,
     "slot_y": [
-      -30,
-      15
+      -35,
+      12
     ],
     "closed_tail_x": [
       -43.7,
-      -25.2
+      -13.7
     ],
     "open_tail_x": [
-      -32.4,
-      -13.9
+      -26.773452,
+      3.226548
     ],
     "tail_y": [
-      -48,
-      25
+      -57,
+      27
     ],
     "pocket_x": [
       -44,
-      -12.7
+      5
     ],
     "pocket_y": [
-      -49,
-      26
+      -57.5,
+      27.5
     ],
     "tail_z": [
       0.45,
@@ -94,16 +121,29 @@
     "vertical_bridge_span": 11.4,
     "source": "default_except_user_inner_location",
     "location": "inside_back",
-    "pocket_floor_z": 0.2
+    "pocket_floor_z": 0.2,
+    "tail_fullheight_shoulder_length": 4,
+    "fullheight_pocket_end_x": -21.5,
+    "fullheight_pocket_y": [
+      -59.4,
+      59.4
+    ],
+    "flat_free_web_x": [
+      -43.2,
+      -26.773452
+    ],
+    "flat_fullheight_end_x": -22.773452,
+    "slot_forward_limit": 18.55,
+    "geometry_assumption": "完整自由段摊平，前盖胶接端保留；非实机连续运动轨迹"
   },
   "retainer": {
     "outer_x": [
       -43.8,
-      -10.7
+      6.7
     ],
     "outer_y": [
-      -50.8,
-      27.8
+      -58.9,
+      44.5
     ],
     "base_z": [
       1.2,
@@ -115,7 +155,18 @@
     "bondline": 0.2,
     "attachment": "内侧三边限胶胶接，左侧开口；先装压盖再装手机",
     "source": "default",
-    "phone_clearance": 0.2
+    "phone_clearance": 0.2,
+    "fullheight_end_x": -19.8,
+    "central_y": [
+      -58.9,
+      28.9
+    ],
+    "shape": "stepped; deep cavity edge lands only; no glue across fullheight entrance",
+    "corner_notches": {
+      "world_x_end": -18.8,
+      "abs_y_start": 44.5,
+      "coverage_replaced_by": "back_cover_corner_bridges"
+    }
   },
   "front": {
     "outer_width": 87.8,
@@ -137,7 +188,26 @@
     ],
     "bond_pocket_ceiling_z": 15.85,
     "bondline": 0.2,
-    "source": "default"
+    "source": "default",
+    "hinge_end_flush_y": 58.9,
+    "hinge_end_trim_to_x": 50,
+    "hinge_edge_x": -43.7,
+    "finished_height": 117.8,
+    "tuck_edge_relief_width": 1.1,
+    "tuck_edge_remaining_thickness": 0.8,
+    "flat_check_position": [
+      -86.9,
+      0,
+      1.25
+    ],
+    "flat_check_rotation_deg": [
+      0,
+      180,
+      0
+    ],
+    "flat_back_clearance": 0.15,
+    "bond_land_remaining_length": 6.9,
+    "flat_floor_clearance": 0.25
   },
   "connections": [
     {
@@ -181,7 +251,7 @@
     {
       "id": "kinematics",
       "severity": "prototype_limit",
-      "description": "11.3 mm为行程假设；真实铰链扫掠、柔性变形及自动回缩未验证"
+      "description": "16.926548mm收纳位移依据自由片展开料长；闭合及摊平检查不能保证实际铰链驱动、连续运动、摩擦与疲劳。"
     },
     {
       "id": "sheet_life",
@@ -197,6 +267,11 @@
       "id": "camera_height",
       "severity": "prototype_limit",
       "description": "摄像头高出机背4mm为假定值；保护圈需实测校准"
+    },
+    {
+      "id": "flat_edge_clearance",
+      "severity": "prototype_limit",
+      "description": "摊平前盖/背盖桥底最小0.15mm、距槽底0.25mm，薄片/压盖局部0.15mm；需试配公差、毛刺、溢胶。四角恢复，一体桥刚度及打印成形未实测。"
     }
   ],
   "camera_guard": {
