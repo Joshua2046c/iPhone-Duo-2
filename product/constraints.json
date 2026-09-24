@@ -84,10 +84,10 @@
     "bridge_span": 11.9,
     "bend_radius": 1.6,
     "nominal_travel": 16.926548245743668,
-    "slot_length": 22.5,
-    "slot_width": 3.2,
+    "slot_length": 23.3,
+    "slot_width": 4.2,
     "slot_center_from_bend": 17,
-    "pin_diameter": 2.4,
+    "pin_diameter": 3.2,
     "pin_center_x_front_local": -18.9,
     "pin_y": [
       -25,
@@ -114,17 +114,19 @@
     "remaining_slot_at_open": 1.1234517542563331,
     "source": "default_geometry_user_front_location",
     "validation": "static_edge_meeting_endpoints_not_real_phone_kinematics",
-    "flat_total_length": 54.92654824574367
+    "flat_total_length": 54.92654824574367,
+    "transverse_clearance_per_side": 0.5,
+    "axial_center_travel": 20.1
   },
   "retainer": {
-    "width": 51,
+    "width": 85,
     "height": 118.6,
     "thickness": 1,
     "relief": 0.2,
     "side_land": 1.4,
-    "end_land": 2.3,
+    "end_land": 37.6,
     "closed_position": [
-      -18.3,
+      0,
       0,
       15.05
     ],
@@ -134,7 +136,7 @@
       0
     ],
     "open_position": [
-      -69.5,
+      -87.8,
       0,
       3.45
     ],
@@ -149,7 +151,11 @@
     "outer_decor_skin": 0.2,
     "total_thickness": 1.2,
     "decor_recess_depth": 0.15,
-    "minimum_remaining_thickness": 0.85
+    "minimum_remaining_thickness": 0.85,
+    "corner_radius": 10.15,
+    "left_corner_radius": 0.6,
+    "side_clearance": 0.2,
+    "attachment": "整面周边台阶及右侧承台胶接，铰链口与左侧滑动腔不施胶"
   },
   "front": {
     "outer_width": 87.8,
@@ -277,8 +283,12 @@
         ]
       },
       "round_disk_colour": "yellow",
-      "attachment": "顶部黑块和蓝块是各自独立整体嵌件，跨分件缝但仅盖板侧涂胶，前盖侧干配，不封死可拆分件。"
-    }
+      "attachment": "八个内侧嵌件均完整胶接整面盖板，无跨分件缝；盖板可带八件整体拆下。"
+    },
+    "cap_seat_width": 85.4,
+    "cap_seat_radius": 10.35,
+    "cap_seat_left_radius": 0.8,
+    "hinge_mouth_floor": 1.2
   },
   "connections": [
     {
@@ -302,7 +312,7 @@
     {
       "id": "cap_to_front",
       "implementation": "free",
-      "kind": "three_edge_adhesive",
+      "kind": "full_inset_panel_stepped_adhesive",
       "status": "dimensioned_not_physically_tested"
     },
     {
@@ -322,7 +332,7 @@
       "implementation": "free",
       "kind": "eight_shallow_adhesive_seats",
       "status": "dimensioned_not_physically_tested",
-      "note": "跨缝长块只胶接盖板；其余依所属宿主固定。"
+      "note": "八件均胶接整面盖板，不再跨前盖分件缝。"
     }
   ],
   "unresolved_roles": [],

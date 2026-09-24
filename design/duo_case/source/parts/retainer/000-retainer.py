@@ -4,17 +4,18 @@ t=param('retainer_thickness',1.0)
 relief=param('retainer_roof_relief',0.2)
 end_land=param('retainer_end_bond_land',2.3)
 side_land=param('retainer_side_bond_land',2.1)
-# Local origin is the centre of the lower face. Three raised glue lands, open left mouth.
+# Centred full cover with asymmetrical shell outline and an open hinge-side rail relief.
 skin=param('retainer_decor_skin',0.2)
-body=Pos(0,0,(t-skin)/2)*Box(w,h,t+skin)
+corner_r=param('retainer_corner_radius',10.15)
+left_r=param('retainer_left_corner_radius',0.6)
+outline=RectangleRounded(w,h,corner_r)+Pos(-w/4,0)*Rectangle(w/2,h)
+outline=fillet([v for v in outline.vertices() if abs(v.X+w/2)<1e-6],radius=left_r)
+body=Pos(0,0,-skin)*extrude(outline,amount=t+skin)
 cut_left=-w/2-1
 cut_right=w/2-end_land
 body -= Pos((cut_left+cut_right)/2,0,t-relief/2+0.5)*Box(cut_right-cut_left,h-2*side_land,relief+1)
 
-# Coordinate interface from the current closed assembly:
-# retainer object placement is X=-18.3; front placement is X=0.
-# Added skin makes the two visible inner surfaces coplanar, without moving rail faces.
-FRONT_TO_RETAINER_X=18.3
+# Retainer and front cover now share the same XY centre.
 seat_depth=param('retainer_decor_recess_depth',0.15)
 seat_gap=param('retainer_decor_seat_clearance',0.15)
 long_w=param('retainer_inner_long_width',62.0)
@@ -35,10 +36,16 @@ lower_w=param('retainer_inner_lower_width',24.0)
 lower_h=param('retainer_inner_lower_height',10.0)
 lower_u=param('retainer_inner_lower_u',20.0)
 lower_y=param('retainer_inner_lower_y',-40.0)
+white_w=param('retainer_inner_white_width',24.0)
+white_h=param('retainer_inner_white_height',9.0)
+white_u=param('retainer_inner_white_u',-20.0)
+white_y=param('retainer_inner_white_y',-18.0)
 def inner_cut(sk,u,y):
- return Pos(FRONT_TO_RETAINER_X-u,y,-skin-0.1)*extrude(sk,amount=seat_depth+0.1)
+ return Pos(-u,y,-skin-0.1)*extrude(sk,amount=seat_depth+0.1)
 for uu,yy,ww,hh in ((0,top_y,long_w,black_h),(0,blue_y,long_w,blue_h),
-                     (lower_u,lower_y,lower_w,lower_h)):
+                     (lower_u,lower_y,lower_w,lower_h),
+                     (-lower_u,lower_y,lower_w,lower_h),
+                     (white_u,white_y,white_w,white_h)):
  body-=inner_cut(RectangleRounded(ww+2*seat_gap,hh+2*seat_gap,corner+seat_gap),uu,yy)
 for i in range(2):
  body-=inner_cut(SlotOverall(bar_l+2*seat_gap,bar_w+2*seat_gap),bar_first_u+i*bar_pitch,bar_y)

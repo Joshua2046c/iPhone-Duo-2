@@ -14,7 +14,7 @@
     {
       "id": "slider",
       "kind": "sliding_fit",
-      "description": "前盖内侧双销、收纳凹槽和独立压盖；两盖打开直边并拢时自由护轴段及滑尾完全收纳；背盖不再有滑槽固定结构。",
+      "description": "前盖内侧双销加粗并匹配加宽长槽，保留原轴向行程；整面盖板防脱，铰链侧留护轴片进出口；打开直边并拢时自由段及滑尾收纳。",
       "source": "user_requested",
       "required": true
     },
@@ -56,7 +56,14 @@
     {
       "id": "inner_decoration_seats",
       "kind": "adhesive_joint",
-      "description": "前盖背面及独立盖板具有黑色长块、两排十格蓝块、两短条、白双格块、小圆饼和下方双黑块的浅定位槽；蓝/白分格均为凹线。",
+      "description": "内侧八个装饰浅定位槽全部位于整面护轴片盖板；黑长块、蓝十格块、两短条、白双格、小圆饼及下方双黑块完整嵌入盖板，不跨前盖分件缝。",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "full_retainer_step",
+      "kind": "adhesive_joint",
+      "description": "略小于前盖同形轮廓的整面盖板，嵌入周边配套台阶并贴合；预留装配与胶接间隙和铰链出片口。",
       "source": "user_requested",
       "required": true
     }
@@ -190,7 +197,8 @@
           "open_edge_meeting",
           "closed_hinge_wrap",
           "front_decoration_seats",
-          "inner_decoration_seats"
+          "inner_decoration_seats",
+          "full_retainer_step"
         ],
         "reference_ids": [
           "dimensions_image",

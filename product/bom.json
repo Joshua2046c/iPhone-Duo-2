@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "57a91451286b43c5300db4ca20154258de74d92b5d0a83ead7fdeb262f370ecb",
+  "requirements_digest": "edf3e661d7f480d550fafddd95c374cc4cee4676e45be4fa96a2224a227d1214",
   "items": [
     {
       "id": "back_cover",
@@ -23,25 +23,25 @@
       "name": "滑动护轴薄片",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-SPINE-R6",
+      "part_number": "DUO-SPINE-R7",
       "source": "default",
-      "description": "整片沿轴宽114，厚0.6；中性展开总长54.926548=胶端8+自由段16.926548+滑尾30；双槽22.5×3.2。",
+      "description": "整片沿轴宽114，厚0.6；中性展开总长54.926548=胶端8+自由段16.926548+滑尾30；双槽23.3×4.2配Ø3.2销，轴向中心行程20.1。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "52aaf8eb16de8833"
+      "part_identity": "ec72696ed8d1a3af"
     },
     {
       "id": "retainer",
       "role": "retainer",
-      "name": "滑动压盖",
+      "name": "整面护轴片盖板",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-RETAINER-R8",
+      "part_number": "DUO-RETAINER-R9",
       "source": "default",
-      "description": "PETG红色盖板51×118.6；保留原1mm结构及0.2内让位，外加0.2齐平皮层，总厚1.2；外侧定位槽深0.15，最薄底0.85；原三边胶接及导向面不变。",
+      "description": "PETG 85×118.6×1.2，右圆角10.15/左圆角0.6；比前盖边缘缩进约1.4；侧向间隙0.2、台阶胶层0.2。八个内侧浅槽均深0.15，槽下最薄0.85；滑道让位0.2，盖板中心与前盖重合。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "27bf4f89fcab54cd"
+      "part_identity": "6739aea2d1a7bed2"
     },
     {
       "id": "front_cover",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT-COVER-R9",
+      "part_number": "DUO-FRONT-COVER-R10",
       "source": "default",
-      "description": "PETG红色上盖87.8×121.5×4；保留内侧收纳腔及压盖座；五个嵌件浅座与34×2.4胶囊浅槽均深0.2，局部剩余底厚1.2。 内侧增加0.15深定位座，白块/左下黑块固定前盖；长黑块/蓝块跨缝部分为干配。 铰链侧两外角R1.0，保留直边主体。",
+      "description": "PETG红色前盖87.8×121.5×4；整面台阶座85.4×119深1.4；左侧49×115.4收纳腔顶深2.6，铰链口底高1.2；双销Ø3.2。保留正面装饰浅槽和左侧R1外角；八个内侧装饰槽全部移至盖板。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "958d54bec23c0a5c"
+      "part_identity": "9232a759f8b444e9"
     },
     {
       "id": "camera_guard",
@@ -77,7 +77,7 @@
       "source": "default",
       "procurement_status": "external_procurement_required",
       "required_user_evidence": [],
-      "supply_risk": "原结构胶层沿用，正反面装饰嵌件底部胶层0.05mm；内侧跨缝长块仅盖板侧施胶，前盖部分干配；胶种及强度待试样，辅料不计入18个定制部件。"
+      "supply_risk": "整面盖板承台胶层0.2 mm；正反面装饰底部胶层0.05 mm。内侧八件全部胶接盖板，禁止胶液进入导向腔与铰链口；胶种及强度仍需试样。"
     },
     {
       "id": "lens_insert",
@@ -152,7 +152,7 @@
       "manufacturer": "Project custom",
       "part_number": "DUO-INNER-BLACK-HEADER-R1",
       "source": "default",
-      "description": "PETG；62×18×0.7，圆角0.8；跨前盖/盖板浅座，仅胶接盖板侧。",
+      "description": "PETG；62×18×0.7，圆角0.8；完整浅座全部在整面盖板上。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
       "part_identity": "98f2d380838b511c"
@@ -165,7 +165,7 @@
       "manufacturer": "Project custom",
       "part_number": "DUO-INNER-BLUE-GRID-R1",
       "source": "default",
-      "description": "PETG；62×20×0.7；两排五列，凹线宽0.5深0.25，整体单件；仅胶接盖板侧。",
+      "description": "PETG；62×20×0.7；两排五列，凹线宽0.5深0.25，整体单件；完整胶接盖板。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
       "part_identity": "d07882a02170080f"
@@ -204,7 +204,7 @@
       "manufacturer": "Project custom",
       "part_number": "DUO-INNER-WHITE-KEY-R1",
       "source": "default",
-      "description": "PETG；24×9×0.7，中央竖向凹线宽0.5深0.25，整体单件，胶接前盖。",
+      "description": "PETG；24×9×0.7，中央竖向凹线宽0.5深0.25，整体单件，胶接整面盖板。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
       "part_identity": "7d0b2e04a7a5e82c"
@@ -230,7 +230,7 @@
       "manufacturer": "Project custom",
       "part_number": "DUO-INNER-LOWER-LEFT-R1",
       "source": "default",
-      "description": "PETG；24×10×0.7，圆角0.8，胶接前盖。",
+      "description": "PETG；24×10×0.7，圆角0.8，胶接整面盖板。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
       "part_identity": "bf65dd5588360db2"

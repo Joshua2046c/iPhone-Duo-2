@@ -94,7 +94,7 @@
       "source": "default"
     },
     "retainer_attachment": {
-      "value": "压盖三边胶粘于固定台阶，铰链侧开口；胶与滑动槽隔开，无螺钉",
+      "value": "整面盖板嵌入前盖周边配套台阶，固定承台留0.2 mm胶层；铰链侧保留护轴片进出口，胶与滑道隔开，无螺钉。",
       "source": "default"
     },
     "delivery": {
@@ -241,7 +241,7 @@
       "source": "default"
     },
     "inner_decoration": {
-      "value": "前盖背面及盖板上的嵌件按参考图从上至下：黑色长方块、凹线分成两排十格的蓝色长方块、蓝块右下方两个圆角短条、左侧中央有凹线的白色长方块与右侧小圆饼，底部两个黑色长方块。每个嵌件均留浅凹定位空间。",
+      "value": "内侧黑色长块、两排十格蓝块、两个圆角短条、白色双格块、小圆饼及底部两个黑块的定位槽全部移到转轴保护片盖板上。",
       "source": "user"
     },
     "inner_decoration_defaults": {
@@ -296,7 +296,7 @@
           ]
         },
         "round_disk_colour": "yellow",
-        "attachment": "顶部黑块和蓝块是各自独立整体嵌件，跨分件缝但仅盖板侧涂胶，前盖侧干配，不封死可拆分件。"
+        "attachment": "八个内侧嵌件均完整胶接整面盖板，无跨分件缝；盖板可带八件整体拆下。"
       },
       "source": "default"
     },
@@ -312,6 +312,31 @@
         "method": "开口轮廓上下转角R1，开口两端各拓宽1以保持原矩形避让范围；触手外侧U形边缘R0.3。壳体四角平面轮廓R1。",
         "opening_turn_radius_mm": 1,
         "opening_extension_per_end_mm": 1
+      },
+      "source": "default"
+    },
+    "full_retainer": {
+      "value": "转轴保护片盖板采用略小于前盖的整面形状，贴合前盖并设置配套周边盒盖台阶；加大圆桩直径和滑道宽度。",
+      "source": "user"
+    },
+    "full_retainer_defaults": {
+      "value": {
+        "panel_width_mm": 85,
+        "panel_height_mm": 118.6,
+        "panel_total_thickness_mm": 1.2,
+        "panel_right_radius_mm": 10.15,
+        "panel_left_radius_mm": 0.6,
+        "seat_width_mm": 85.4,
+        "seat_height_mm": 119,
+        "seat_depth_mm": 1.4,
+        "side_clearance_mm": 0.2,
+        "bondline_mm": 0.2,
+        "pin_diameter_mm": 3.2,
+        "slot_width_mm": 4.2,
+        "slot_length_mm": 23.3,
+        "transverse_clearance_per_side_mm": 0.5,
+        "axial_center_travel_mm": 20.1,
+        "hinge_mouth_floor_front_local_z_mm": 1.2
       },
       "source": "default"
     }

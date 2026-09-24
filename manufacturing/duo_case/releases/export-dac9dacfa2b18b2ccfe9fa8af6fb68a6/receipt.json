@@ -1,31 +1,31 @@
 {
   "designId": "duo_case",
-  "revision": "67643a124cf3e19437175bb8979bfd22538c212846b13b41baf827c30707b9c0",
+  "revision": "917ec63234a3b6575a5150d354f6b7f0cebe55db23bbb54f83daf43452e71b9a",
   "schemaVersion": 2,
-  "exportId": "export-97ebf4ad665d2c62eef7d5558ac3bbb8",
-  "generatedAt": "2026-09-24T20:22:18.147Z",
-  "designSha256": "72d24c3b1f21eb00988fbdda7bc0f57393a235a622509a7ca25469cb91b86864",
+  "exportId": "export-dac9dacfa2b18b2ccfe9fa8af6fb68a6",
+  "generatedAt": "2026-09-24T22:49:17.510Z",
+  "designSha256": "d8b57074b05db691e0536997d85adbb49448e13212b395eee848cfe317b925e9",
   "role": "phone_case",
-  "stateHash": "073fe593ea57b4a0c230969490db08ada74ad6378cb01ab1c5e786fd0344eb55",
+  "stateHash": "2564fff17a859a35c921d9eb8936e5a54b9d828c173e23895e578dab9c35175c",
   "stateManifest": {
     "schemaVersion": 3,
     "designId": "duo_case",
     "role": "phone_case",
     "design": {
-      "revision": "67643a124cf3e19437175bb8979bfd22538c212846b13b41baf827c30707b9c0",
-      "designSha256": "fbd88259789e4fdf8c40f854256393497e57a86de170308a15a80470489c1c37",
-      "manifestSha256": "6404673c2d4613c3a7cc659105f09697d41846fab56cbb2977fc05ec80b77b11",
-      "stepSha256": "1fbaa1749a7eb73bfd93f52555f7e2441cd4b7a90e5187a35b0e1fd16b25605f",
+      "revision": "917ec63234a3b6575a5150d354f6b7f0cebe55db23bbb54f83daf43452e71b9a",
+      "designSha256": "791cfb7ca35162c0596882f5967036c4cc611e21d00305c5c2252fe59b9a4837",
+      "manifestSha256": "0328ef9e287f8867774561ecd7b67b6056f1f0a6ac5b6d69e67e5ecff23aac76",
+      "stepSha256": "e07855e263abc1f4d85511c657c85368e775f4e363eaa46e79bfccfe50d97d0a",
       "pcbReleases": []
     },
     "brief": {
       "path": "design/duo_case/README.md",
-      "sha256": "371a4f0e48224805071c05d48b4d24a0fe74de7f10898582e0192c77eb346455"
+      "sha256": "e499908884083ea518f09a9e09d9f0a86a41bc81457eb9211300804098a68261"
     },
     "requirement": {
       "artifactContractPath": "product/contract.json",
-      "artifactContractSha256": "e2f7eefecec3622b79be253add06eab2fa3d2629dead9e79e4284a33256d73ae",
-      "designRequirementSha256": "0df7875c0f2891f0c787181c3c6b2209eb5027ffe5ecedd7ede28be3dce4b662",
+      "artifactContractSha256": "3e000a3c470e2b623afde13b3e4726ed2f2dbd5e5113970c36240dbe5b620bcb",
+      "designRequirementSha256": "e92b1779cc51422773fea5631fb8b3ea8243dad47463a8387c22f4ec6fea2a06",
       "inputs": [
         {
           "role": "external-reference",
@@ -147,11 +147,11 @@
         "step"
       ]
     },
-    "stateHash": "073fe593ea57b4a0c230969490db08ada74ad6378cb01ab1c5e786fd0344eb55"
+    "stateHash": "2564fff17a859a35c921d9eb8936e5a54b9d828c173e23895e578dab9c35175c"
   },
   "buildArtifacts": {
-    "manifestSha256": "6404673c2d4613c3a7cc659105f09697d41846fab56cbb2977fc05ec80b77b11",
-    "stepSha256": "1fbaa1749a7eb73bfd93f52555f7e2441cd4b7a90e5187a35b0e1fd16b25605f"
+    "manifestSha256": "0328ef9e287f8867774561ecd7b67b6056f1f0a6ac5b6d69e67e5ecff23aac76",
+    "stepSha256": "e07855e263abc1f4d85511c657c85368e775f4e363eaa46e79bfccfe50d97d0a"
   },
   "exportAlgorithm": {
     "version": 1,
@@ -161,7 +161,7 @@
     "arrow_insert/arrow_insert": "2d47517e87feca727588c521529e40417a095f52f6f75e72696bd66cd252d612",
     "back_cover/back_cover": "e48fa8903fafe738d2d71500db7e20836ea4c0753f2c78c44ec2709bcec6119b",
     "camera_guard/camera_guard": "cb9cb22b359d7f54f8899dee81bc1be78aa93c5a6cde4f7d9dbc3329dd23b3b6",
-    "front_cover/front_cover": "f22ba235e05a49b52a3603109ea8d8ab6ac0c8858b287ee42b76f8269197d23f",
+    "front_cover/front_cover": "acee986049e1be4fce9490c6d4ca793a2a36143a58d754f01167180a40dafd40",
     "indicator_green/indicator_green": "96ff5f15ac97da17896568bc25dd8d0443bf4e85fe626e59922e7471a989b687",
     "indicator_red/indicator_red": "ea3c05ffec33ee416fc5e3707b975738d9407e10a32cfe02414ba10fbba66628",
     "indicator_yellow/indicator_yellow": "fe03239939bfb8b87012dc5318417a1ba7885c7e43c18c98488abe5c1bf5e15a",
@@ -169,7 +169,7 @@
     "inner_blue_grid/inner_blue_grid": "6deceae143b1b5d77c3723ec9c1b2b4fd59ac97f135d2cb7e6019015cc1264a3",
     "inner_controls/inner_controls": "86153a72b4f64003339101c0e5362b925eddad06213abb33198facbb2b0d04a9",
     "lens_insert/lens_insert": "14218db52bcee52f068082b19358abba8153aba6295f68410b984820c2673e75",
-    "retainer/retainer": "24c65c7ee96882903a9ba7fc820f4866a530773f605a0495f8db471169ec04f3",
+    "retainer/retainer": "680c14f2ec0d7f41536526e31854023dd9026c618454c3ab8e68bb6e58481f7c",
     "spine/spine": "ce31de648986daf78717f280dac2c2166ea9c38fbc297d8bc5d105385926678f"
   },
   "assetHashes": {},
@@ -177,7 +177,7 @@
     "arrow_insert": "59d9ad270876c767709f6b6bc427fd853efbace780762058a3a6c0b1942b6877",
     "back_cover": "c4cd282f0018739e1f179f12b74dbb241e52541d1d59c0f833a7da3500a0e77c",
     "camera_guard": "b88f43a91d9eda71dab1ce5599e73e62b838c3d5e63b97aaf40d87d2532e1baf",
-    "front_cover": "39fdde062b7d54d6349737448edb7b4f939b78f09e632bdca3d8094aeb95fdd0",
+    "front_cover": "86ee977cc9c61473498fadd7116ffde065b2b1766e10c2e49b3aad7c562074cf",
     "indicator_green": "fe3f02569295747549743000d16b4e7706815528fcac785953c0fc1f64a3a6a2",
     "indicator_red": "c488370651160bfd32bf1368a99a166621f39d0b2806ff1947793b3ac502f6e4",
     "indicator_yellow": "5edbdeb9c661f5bc12ffd8a66ac26d029d1cdaebe94cf4c04d306ac109a8d16b",
@@ -190,8 +190,8 @@
     "inner_white_key": "5ef6f247dd4d31ba5a398e5d691d4732f6184bb376f02e3a3453be41c0c7fed3",
     "inner_yellow_disk": "22c006eef7521e1e65e3debac337f630a48b8d473926a7563c34cfd5a2713b3f",
     "lens_insert": "d8eb2b6227df6b6d65f09e62fea703842741a8e899a76297a649e9b4951d96e6",
-    "retainer": "da4afa829c8edc91bdcbadbec5fe90fdf43b8367a9c5a55178f74023a2fbb61a",
-    "spine": "c16ee90eaddf41a4cf59a211b771a412724fd58aa009211ab685cce1294f3fde"
+    "retainer": "40ff6bd58e1af1d6d6f24ac0f38c6fe8175fad6449792bba42bb8482b601bd9e",
+    "spine": "c62fdf3dbbac4c03bdcf23427e7ce33c93b26bd575299c6c794d168de17e22cc"
   },
   "runtime": {
     "manifestHash": "56a1de5d760e9f5c1dd991c57c86f24fbfb7da361b3d55b9d4cb65cdabe66a74",
@@ -202,10 +202,10 @@
   },
   "artifacts": [
     {
-      "path": "manufacturing/duo_case/releases/export-97ebf4ad665d2c62eef7d5558ac3bbb8/model.step",
+      "path": "manufacturing/duo_case/releases/export-dac9dacfa2b18b2ccfe9fa8af6fb68a6/model.step",
       "role": "model/step",
-      "sha256": "1fbaa1749a7eb73bfd93f52555f7e2441cd4b7a90e5187a35b0e1fd16b25605f",
-      "sizeBytes": 1356641
+      "sha256": "e07855e263abc1f4d85511c657c85368e775f4e363eaa46e79bfccfe50d97d0a",
+      "sizeBytes": 1365821
     }
   ],
   "interference": {
@@ -213,8 +213,8 @@
     "counts": {
       "objects": 18,
       "pairs": 153,
-      "exact": 0,
-      "cached": 21,
+      "exact": 22,
+      "cached": 1,
       "interference": 0,
       "undeclared": 0,
       "over_budget": 0,
@@ -227,9 +227,9 @@
     "algorithm": "hmac-sha256",
     "keyId": "6293cb717f4fe34d12238dabee613b05",
     "projectId": "991d92af-8dfa-49d2-9edb-b9c884fc07c9",
-    "receiptPath": "manufacturing/duo_case/releases/export-97ebf4ad665d2c62eef7d5558ac3bbb8/receipt.json",
-    "payloadSha256": "c445efb65f84eda7313aba1ff46939adbd7bbe13f843d6666a3bcbc30dc798e3",
-    "mac": "1300e4fbee9be82700ee9dcb7f106c896bff0f81df815ea7e625d36beb764c8c"
+    "receiptPath": "manufacturing/duo_case/releases/export-dac9dacfa2b18b2ccfe9fa8af6fb68a6/receipt.json",
+    "payloadSha256": "afc9f6f25745b7480a637eb593456eb3e63dbe2055be17bcb2a252b864d1a475",
+    "mac": "d11bc20c2b3f887a4accfaf4a07e427579f4969cee272b4b0466cb011b74ff5b"
   },
   "status": "handoff"
 }
