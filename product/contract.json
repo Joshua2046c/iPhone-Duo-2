@@ -49,7 +49,7 @@
     {
       "id": "front_decoration_seats",
       "kind": "adhesive_joint",
-      "description": "右中向内三角、左上蓝白一体半球及三个等距小球均坐入浅座；下部胶囊浅槽不贯穿。",
+      "description": "右中向内三角、左上蓝白一体半球及三个等距小球均坐入浅座；下部胶囊浅槽不贯穿。 上部增加按蓝色标注走向的窄浅折线槽，拐点圆滑过渡。",
       "source": "user_requested",
       "required": true
     },
@@ -164,6 +164,12 @@
       "source": "user_requested",
       "description": "用户标出的开口轮廓转角，加大圆弧。",
       "path": "product/references/uploads/20260924T202012879Z-3-mark.png"
+    },
+    {
+      "id": "front_divider_reference",
+      "source": "user_requested",
+      "description": "蓝色手绘圈定前盖上部窄折线凹槽的位置和形状。",
+      "path": "product/references/uploads/20260924T225602106Z-1-image.png"
     }
   ],
   "assembly_story": {
@@ -216,7 +222,8 @@
           "comfort_edge_mark_4",
           "opening_turn_mark_1",
           "opening_turn_mark_2",
-          "opening_turn_mark_3"
+          "opening_turn_mark_3",
+          "front_divider_reference"
         ]
       }
     ]

@@ -288,7 +288,18 @@
     "cap_seat_width": 85.4,
     "cap_seat_radius": 10.35,
     "cap_seat_left_radius": 0.8,
-    "hinge_mouth_floor": 1.2
+    "hinge_mouth_floor": 1.2,
+    "divider": {
+      "width_mm": 0.7,
+      "depth_mm": 0.2,
+      "left_y_mm": 31,
+      "right_y_mm": 48,
+      "rise_start_x_mm": -8,
+      "rise_end_x_mm": 14,
+      "bend_radius_mm": 4,
+      "ends": "延伸至左右外缘",
+      "remaining_roof_mm": 1.2
+    }
   },
   "connections": [
     {

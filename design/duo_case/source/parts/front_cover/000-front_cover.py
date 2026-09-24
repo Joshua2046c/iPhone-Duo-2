@@ -61,6 +61,26 @@ tri=Polygon((-arrow_w/2,0),(arrow_w/2,-arrow_h/2),(arrow_w/2,arrow_h/2),align=No
 body-=pocket(offset(tri,amount=clearance),arrow_x,arrow_y)
 body-=pocket(SlotOverall(slot_l,slot_w),slot_x,slot_y)
 
+
+# Shallow front divider follows the user's marked Pokedex contour.
+line_w=param('front_cover_divider_width',0.7)
+line_d=param('front_cover_divider_depth',0.2)
+line_low=param('front_cover_divider_left_y',31.0)
+line_high=param('front_cover_divider_right_y',48.0)
+line_start=param('front_cover_divider_rise_start_x',-8.0)
+line_end=param('front_cover_divider_rise_end_x',14.0)
+line_r=param('front_cover_divider_bend_radius',4.0)
+path=Polyline((-w/2-1,line_low),(line_start,line_low),(line_end,line_high),(w/2+1,line_high))
+path=fillet(path.vertices(),radius=line_r)
+groove_face=trace(path,line_width=line_w)
+body-=Pos(0,0,t-line_d)*extrude(groove_face,amount=line_d+0.1)
+assert t-depth-line_d>=1.2-1e-6, 'Divider must leave 1.2 mm above the rail cavity'
+lens_seat=Pos(lens_x,lens_y)*Circle(lens_d/2+clearance)
+assert groove_face.distance_to(lens_seat)>3.0, 'Divider too close to lens seat'
+for i in range(3):
+ ball_seat=Pos(balls_x+i*balls_pitch,balls_y)*Circle(balls_d/2+clearance)
+ assert groove_face.distance_to(ball_seat)>3.0, 'Divider too close to indicator seat'
+
 assert t-depth-recess>=1.2-1e-6
 assert len(body.solids())==1
 body.color=Color(0.80,0.015,0.055)

@@ -54,7 +54,7 @@
           "target": "front_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/front_cover/000-front_cover.py",
-          "sha256": "acee986049e1be4fce9490c6d4ca793a2a36143a58d754f01167180a40dafd40"
+          "sha256": "2ad8dc1931dbccf230e18df9099056192d119ea8409b500bb1baee741361421c"
         }
       ],
       "dependencies": []
@@ -272,7 +272,7 @@
       "label": "04 整面台阶前盖",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "86ee977cc9c61473498fadd7116ffde065b2b1766e10c2e49b3aad7c562074cf",
+      "shapeHash": "ffc1094ef2d9cbddf174265cae703750bec2792fdcad4416b71fad204a96409b",
       "transform": {
         "positionMm": [
           0,
@@ -673,7 +673,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T22:49:17.510Z",
+  "updatedAt": "2026-09-24T22:57:30.815Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -806,7 +806,14 @@
       "front_cover_left_corner_radius": 1,
       "front_cover_cap_seat_radius": 10.35,
       "front_cover_cap_seat_left_radius": 0.8,
-      "front_cover_cap_bond_gap": 0.2
+      "front_cover_cap_bond_gap": 0.2,
+      "front_cover_divider_width": 0.7,
+      "front_cover_divider_depth": 0.2,
+      "front_cover_divider_left_y": 31,
+      "front_cover_divider_right_y": 48,
+      "front_cover_divider_rise_start_x": -8,
+      "front_cover_divider_rise_end_x": 14,
+      "front_cover_divider_bend_radius": 4
     },
     "camera_guard": {
       "camera_guard_inner_width": 55,

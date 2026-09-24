@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "edf3e661d7f480d550fafddd95c374cc4cee4676e45be4fa96a2224a227d1214",
+  "requirements_digest": "132d7e0aff08dbfa067b3571ad1c9f40f55cde92a11e36b3e39ee5cc255735ac",
   "items": [
     {
       "id": "back_cover",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT-COVER-R10",
+      "part_number": "DUO-FRONT-COVER-R11",
       "source": "default",
-      "description": "PETG红色前盖87.8×121.5×4；整面台阶座85.4×119深1.4；左侧49×115.4收纳腔顶深2.6，铰链口底高1.2；双销Ø3.2。保留正面装饰浅槽和左侧R1外角；八个内侧装饰槽全部移至盖板。",
+      "description": "PETG红色前盖87.8×121.5×4；整面台阶座85.4×119深1.4；左侧49×115.4收纳腔顶深2.6，铰链口底高1.2；双销Ø3.2。保留正面装饰浅槽和左侧R1外角；八个内侧装饰槽全部移至盖板。 正面增加宽0.7深0.2的圆滑折线分界槽，槽下保留至少1.2厚。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "9232a759f8b444e9"
+      "part_identity": "d334f890efccb102"
     },
     {
       "id": "camera_guard",
