@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "buildNumber": 7,
+  "sourceHash": "148c8f1752f7d0d90028747b6e44b71333d68901837b9bf19194d35190e48f7e",
+  "units": "mm",
+  "coordinateFrame": "replicator-world-z-up",
+  "targets": [
+    {
+      "id": "back_cover",
+      "label": "back_cover",
+      "cells": [
+        {
+          "id": "back_cover",
+          "target": "back_cover",
+          "order": 0,
+          "path": "design/duo_case/source/parts/back_cover/000-back_cover.py",
+          "sha256": "918754cad0e0debb159c5e681c17b7736f5644466dcacb0eb2b822175125115e"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "spine",
+      "label": "spine",
+      "cells": [
+        {
+          "id": "spine",
+          "target": "spine",
+          "order": 0,
+          "path": "design/duo_case/source/parts/spine/000-spine.py",
+          "sha256": "76a971b8cdceed9e892e73175fa9f9b05222d2907a9977cfe9b614f0fa2d4bbd"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "retainer",
+      "label": "retainer",
+      "cells": [
+        {
+          "id": "retainer",
+          "target": "retainer",
+          "order": 0,
+          "path": "design/duo_case/source/parts/retainer/000-retainer.py",
+          "sha256": "0c97293fcb45a95deb8e4422ade206a2db2271e604856d21bed90f1f24a3311b"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "front_cover",
+      "label": "front_cover",
+      "cells": [
+        {
+          "id": "front_cover",
+          "target": "front_cover",
+          "order": 0,
+          "path": "design/duo_case/source/parts/front_cover/000-front_cover.py",
+          "sha256": "4100623f480f0aed700f3eeeb1ddb7e0f95dcb0923732c0ccaad5bf1ecb24f1e"
+        }
+      ],
+      "dependencies": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "back_cover",
+      "target": "back_cover",
+      "label": "01 弹性背盖",
+      "kind": "generated",
+      "shapeHash": "4cbdf57705d423368efae5674cacf90109938fd2696f2782356d6fb85e81c4b8",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          0
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "spine",
+      "target": "spine",
+      "label": "02 滑动护轴片",
+      "kind": "generated",
+      "shapeHash": "a95fd398ea369638202cc7f27281292f79f9d34039caad74e8a65f1c555fbfeb",
+      "transform": {
+        "positionMm": [
+          -43.7,
+          0,
+          2.25
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "retainer",
+      "target": "retainer",
+      "label": "03 滑动压盖",
+      "kind": "generated",
+      "shapeHash": "7df60292990acb4eecfd2dd690f7c9e764a033f110d8255f2b07403acfd87d8b",
+      "transform": {
+        "positionMm": [
+          -27.25,
+          -11.5,
+          -0.8
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "front_cover",
+      "target": "front_cover",
+      "label": "04 完整前盖",
+      "kind": "generated",
+      "shapeHash": "42e4f6e09621dda84dc25203f6d408748347f8c993e9f2d2b3381a081d9d4a64",
+      "transform": {
+        "positionMm": [
+          0,
+          0,
+          14.85
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    }
+  ],
+  "assets": [],
+  "fits": [],
+  "updatedAt": "2026-09-24T03:46:21.066Z",
+  "parameters": {
+    "back_cover": {
+      "back_cover_fit_clearance": 0.25,
+      "back_cover_wall": 1.6,
+      "back_cover_plate": 2.4,
+      "back_cover_corner_radius": 10,
+      "back_cover_corner_inward": 0.4,
+      "back_cover_lip_height": 0.7,
+      "back_cover_corner_zone": 15,
+      "back_cover_camera_width": 55,
+      "back_cover_camera_height": 23,
+      "back_cover_camera_x": 10,
+      "back_cover_camera_y": 42.5,
+      "back_cover_volume_x": 6,
+      "back_cover_volume_opening": 34,
+      "back_cover_power_y": 18,
+      "back_cover_power_opening": 21,
+      "back_cover_shutter_y": -27,
+      "back_cover_shutter_opening": 23,
+      "back_cover_bottom_opening": 50,
+      "back_cover_channel_end_x": -12.7,
+      "back_cover_channel_center_y": -11.5,
+      "back_cover_channel_height": 75,
+      "back_cover_channel_depth": 1.2,
+      "back_cover_seat_border": 2,
+      "back_cover_seat_depth": 0.4,
+      "back_cover_pin_diameter": 2.4,
+      "back_cover_pin_x": -29.2,
+      "back_cover_pin_y1": -30,
+      "back_cover_pin_y2": 15,
+      "back_cover_pin_tip_z": 0.1
+    },
+    "spine": {
+      "spine_height": 117.8,
+      "spine_thickness": 0.6,
+      "spine_bridge_span": 11.5,
+      "spine_bend_radius": 1.6,
+      "spine_tail_length": 18.5,
+      "spine_tail_height": 73,
+      "spine_tail_center_y": -11.5,
+      "spine_glue_tab_length": 8,
+      "spine_glue_tab_height": 104,
+      "spine_slot_length": 14.5,
+      "spine_slot_width": 3.2,
+      "spine_slot_center_from_bend": 9.25,
+      "spine_slot_y1": -30,
+      "spine_slot_y2": 15
+    },
+    "retainer": {
+      "retainer_width": 33.1,
+      "retainer_height": 78.6,
+      "retainer_thickness": 1,
+      "retainer_roof_relief": 0.2,
+      "retainer_end_bond_land": 2.3,
+      "retainer_side_bond_land": 2.1
+    },
+    "front_cover": {
+      "front_cover_width": 87.8,
+      "front_cover_height": 121.5,
+      "front_cover_thickness": 2.2,
+      "front_cover_corner_radius": 11.6,
+      "front_cover_groove_end_x": -35.4,
+      "front_cover_groove_height": 104.6,
+      "front_cover_groove_y": 0,
+      "front_cover_groove_depth": 1
+    }
+  }
+}

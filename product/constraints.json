@@ -1,0 +1,24 @@
+{
+ "schema_version":1,
+ "status":"ready_for_concept_fit_check",
+ "units":"mm",
+ "coordinate_system":"背盖中心XY，X负方向为铰链，Y正方向为顶部，背盖外表面Z=0，手机从Z=2.4起；不导入虚构手机实体",
+ "phone":{"height":117.8,"closed_width":84.1,"closed_thickness":11.3,"rear_half_thickness":5.2,"open_width":164.6,"source":"user_images","mechanical_drawing_verified":false},
+ "back":{"fit_clearance_per_side":0.25,"corner_radius":10,"wall":1.6,"plate":2.4,"corner_inward_lip":0.4,"camera_opening":{"width":55,"height":23,"radius":11.5,"center":[10,42.5]},"volume_opening":{"center_x":6,"width":34},"power_opening":{"center_y":18,"length":21},"camera_button_opening":{"center_y":-27,"length":23},"bottom_opening_width":50,"source":"default_image_estimate"},
+ "slider":{"sheet_thickness":0.6,"nominal_travel":11.3,"slot_length":14.5,"slot_width":3.2,"pin_diameter":2.4,"pin_center_x":-29.2,"pin_y":[-30,15],"slot_center_x":-34.45,"slot_y":[-30,15],"closed_tail_x":[-43.7,-25.2],"open_tail_x":[-32.4,-13.9],"tail_y":[-48,25],"pocket_x":[-44,-12.7],"pocket_y":[-49,26],"pocket_ceiling_z":1.2,"tail_z":[0.35,0.95],"pin_tip_z":0.1,"cap_inner_roof_z":0,"bend_center_x":-43.7,"bend_centerline_radius":1.6,"lower_bend_z":2.25,"upper_bend_z":13.75,"vertical_protection_height":117.8,"vertical_bridge_span":11.5,"source":"default"},
+ "retainer":{"outer_x":[-43.8,-10.7],"outer_y":[-50.8,27.8],"base_z":[-0.8,0.2],"sliding_roof_z":0,"bond_land_z":0.2,"back_seat_z":0.4,"bondline":0.2,"attachment":"三边限胶胶接；左侧入口无横向挡墙","source":"default"},
+ "front":{"outer_width":87.8,"outer_height":121.5,"corner_radius":11.6,"thickness":2.2,"bottom_z":14.85,"tab_x":[-43.7,-35.7],"tab_y":[-52,52],"tab_z":[15.05,15.65],"bond_pocket_ceiling_z":15.85,"bondline":0.2,"source":"default"},
+ "connections":[
+  {"id":"phone_to_back","implementation":"free","kind":"elastic_corner_lips","status":"modeled_default_not_physically_tested"},
+  {"id":"spine_to_back","implementation":"free","kind":"two_pin_two_slot_slider","status":"dimensioned"},
+  {"id":"cap_to_back","implementation":"free","kind":"three_edge_adhesive","status":"dimensioned_adhesive_process_test_needed"},
+  {"id":"spine_to_front","implementation":"free","kind":"recessed_adhesive_tab","status":"dimensioned_adhesive_process_test_needed"}
+ ],
+ "unresolved_roles":[],
+ "risks":[
+  {"id":"real_device_geometry","severity":"prototype_limit","description":"无官方机械图；镜头、按键、角半径为图片估值，只可试配"},
+  {"id":"kinematics","severity":"prototype_limit","description":"11.3 mm为行程假设；真实铰链扫掠、柔性变形及自动回缩未验证"},
+  {"id":"sheet_life","severity":"prototype_limit","description":"TPU薄片摩擦、疲劳、屈曲和槽口撕裂需小样试验"},
+  {"id":"bond","severity":"prototype_limit","description":"0.2 mm设计胶层，不代表已选胶种能粘接TPU；需表面处理及剥离试验"}
+ ]
+}

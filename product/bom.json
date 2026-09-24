@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "status": "ready_for_fit_check",
+  "bom_ready": true,
+  "requirements_digest": "654a45b51599159a3ee4002cdda3c6ef9eddc41b0b5a83eeb0b48b3c14aff0f7",
+  "items": [
+    {
+      "id": "back_cover",
+      "role": "back_cover",
+      "name": "弹性半包背盖",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-BACK_COVER-R1",
+      "source": "default",
+      "description": "TPU 95A；几何尺寸见 constraints.json，试配版，非实机认证。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "22ef8af74f49b507"
+    },
+    {
+      "id": "spine",
+      "role": "spine",
+      "name": "滑动护轴薄片",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-SPINE-R1",
+      "source": "default",
+      "description": "TPU flexible sheet 0.6 mm；几何尺寸见 constraints.json，试配版，非实机认证。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "522778ea69d9dd46"
+    },
+    {
+      "id": "retainer",
+      "role": "retainer",
+      "name": "滑动压盖",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-RETAINER-R1",
+      "source": "default",
+      "description": "PETG；几何尺寸见 constraints.json，试配版，非实机认证。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "56071584db2ea347"
+    },
+    {
+      "id": "front_cover",
+      "role": "front_cover",
+      "name": "整面前盖",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-FRONT_COVER-R1",
+      "source": "default",
+      "description": "PETG；几何尺寸见 constraints.json，试配版，非实机认证。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "f6947c0ceb258e1c"
+    },
+    {
+      "id": "adhesive",
+      "role": "assembly_consumable",
+      "name": "柔性材料兼容胶，设计胶层0.2 mm，胶种需粘接试样确认",
+      "quantity": 1,
+      "source": "default",
+      "procurement_status": "external_procurement_required",
+      "required_user_evidence": [],
+      "supply_risk": "非几何阻塞项；胶接强度未验证，不计入四个定制零件"
+    }
+  ],
+  "unresolved_items": [],
+  "supply_risks": [
+    {
+      "id": "prototype_only",
+      "description": "图片估计机身接口；本BOM仅可进入概念试配CAD，不代表采购或量产就绪。"
+    },
+    {
+      "id": "adhesive_process",
+      "description": "胶品与TPU表面处理及疲劳需验证；CAD已留定量胶层。"
+    }
+  ]
+}
