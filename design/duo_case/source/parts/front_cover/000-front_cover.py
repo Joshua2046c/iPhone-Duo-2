@@ -48,6 +48,31 @@ for i in range(3):
 tri=Polygon((-arrow_w/2,0),(arrow_w/2,-arrow_h/2),(arrow_w/2,arrow_h/2),align=None)
 body-=pocket(offset(tri,amount=clearance),arrow_x,arrow_y)
 body-=pocket(SlotOverall(slot_l,slot_w),slot_x,slot_y)
+
+# Inner face seats. Back-face artwork uses u=-X, v=Y, outward=-Z.
+inner_depth=param('front_cover_inner_recess_depth',0.15)
+inner_gap=param('front_cover_inner_seat_clearance',0.15)
+inner_long_w=param('front_cover_inner_long_width',62.0)
+inner_black_h=param('front_cover_inner_black_height',18.0)
+inner_blue_h=param('front_cover_inner_blue_height',20.0)
+inner_top_y=param('front_cover_inner_top_y',31.0)
+inner_blue_y=param('front_cover_inner_blue_y',8.0)
+inner_left_x=param('front_cover_inner_left_x',20.0)
+inner_white_w=param('front_cover_inner_white_width',24.0)
+inner_white_h=param('front_cover_inner_white_height',9.0)
+inner_white_y=param('front_cover_inner_white_y',-18.0)
+inner_lower_w=param('front_cover_inner_lower_width',24.0)
+inner_lower_h=param('front_cover_inner_lower_height',10.0)
+inner_lower_y=param('front_cover_inner_lower_y',-40.0)
+inner_corner=param('front_cover_inner_corner_radius',0.8)
+for xx,yy,ww,hh in ((0,inner_top_y,inner_long_w,inner_black_h),
+                     (0,inner_blue_y,inner_long_w,inner_blue_h),
+                     (inner_left_x,inner_white_y,inner_white_w,inner_white_h),
+                     (inner_left_x,inner_lower_y,inner_lower_w,inner_lower_h)):
+ seat=RectangleRounded(ww+2*inner_gap,hh+2*inner_gap,inner_corner+inner_gap)
+ body-=Pos(xx,yy,-0.1)*extrude(seat,amount=inner_depth+0.1)
+assert t-depth-recess>=1.2-1e-6
+
 assert t-depth-recess>=1.2-1e-6, 'Decoration pocket leaves less than 1.2 mm over storage'
 assert len(body.solids())==1
 print('Storage roof below outer pockets:',t-depth-recess,'mm')

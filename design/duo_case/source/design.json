@@ -40,7 +40,7 @@
           "target": "retainer",
           "order": 0,
           "path": "design/duo_case/source/parts/retainer/000-retainer.py",
-          "sha256": "0c97293fcb45a95deb8e4422ade206a2db2271e604856d21bed90f1f24a3311b"
+          "sha256": "24c65c7ee96882903a9ba7fc820f4866a530773f605a0495f8db471169ec04f3"
         }
       ],
       "dependencies": []
@@ -54,7 +54,7 @@
           "target": "front_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/front_cover/000-front_cover.py",
-          "sha256": "10d22b0aa8fbc689c61a92a255eb7d35b2f4abfdb52ea72cf635751435ed9305"
+          "sha256": "8f438fc96f8ee87673eae7bef2a76672daaef08097c4e002370545132d4fa658"
         }
       ],
       "dependencies": []
@@ -142,6 +142,48 @@
         }
       ],
       "dependencies": []
+    },
+    {
+      "id": "inner_black_header",
+      "label": "inner_black_header",
+      "cells": [
+        {
+          "id": "inner_black_header",
+          "target": "inner_black_header",
+          "order": 0,
+          "path": "design/duo_case/source/parts/inner_black_header/000-inner_black_header.py",
+          "sha256": "5cacca2e57eeed02fd5ef7a90c03d9a7a3653ec5f7205764e10d5dc8bf512985"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "inner_blue_grid",
+      "label": "inner_blue_grid",
+      "cells": [
+        {
+          "id": "inner_blue_grid",
+          "target": "inner_blue_grid",
+          "order": 0,
+          "path": "design/duo_case/source/parts/inner_blue_grid/000-inner_blue_grid.py",
+          "sha256": "6deceae143b1b5d77c3723ec9c1b2b4fd59ac97f135d2cb7e6019015cc1264a3"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "inner_controls",
+      "label": "inner_controls",
+      "cells": [
+        {
+          "id": "inner_controls",
+          "target": "inner_controls",
+          "order": 0,
+          "path": "design/duo_case/source/parts/inner_controls/000-inner_controls.py",
+          "sha256": "86153a72b4f64003339101c0e5362b925eddad06213abb33198facbb2b0d04a9"
+        }
+      ],
+      "dependencies": []
     }
   ],
   "objects": [
@@ -200,9 +242,10 @@
     {
       "id": "retainer",
       "target": "retainer",
-      "label": "03 滑动压盖",
+      "label": "03 内侧装饰盖板",
+      "material": "petg",
       "kind": "generated",
-      "shapeHash": "4a722963a75122eb4cd248e136b4c4c41f04931baf436ab92deab1272795e003",
+      "shapeHash": "da4afa829c8edc91bdcbadbec5fe90fdf43b8367a9c5a55178f74023a2fbb61a",
       "transform": {
         "positionMm": [
           -18.3,
@@ -229,7 +272,7 @@
       "label": "04 上盖与装饰浅槽",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "7d673a9d546dde0f6dfa73356e3465c52836721a926c5d6d99668fd40e984f4f",
+      "shapeHash": "ff27cae5895c7fdce96acb25b39679cc6e80ab6430b388d2d484b8f6e9c76aef",
       "transform": {
         "positionMm": [
           0,
@@ -282,7 +325,7 @@
       "label": "06 蓝白一体双色嵌件",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "bfc0011f1b27244c9ebd94ac59f90f0c2ac8941d2897cf0a285b5750b9e275ed",
+      "shapeHash": "d8eb2b6227df6b6d65f09e62fea703842741a8e899a76297a649e9b4951d96e6",
       "transform": {
         "positionMm": [
           -29,
@@ -410,11 +453,227 @@
         ]
       },
       "datums": []
+    },
+    {
+      "id": "inner_black_header",
+      "target": "inner_black_header",
+      "label": "11 内侧黑色长块",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "553e91e1563685d406207a84b7a5b55bca8e441531d38d64e805a506315a9dd1",
+      "transform": {
+        "positionMm": [
+          0,
+          31,
+          14.95
+        ],
+        "rotationDeg": [
+          0,
+          180,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "inner_blue_grid",
+      "target": "inner_blue_grid",
+      "label": "12 两排十格蓝块",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "23c7f12a2a968b13ebd57f478e34f16940ebab2a577887519f939e17fadd0f54",
+      "transform": {
+        "positionMm": [
+          0,
+          8,
+          14.95
+        ],
+        "rotationDeg": [
+          0,
+          180,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "inner_bar_left",
+      "target": "inner_controls",
+      "label": "14 左圆角短条",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "526c62602c470c355f9b9cd67d15d0019a1ad8ed2f6361db8e741d4c6ba38bd0",
+      "transform": {
+        "positionMm": [
+          -15,
+          -6,
+          14.95
+        ],
+        "rotationDeg": [
+          0,
+          180,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "inner_bar_right",
+      "target": "inner_controls",
+      "label": "15 右圆角短条",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "c816716f8d63e32d26c8df7561f61e6b62a595790ec183b3994076fc268978ef",
+      "transform": {
+        "positionMm": [
+          -26,
+          -6,
+          14.95
+        ],
+        "rotationDeg": [
+          0,
+          180,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "inner_lower_left",
+      "target": "inner_controls",
+      "label": "17 下方左黑块",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "1aa00276522f3500aa11fc9200f97f32e540a50651798ffa9d2521e1b092d599",
+      "transform": {
+        "positionMm": [
+          20,
+          -40,
+          14.95
+        ],
+        "rotationDeg": [
+          0,
+          180,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "inner_lower_right",
+      "target": "inner_controls",
+      "label": "18 下方右黑块",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "53fa10a399bb476f0536cec4f8ddc02a31fc6a0cbcb68875a404327044aaf658",
+      "transform": {
+        "positionMm": [
+          -20,
+          -40,
+          14.95
+        ],
+        "rotationDeg": [
+          0,
+          180,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "inner_white_key",
+      "target": "inner_controls",
+      "label": "13 白色双格嵌件",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "5ef6f247dd4d31ba5a398e5d691d4732f6184bb376f02e3a3453be41c0c7fed3",
+      "transform": {
+        "positionMm": [
+          20,
+          -18,
+          14.95
+        ],
+        "rotationDeg": [
+          0,
+          180,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "inner_yellow_disk",
+      "target": "inner_controls",
+      "label": "16 黄色小圆饼",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "22c006eef7521e1e65e3debac337f630a48b8d473926a7563c34cfd5a2713b3f",
+      "transform": {
+        "positionMm": [
+          -25,
+          -23,
+          14.95
+        ],
+        "rotationDeg": [
+          0,
+          180,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
     }
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T13:05:11.145Z",
+  "updatedAt": "2026-09-24T13:33:52.361Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -464,7 +723,28 @@
       "retainer_thickness": 1,
       "retainer_roof_relief": 0.2,
       "retainer_end_bond_land": 2.3,
-      "retainer_side_bond_land": 1.4
+      "retainer_side_bond_land": 1.4,
+      "retainer_decor_skin": 0.2,
+      "retainer_decor_recess_depth": 0.15,
+      "retainer_decor_seat_clearance": 0.15,
+      "retainer_inner_long_width": 62,
+      "retainer_inner_black_height": 18,
+      "retainer_inner_blue_height": 20,
+      "retainer_inner_top_y": 31,
+      "retainer_inner_blue_y": 8,
+      "retainer_inner_corner_radius": 0.8,
+      "retainer_inner_bar_length": 10,
+      "retainer_inner_bar_width": 1.6,
+      "retainer_inner_bar_first_u": 15,
+      "retainer_inner_bar_pitch": 11,
+      "retainer_inner_bar_y": -6,
+      "retainer_inner_disk_diameter": 7,
+      "retainer_inner_disk_u": 25,
+      "retainer_inner_disk_y": -23,
+      "retainer_inner_lower_width": 24,
+      "retainer_inner_lower_height": 10,
+      "retainer_inner_lower_u": 20,
+      "retainer_inner_lower_y": -40
     },
     "front_cover": {
       "front_cover_width": 87.8,
@@ -498,7 +778,22 @@
       "front_cover_lower_slot_length": 34,
       "front_cover_lower_slot_width": 2.4,
       "front_cover_lower_slot_x": 0,
-      "front_cover_lower_slot_y": -44
+      "front_cover_lower_slot_y": -44,
+      "front_cover_inner_recess_depth": 0.15,
+      "front_cover_inner_seat_clearance": 0.15,
+      "front_cover_inner_long_width": 62,
+      "front_cover_inner_black_height": 18,
+      "front_cover_inner_blue_height": 20,
+      "front_cover_inner_top_y": 31,
+      "front_cover_inner_blue_y": 8,
+      "front_cover_inner_left_x": 20,
+      "front_cover_inner_white_width": 24,
+      "front_cover_inner_white_height": 9,
+      "front_cover_inner_white_y": -18,
+      "front_cover_inner_lower_width": 24,
+      "front_cover_inner_lower_height": 10,
+      "front_cover_inner_lower_y": -40,
+      "front_cover_inner_corner_radius": 0.8
     },
     "camera_guard": {
       "camera_guard_inner_width": 55,
@@ -532,6 +827,45 @@
     "indicator_green": {
       "indicator_green_radius": 1.8,
       "indicator_green_seat_thickness": 0.25
+    },
+    "inner_black_header": {
+      "inner_black_header_width": 62,
+      "inner_black_header_height": 18,
+      "inner_black_header_thickness": 0.7,
+      "inner_black_header_corner_radius": 0.8
+    },
+    "inner_blue_grid": {
+      "inner_blue_grid_width": 62,
+      "inner_blue_grid_height": 20,
+      "inner_blue_grid_thickness": 0.7,
+      "inner_blue_grid_corner_radius": 0.8,
+      "inner_blue_grid_groove_width": 0.5,
+      "inner_blue_grid_groove_depth": 0.25
+    },
+    "inner_controls": {
+      "inner_white_key_width": 24,
+      "inner_white_key_height": 9,
+      "inner_white_key_thickness": 0.7,
+      "inner_white_key_corner_radius": 0.8,
+      "inner_white_key_groove_width": 0.5,
+      "inner_white_key_groove_depth": 0.25,
+      "inner_bar_left_length": 10,
+      "inner_bar_left_width": 1.6,
+      "inner_bar_left_thickness": 0.7,
+      "inner_bar_right_length": 10,
+      "inner_bar_right_width": 1.6,
+      "inner_bar_right_thickness": 0.7,
+      "inner_yellow_disk_diameter": 7,
+      "inner_yellow_disk_thickness": 0.7,
+      "inner_yellow_disk_edge_radius": 0.15,
+      "inner_lower_left_width": 24,
+      "inner_lower_left_height": 10,
+      "inner_lower_left_thickness": 0.7,
+      "inner_lower_left_corner_radius": 0.8,
+      "inner_lower_right_width": 24,
+      "inner_lower_right_height": 10,
+      "inner_lower_right_thickness": 0.7,
+      "inner_lower_right_corner_radius": 0.8
     }
   }
 }

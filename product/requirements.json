@@ -9,7 +9,7 @@
       "source": "user"
     },
     "part_count": {
-      "value": 10,
+      "value": 18,
       "source": "default"
     },
     "parts": {
@@ -23,7 +23,15 @@
         "向内三角嵌件",
         "红色小球嵌件",
         "黄色小球嵌件",
-        "绿色小球嵌件"
+        "绿色小球嵌件",
+        "内侧黑色长方块",
+        "内侧蓝色十格长方块",
+        "内侧左圆角短条",
+        "内侧右圆角短条",
+        "内侧白色双格长方块",
+        "内侧黄色小圆饼",
+        "内侧下方左黑色长方块",
+        "内侧下方右黑色长方块"
       ],
       "source": "user"
     },
@@ -90,7 +98,7 @@
       "source": "default"
     },
     "delivery": {
-      "value": "10个装配对象的参数化STEP试配模型；蓝白一体嵌件内含2个共面颜色区域，故STEP共11实体；不宣称实机精确适配或寿命已验证。",
+      "value": "18个装配对象的参数化STEP试配模型；正面蓝白一体嵌件分两个共面颜色区域，故共19实体；不宣称实机适配、粘接强度或寿命已验证。",
       "source": "default"
     },
     "verification": {
@@ -150,7 +158,8 @@
         "thickness_mm": 4,
         "pocket_depth_mm": 2.6,
         "retainer_thickness_mm": 1,
-        "remaining_roof_below_decor_mm": 1.2
+        "remaining_roof_below_decor_mm": 1.2,
+        "retainer_decor_outer_skin_mm": 0.2
       },
       "source": "default"
     },
@@ -228,6 +237,66 @@
         "alignment": "正视图蓝色半球与小球轮廓顶边均为Y=51，不是球顶Z高度相等",
         "attachment": "浅槽胶接定位；蓝白嵌件为共面双色区域，同次成形为一个零件",
         "body_colour": "red"
+      },
+      "source": "default"
+    },
+    "inner_decoration": {
+      "value": "前盖背面及盖板上的嵌件按参考图从上至下：黑色长方块、凹线分成两排十格的蓝色长方块、蓝块右下方两个圆角短条、左侧中央有凹线的白色长方块与右侧小圆饼，底部两个黑色长方块。每个嵌件均留浅凹定位空间。",
+      "source": "user"
+    },
+    "inner_decoration_defaults": {
+      "value": {
+        "grid_rows": 2,
+        "grid_columns": 5,
+        "recess_depth_mm": 0.15,
+        "edge_clearance_mm": 0.15,
+        "adhesive_gap_mm": 0.05,
+        "insert_thickness_mm": 0.7,
+        "insert_engagement_mm": 0.1,
+        "protrusion_mm": 0.6,
+        "retainer_outer_skin_mm": 0.2,
+        "retainer_total_thickness_mm": 1.2,
+        "retainer_min_under_pockets_mm": 0.85,
+        "groove_width_mm": 0.5,
+        "groove_depth_mm": 0.25,
+        "groove_remaining_thickness_mm": 0.45,
+        "coordinate_frame": "背面正视图u向右、v向上，对应闭合前盖局部X=-u,Y=v；嵌件朝-Z",
+        "layout_uv_mm": {
+          "inner_black_header": [
+            0,
+            31
+          ],
+          "inner_blue_grid": [
+            0,
+            8
+          ],
+          "inner_bar_left": [
+            15,
+            -6
+          ],
+          "inner_bar_right": [
+            26,
+            -6
+          ],
+          "inner_white_key": [
+            -20,
+            -18
+          ],
+          "inner_yellow_disk": [
+            25,
+            -23
+          ],
+          "inner_lower_left": [
+            -20,
+            -40
+          ],
+          "inner_lower_right": [
+            20,
+            -40
+          ]
+        },
+        "round_disk_colour": "yellow",
+        "attachment": "顶部黑块和蓝块是各自独立整体嵌件，跨分件缝但仅盖板侧涂胶，前盖侧干配，不封死可拆分件。"
       },
       "source": "default"
     }

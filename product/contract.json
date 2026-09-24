@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "fit_check",
-  "summary": "五件基础护轴壳加五个正面装饰嵌件；蓝白半球与底座为一体双色件。",
+  "summary": "五件基础护轴壳、五个正面装饰嵌件和八个背面/盖板嵌件；蓝白半球为一体双色件。",
   "required_interfaces": [
     {
       "id": "phone_fit",
@@ -50,6 +50,13 @@
       "id": "front_decoration_seats",
       "kind": "adhesive_joint",
       "description": "右中向内三角、左上蓝白一体半球及三个等距小球均坐入浅座；下部胶囊浅槽不贯穿。",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "inner_decoration_seats",
+      "kind": "adhesive_joint",
+      "description": "前盖背面及独立盖板具有黑色长块、两排十格蓝块、两短条、白双格块、小圆饼和下方双黑块的浅定位槽；蓝/白分格均为凹线。",
       "source": "user_requested",
       "required": true
     }
@@ -102,6 +109,12 @@
       "source": "user_requested",
       "description": "正面配色与比例参考；三角位置按用户文字放在右侧中部。",
       "path": "product/references/uploads/20260924T104558589Z-1-image.png"
+    },
+    {
+      "id": "pokedex_inner_reference",
+      "source": "user_requested",
+      "description": "前盖背面/独立盖板的嵌件排布及配色参考。",
+      "path": "product/references/uploads/20260924T132742363Z-1-image.png"
     }
   ],
   "assembly_story": {
@@ -122,7 +135,7 @@
       {
         "role": "phone_case",
         "design_id": "duo_case",
-        "description": "五件基础壳加五个正面嵌件；蓝白件为双色共面区域",
+        "description": "双面装饰护轴壳：18个装配对象、19实体的试配模型",
         "delivery_target": "fit_check",
         "required_formats": [
           "step"
@@ -134,7 +147,8 @@
           "camera_guard_bond",
           "open_edge_meeting",
           "closed_hinge_wrap",
-          "front_decoration_seats"
+          "front_decoration_seats",
+          "inner_decoration_seats"
         ],
         "reference_ids": [
           "dimensions_image",
@@ -144,7 +158,8 @@
           "straight_left_image",
           "front_storage_mark",
           "wide_shield_request",
-          "pokedex_front_reference"
+          "pokedex_front_reference",
+          "pokedex_inner_reference"
         ]
       }
     ]

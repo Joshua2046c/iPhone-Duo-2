@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "544ca61b059278ac394e738aecee9c92e3429a7982b3b6072b39faebdff24975",
+  "requirements_digest": "e77e40f20cd91d02df390b891f0e0b5ea3255fa656d166842b45d6b2cc759eac",
   "items": [
     {
       "id": "back_cover",
@@ -36,12 +36,12 @@
       "name": "滑动压盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-RETAINER-R6",
+      "part_number": "DUO-RETAINER-R8",
       "source": "default",
-      "description": "前盖内侧PETG压盖51×118.6×1；内面让位0.2、侧胶边1.4、端胶边2.3；三边胶接。",
+      "description": "PETG红色盖板51×118.6；保留原1mm结构及0.2内让位，外加0.2齐平皮层，总厚1.2；外侧定位槽深0.15，最薄底0.85；原三边胶接及导向面不变。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "57b6476907626700"
+      "part_identity": "27bf4f89fcab54cd"
     },
     {
       "id": "front_cover",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT_COVER-R7",
+      "part_number": "DUO-FRONT-COVER-R8",
       "source": "default",
-      "description": "PETG红色上盖87.8×121.5×4；保留内侧收纳腔及压盖座；五个嵌件浅座与34×2.4胶囊浅槽均深0.2，局部剩余底厚1.2。",
+      "description": "PETG红色上盖87.8×121.5×4；保留内侧收纳腔及压盖座；五个嵌件浅座与34×2.4胶囊浅槽均深0.2，局部剩余底厚1.2。 内侧增加0.15深定位座，白块/左下黑块固定前盖；长黑块/蓝块跨缝部分为干配。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "b6fa8997818ff106"
+      "part_identity": "5fe2ad6e72b255d7"
     },
     {
       "id": "camera_guard",
@@ -77,7 +77,7 @@
       "source": "default",
       "procurement_status": "external_procurement_required",
       "required_user_evidence": [],
-      "supply_risk": "胶种及强度待试样；原有胶层不变，正面嵌件底部胶层0.05mm；辅料不计入10个定制零件"
+      "supply_risk": "原结构胶层沿用，正反面装饰嵌件底部胶层0.05mm；内侧跨缝长块仅盖板侧施胶，前盖部分干配；胶种及强度待试样，辅料不计入18个定制部件。"
     },
     {
       "id": "lens_insert",
@@ -143,6 +143,110 @@
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
       "part_identity": "fa04a943dbaed91f"
+    },
+    {
+      "id": "inner_black_header",
+      "role": "inner_decoration",
+      "name": "内侧黑色长方块",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INNER-BLACK-HEADER-R1",
+      "source": "default",
+      "description": "PETG；62×18×0.7，圆角0.8；跨前盖/盖板浅座，仅胶接盖板侧。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "98f2d380838b511c"
+    },
+    {
+      "id": "inner_blue_grid",
+      "role": "inner_decoration",
+      "name": "内侧蓝色十格长方块",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INNER-BLUE-GRID-R1",
+      "source": "default",
+      "description": "PETG；62×20×0.7；两排五列，凹线宽0.5深0.25，整体单件；仅胶接盖板侧。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "d07882a02170080f"
+    },
+    {
+      "id": "inner_bar_left",
+      "role": "inner_decoration",
+      "name": "内侧左圆角短条",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INNER-BAR-LEFT-R1",
+      "source": "default",
+      "description": "PETG；10×1.6×0.7，两端半圆，胶接盖板。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "fe81a4b9aacb0ebf"
+    },
+    {
+      "id": "inner_bar_right",
+      "role": "inner_decoration",
+      "name": "内侧右圆角短条",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INNER-BAR-RIGHT-R1",
+      "source": "default",
+      "description": "PETG；10×1.6×0.7，两端半圆，胶接盖板。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "e2b22f3a91a805bb"
+    },
+    {
+      "id": "inner_white_key",
+      "role": "inner_decoration",
+      "name": "内侧白色双格长方块",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INNER-WHITE-KEY-R1",
+      "source": "default",
+      "description": "PETG；24×9×0.7，中央竖向凹线宽0.5深0.25，整体单件，胶接前盖。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "7d0b2e04a7a5e82c"
+    },
+    {
+      "id": "inner_yellow_disk",
+      "role": "inner_decoration",
+      "name": "内侧黄色小圆饼",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INNER-YELLOW-DISK-R1",
+      "source": "default",
+      "description": "PETG；Ø7×0.7，边圆角0.15，胶接盖板。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "aea32c4d250f36c5"
+    },
+    {
+      "id": "inner_lower_left",
+      "role": "inner_decoration",
+      "name": "内侧下方左黑色长方块",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INNER-LOWER-LEFT-R1",
+      "source": "default",
+      "description": "PETG；24×10×0.7，圆角0.8，胶接前盖。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "bf65dd5588360db2"
+    },
+    {
+      "id": "inner_lower_right",
+      "role": "inner_decoration",
+      "name": "内侧下方右黑色长方块",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INNER-LOWER-RIGHT-R1",
+      "source": "default",
+      "description": "PETG；24×10×0.7，圆角0.8，胶接盖板。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "a89c49a7957d63a9"
     }
   ],
   "unresolved_items": [],

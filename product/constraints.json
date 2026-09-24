@@ -141,7 +141,11 @@
     ],
     "glue_thickness": 0.2,
     "front_seat_depth": 1.4,
-    "source": "default"
+    "source": "default",
+    "outer_decor_skin": 0.2,
+    "total_thickness": 1.2,
+    "decor_recess_depth": 0.15,
+    "minimum_remaining_thickness": 0.85
   },
   "front": {
     "outer_width": 87.8,
@@ -217,6 +221,59 @@
       "alignment": "正视图蓝色半球与小球轮廓顶边均为Y=51，不是球顶Z高度相等",
       "attachment": "浅槽胶接定位；蓝白嵌件为共面双色区域，同次成形为一个零件",
       "body_colour": "red"
+    },
+    "inner_decoration": {
+      "grid_rows": 2,
+      "grid_columns": 5,
+      "recess_depth_mm": 0.15,
+      "edge_clearance_mm": 0.15,
+      "adhesive_gap_mm": 0.05,
+      "insert_thickness_mm": 0.7,
+      "insert_engagement_mm": 0.1,
+      "protrusion_mm": 0.6,
+      "retainer_outer_skin_mm": 0.2,
+      "retainer_total_thickness_mm": 1.2,
+      "retainer_min_under_pockets_mm": 0.85,
+      "groove_width_mm": 0.5,
+      "groove_depth_mm": 0.25,
+      "groove_remaining_thickness_mm": 0.45,
+      "coordinate_frame": "背面正视图u向右、v向上，对应闭合前盖局部X=-u,Y=v；嵌件朝-Z",
+      "layout_uv_mm": {
+        "inner_black_header": [
+          0,
+          31
+        ],
+        "inner_blue_grid": [
+          0,
+          8
+        ],
+        "inner_bar_left": [
+          15,
+          -6
+        ],
+        "inner_bar_right": [
+          26,
+          -6
+        ],
+        "inner_white_key": [
+          -20,
+          -18
+        ],
+        "inner_yellow_disk": [
+          25,
+          -23
+        ],
+        "inner_lower_left": [
+          -20,
+          -40
+        ],
+        "inner_lower_right": [
+          20,
+          -40
+        ]
+      },
+      "round_disk_colour": "yellow",
+      "attachment": "顶部黑块和蓝块是各自独立整体嵌件，跨分件缝但仅盖板侧涂胶，前盖侧干配，不封死可拆分件。"
     }
   },
   "connections": [
@@ -255,6 +312,13 @@
       "implementation": "free",
       "kind": "five_shallow_adhesive_seats",
       "status": "dimensioned_not_physically_tested"
+    },
+    {
+      "id": "inner_decor_to_shell",
+      "implementation": "free",
+      "kind": "eight_shallow_adhesive_seats",
+      "status": "dimensioned_not_physically_tested",
+      "note": "跨缝长块只胶接盖板；其余依所属宿主固定。"
     }
   ],
   "unresolved_roles": [],
