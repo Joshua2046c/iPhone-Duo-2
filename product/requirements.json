@@ -1,23 +1,125 @@
 {
   "requirements": {
-    "product_class": {"value":"mechanical", "source":"user"},
-    "product_name": {"value":"iPhone duo 四件式滑动护轴手机壳", "source":"user"},
-    "part_count": {"value":4,"source":"user"},
-    "parts": {"value":["背盖","中轴保护薄片","滑动压盖","完整前盖"],"source":"user"},
-    "phone_closed_mm": {"value":{"height":117.8,"width":84.1,"thickness":11.3},"source":"user"},
-    "phone_open_mm": {"value":{"height":117.8,"width":164.6,"thickness":5.2},"source":"user"},
-    "rear_retention": {"value":"半包弹性背盖，四角向内微收卡住中框", "source":"user"},
-    "button_access": {"value":"顶部音量键、侧面电源键与拍照键镂空", "source":"user"},
-    "camera_access": {"value":"参考图片的横向胶囊形整组摄像头避空", "source":"user"},
-    "hinge_mechanism": {"value":"薄片前端胶粘前盖，后端在背盖凹槽内滑动；背盖两个凸点与薄片两条长槽导向，由独立压盖防脱；展开时向背盖缩回", "source":"user"},
-    "exposed_bridge": {"value":"外露护轴段跨越手机厚度且略有余量；埋入背盖的滑动尾段及前盖胶接段另计", "source":"user"},
-    "front_cover": {"value":"完整覆盖手机正面，仅设护轴片连接凹槽", "source":"user"},
-    "front_cover_interpretation": {"value":"闭合时遮住外屏的实心翻盖，不是带屏幕窗口的前框", "source":"default"},
-    "travel_mm": {"value":11.3,"source":"default"},
-    "materials": {"value":{"back":"TPU 95A prototype","spine":"0.6 mm flexible TPU sheet prototype","retainer":"PETG prototype","front":"PETG prototype"},"source":"default"},
-    "retainer_attachment": {"value":"压盖三边胶粘于固定台阶，铰链侧开口；胶与滑动槽隔开，无螺钉", "source":"default"},
-    "delivery": {"value":"四个独立实体的参数化 STEP 试配模型；不宣称实机精确适配或折叠寿命已验证", "source":"default"},
-    "verification": {"value":"检查四实体、参考外形、静态配合、导向槽容许行程；真实铰链运动及材料疲劳待实物试验", "source":"default"}
+    "product_class": {
+      "value": "mechanical",
+      "source": "user"
+    },
+    "product_name": {
+      "value": "iPhone duo 内置滑轨护轴手机壳",
+      "source": "user"
+    },
+    "part_count": {
+      "value": 5,
+      "source": "user"
+    },
+    "parts": {
+      "value": [
+        "背盖",
+        "中轴保护薄片",
+        "滑动压盖",
+        "完整前盖",
+        "独立胶粘摄像头保护圈"
+      ],
+      "source": "user"
+    },
+    "phone_closed_mm": {
+      "value": {
+        "height": 117.8,
+        "width": 84.1,
+        "thickness": 11.3
+      },
+      "source": "user"
+    },
+    "phone_open_mm": {
+      "value": {
+        "height": 117.8,
+        "width": 164.6,
+        "thickness": 5.2
+      },
+      "source": "user"
+    },
+    "rear_retention": {
+      "value": "半包弹性背盖，四角向内微收卡住中框",
+      "source": "user"
+    },
+    "button_access": {
+      "value": "顶部音量键、侧面电源键与拍照键镂空",
+      "source": "user"
+    },
+    "camera_access": {
+      "value": "参考图片的横向胶囊形整组摄像头避空",
+      "source": "user"
+    },
+    "hinge_mechanism": {
+      "value": "薄片前端胶粘前盖，后端在背盖凹槽内滑动；背盖两个凸点与薄片两条长槽导向，由独立压盖防脱；展开时向背盖缩回",
+      "source": "user"
+    },
+    "exposed_bridge": {
+      "value": "外露护轴段跨越手机厚度且略有余量；埋入背盖的滑动尾段及前盖胶接段另计",
+      "source": "user"
+    },
+    "front_cover": {
+      "value": "完整覆盖手机正面，仅设护轴片连接凹槽",
+      "source": "user"
+    },
+    "front_cover_interpretation": {
+      "value": "闭合时遮住外屏的实心翻盖，不是带屏幕窗口的前框",
+      "source": "default"
+    },
+    "travel_mm": {
+      "value": 11.3,
+      "source": "default"
+    },
+    "materials": {
+      "value": {
+        "back": "TPU 95A prototype",
+        "spine": "0.6 mm flexible TPU sheet prototype",
+        "retainer": "PETG prototype",
+        "front": "PETG prototype",
+        "camera_guard": "PETG prototype"
+      },
+      "source": "default"
+    },
+    "retainer_attachment": {
+      "value": "压盖三边胶粘于固定台阶，铰链侧开口；胶与滑动槽隔开，无螺钉",
+      "source": "default"
+    },
+    "delivery": {
+      "value": "五个独立实体的参数化 STEP 试配模型；不宣称实机精确适配或折叠寿命已验证",
+      "source": "default"
+    },
+    "verification": {
+      "value": "检查五实体、参考外形、静态配合、导向槽容许行程；真实铰链运动及材料疲劳待实物试验",
+      "source": "default"
+    },
+    "slider_location": {
+      "value": "滑槽、导向凸点和压盖均位于背盖内侧，外背面不露滑槽压盖",
+      "source": "user"
+    },
+    "camera_guard": {
+      "value": "摄像头周围一圈凸起，略高过摄像头；保护圈独立分件，胶粘在背盖对应的轻微凹陷中",
+      "source": "user"
+    },
+    "camera_guard_defaults": {
+      "value": {
+        "assumed_camera_protrusion_from_phone_back_mm": 4.0,
+        "height_above_assumed_camera_mm": 0.5,
+        "recess_depth_mm": 0.4,
+        "bondline_mm": 0.15,
+        "radial_width_mm": 2.0,
+        "material": "PETG prototype"
+      },
+      "source": "default"
+    },
+    "backplate_stack": {
+      "value": {
+        "plate_thickness_mm": 3.4,
+        "phone_seat_z_mm": 2.4,
+        "retainer_top_z_mm": 2.2,
+        "outer_back_z_mm": -1.0
+      },
+      "source": "default"
+    }
   },
   "open_questions": []
 }

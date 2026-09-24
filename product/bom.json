@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "654a45b51599159a3ee4002cdda3c6ef9eddc41b0b5a83eeb0b48b3c14aff0f7",
+  "requirements_digest": "dab0ef5f01639c0e8aee549d737ef34c6659f3a329b093f5e78c667d8c84718f",
   "items": [
     {
       "id": "back_cover",
@@ -10,12 +10,12 @@
       "name": "弹性半包背盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-BACK_COVER-R1",
+      "part_number": "DUO-BACK_COVER-R2",
       "source": "default",
-      "description": "TPU 95A；几何尺寸见 constraints.json，试配版，非实机认证。",
+      "description": "TPU95A；3.4mm背板，手机贴合面Z2.4保持不变；内侧槽深2.2mm，外侧镜头圈座深0.4mm。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "22ef8af74f49b507"
+      "part_identity": "010ced1ee612cb40"
     },
     {
       "id": "spine",
@@ -23,12 +23,12 @@
       "name": "滑动护轴薄片",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-SPINE-R1",
+      "part_number": "DUO-SPINE-R2",
       "source": "default",
-      "description": "TPU flexible sheet 0.6 mm；几何尺寸见 constraints.json，试配版，非实机认证。",
+      "description": "0.6mm柔性TPU；尾片改入内槽Z0.45至1.05，前盖胶接端不动。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "522778ea69d9dd46"
+      "part_identity": "6869f8150f1cb161"
     },
     {
       "id": "retainer",
@@ -36,12 +36,12 @@
       "name": "滑动压盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-RETAINER-R1",
+      "part_number": "DUO-RETAINER-R2",
       "source": "default",
-      "description": "PETG；几何尺寸见 constraints.json，试配版，非实机认证。",
+      "description": "PETG；内侧埋入式1mm压盖，顶面Z2.2，低于手机贴合面0.2mm。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "56071584db2ea347"
+      "part_identity": "9829e36f0d7c40aa"
     },
     {
       "id": "front_cover",
@@ -57,14 +57,27 @@
       "part_identity": "f6947c0ceb258e1c"
     },
     {
+      "id": "camera_guard",
+      "role": "camera_protection",
+      "name": "独立胶粘镜头保护圈",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-CAMERA-GUARD-R1",
+      "source": "default",
+      "description": "PETG胶囊形环；内孔55×23mm，外廓59×27mm；座深0.4mm，胶层0.15mm；按假定镜头凸高4mm留0.5mm保护余高。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "703814ad228eff3a"
+    },
+    {
       "id": "adhesive",
       "role": "assembly_consumable",
-      "name": "柔性材料兼容胶，设计胶层0.2 mm，胶种需粘接试样确认",
+      "name": "兼容TPU/PETG的胶；滑盖与前盖胶层0.2mm，镜头圈胶层0.15mm，需粘接试样",
       "quantity": 1,
       "source": "default",
       "procurement_status": "external_procurement_required",
       "required_user_evidence": [],
-      "supply_risk": "非几何阻塞项；胶接强度未验证，不计入四个定制零件"
+      "supply_risk": "胶接强度未验证；辅料不计入五个定制零件"
     }
   ],
   "unresolved_items": [],
@@ -76,6 +89,10 @@
     {
       "id": "adhesive_process",
       "description": "胶品与TPU表面处理及疲劳需验证；CAD已留定量胶层。"
+    },
+    {
+      "id": "camera_height",
+      "description": "4mm镜头凸高是明确默认而非实测；保护余高须实机校准，不阻塞当前结构试配。"
     }
   ]
 }

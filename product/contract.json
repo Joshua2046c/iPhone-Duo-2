@@ -1,23 +1,101 @@
 {
- "version":2,
- "artifact_level":"assembly",
- "deliverable_intent":"fit_check",
- "summary":"基于用户图片的四件式弹性背盖、滑动柔性护轴片、独立压盖与实心前盖试配模型。",
- "required_interfaces":[
-  {"id":"phone_fit","kind":"internal_fit","description":"参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，弹性四角内收及相机、按键避空。未标注的机械细节为可调默认。","source":"user_requested","required":true},
-  {"id":"slider","kind":"sliding_fit","description":"背盖双凸点、薄片双长槽、独立压盖；名义11.3 mm行程，避免镜头，静态零干涉。","source":"user_requested","required":true},
-  {"id":"front_bond","kind":"adhesive_joint","description":"前盖完整覆盖正面，预留薄片胶接凹槽。","source":"user_requested","required":true}
- ],
- "external_references":[
-  {"id":"dimensions_image","source":"user_requested","description":"闭合/展开尺寸标注图片","path":"product/references/uploads/20260924T033602794Z-1-ishot-2026-09-24-11-17-13.png"},
-  {"id":"display_image","source":"user_requested","description":"屏幕与外轮廓图片","path":"product/references/uploads/20260924T033602794Z-2-ishot-2026-09-24-11-17-19.png"},
-  {"id":"camera_image","source":"user_requested","description":"背面相机岛外形参考，不是机械尺寸图","path":"product/references/uploads/20260924T033602794Z-3-ishot-2026-09-24-11-27-23.png"}
- ],
- "assembly_story":{
-  "installation":"先将柔性片双槽套入背盖定位凸点，再把压盖三边胶接到固定台阶；用胶将另一端固定在前盖槽内；最后弹性套入手机。",
-  "maintenance":"先取下手机再拆胶接压盖；勿撬手机铰链。薄片是可更换耗材，胶接需重新施工。",
-  "user_access":["顶部音量键","侧面电源键","侧面拍照键","摄像头","底部接口区域","掀开前盖访问外屏"]
- },
- "cad":{"requirement":"required","designs":[{"role":"phone_case","design_id":"duo_case","description":"四件式闭合装配状态，柔性片以弯曲几何显示","delivery_target":"fit_check","required_formats":["step"],"interface_ids":["phone_fit","slider","front_bond"],"reference_ids":["dimensions_image","display_image","camera_image"]}]},
- "open_questions":[]
+  "version": 2,
+  "artifact_level": "assembly",
+  "deliverable_intent": "fit_check",
+  "summary": "五件式试配：内侧滑槽与压盖，外侧独立胶粘镜头保护圈及浅凹座，保留半包背盖、柔性护轴与实心前盖。",
+  "required_interfaces": [
+    {
+      "id": "phone_fit",
+      "kind": "internal_fit",
+      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，弹性四角内收及相机、按键避空。未标注的机械细节为可调默认。",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "slider",
+      "kind": "sliding_fit",
+      "description": "背盖内侧双凸点、双槽与内埋压盖；名义11.3mm行程；外背面不留压盖，压盖不占用手机安装空间。",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "front_bond",
+      "kind": "adhesive_joint",
+      "description": "前盖完整覆盖正面，预留薄片胶接凹槽。",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "camera_guard_bond",
+      "kind": "adhesive_joint",
+      "description": "独立胶囊保护圈粘入背盖外侧浅凹座，略高于摄像头；凸高按4mm可调假设加0.5mm余高，需实测核验。",
+      "source": "user_requested",
+      "required": true
+    }
+  ],
+  "external_references": [
+    {
+      "id": "dimensions_image",
+      "source": "user_requested",
+      "description": "闭合/展开尺寸标注图片",
+      "path": "product/references/uploads/20260924T033602794Z-1-ishot-2026-09-24-11-17-13.png"
+    },
+    {
+      "id": "display_image",
+      "source": "user_requested",
+      "description": "屏幕与外轮廓图片",
+      "path": "product/references/uploads/20260924T033602794Z-2-ishot-2026-09-24-11-17-19.png"
+    },
+    {
+      "id": "camera_image",
+      "source": "user_requested",
+      "description": "背面相机岛外形参考，不是机械尺寸图",
+      "path": "product/references/uploads/20260924T033602794Z-3-ishot-2026-09-24-11-27-23.png"
+    },
+    {
+      "id": "inner_slider_mark",
+      "source": "user_requested",
+      "description": "本轮红框标记，要求滑槽压盖转入背盖内侧并增加独立镜头圈",
+      "path": "product/references/uploads/20260924T041432570Z-1-mark.png"
+    }
+  ],
+  "assembly_story": {
+    "installation": "先从内侧安装护轴片与胶接压盖，再胶接前盖；外侧浅凹座内粘入镜头圈，固化并检查齐平/胶溢出后套入手机。",
+    "maintenance": "先取下手机再拆胶接压盖；勿撬手机铰链。薄片是可更换耗材，胶接需重新施工。",
+    "user_access": [
+      "顶部音量键",
+      "侧面电源键",
+      "侧面拍照键",
+      "摄像头",
+      "底部接口区域",
+      "掀开前盖访问外屏"
+    ]
+  },
+  "cad": {
+    "requirement": "required",
+    "designs": [
+      {
+        "role": "phone_case",
+        "design_id": "duo_case",
+        "description": "五件闭合装配，内置滑轨、独立胶粘镜头圈",
+        "delivery_target": "fit_check",
+        "required_formats": [
+          "step"
+        ],
+        "interface_ids": [
+          "phone_fit",
+          "slider",
+          "front_bond",
+          "camera_guard_bond"
+        ],
+        "reference_ids": [
+          "dimensions_image",
+          "display_image",
+          "camera_image",
+          "inner_slider_mark"
+        ]
+      }
+    ]
+  },
+  "open_questions": []
 }
