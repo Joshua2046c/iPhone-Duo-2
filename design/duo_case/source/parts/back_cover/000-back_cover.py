@@ -26,12 +26,17 @@ bottom_w=param('back_cover_bottom_opening',50.0)
 glue_l=param('back_cover_glue_recess_length',8.3)
 glue_h=param('back_cover_glue_recess_height',115.0)
 glue_depth=param('back_cover_glue_recess_depth',1.2)
+corner_soft=param('back_cover_left_corner_radius',1.0)
+opening_soft=param('back_cover_opening_edge_radius',0.3)
 def outline(w,h,r):
  return RectangleRounded(w,h,r)+Pos(-w/4,0)*Rectangle(w/2,h)
 wi,hi=PHONE_W+2*clearance,PHONE_H+2*clearance
 wo,ho=wi+2*wall,hi+2*wall
 outside_z=seat_z-plate
 outer,inner=outline(wo,ho,radius+wall),outline(wi,hi,radius)
+left_vertices=[v for v in outer.vertices() if abs(v.X+wo/2)<1e-6]
+assert len(left_vertices)==2
+outer=fillet(left_vertices,radius=corner_soft)
 body=Pos(0,0,outside_z)*extrude(outer,amount=plate)
 ring=extrude(outer,amount=HALF_T)-extrude(inner,amount=HALF_T)
 # The continuous hinge-side cut removes both former corner wall stubs, not the back plate.
@@ -50,6 +55,38 @@ for sx in (-1,1):
 body-=Pos(cam_x,cam_y,outside_z-1)*extrude(SlotOverall(cam_w,cam_h),amount=plate+HALF_T+2)
 body-=Pos(cam_x,cam_y,outside_z-1)*extrude(SlotOverall(cam_w+2*(cam_land+cam_clearance),cam_h+2*(cam_land+cam_clearance)),amount=1+cam_depth)
 body-=Pos(-wo/2+(glue_l-1)/2,0,seat_z-glue_depth+(glue_depth+1)/2)*Box(glue_l+1,glue_h,glue_depth+1)
+
+# Round the exposed U-shaped opening rims and the top/inside edges of their ends.
+# Keep concave floor-to-end intersections unfilleted: no material added to the passage.
+eps=1e-5
+opening_edges=[]
+counts=[]
+for axis,outer_side,inner_side,lo,hi in (
+ ('y',ho/2,hi/2,vol_x-vol_w/2,vol_x+vol_w/2),
+ ('y',-ho/2,-hi/2,-bottom_w/2,bottom_w/2),
+ ('x',wo/2,wi/2,power_y-power_l/2,power_y+power_l/2),
+ ('x',wo/2,wi/2,shutter_y-shutter_l/2,shutter_y+shutter_l/2)):
+ chosen=[]
+ for e in body.edges():
+  if e.geom_type!=GeomType.LINE:
+   continue
+  bb=e.bounding_box()
+  amin,amax=(bb.min.X,bb.max.X) if axis=='x' else (bb.min.Y,bb.max.Y)
+  bmin,bmax=(bb.min.Y,bb.max.Y) if axis=='x' else (bb.min.X,bb.max.X)
+  at_end=(abs(bmin-lo)<eps and abs(bmax-lo)<eps) or (abs(bmin-hi)<eps and abs(bmax-hi)<eps)
+  on_outer=abs(amin-outer_side)<eps and abs(amax-outer_side)<eps
+  on_inner=abs(amin-inner_side)<eps and abs(amax-inner_side)<eps
+  in_span=bmin>=lo-eps and bmax<=hi+eps
+  vertical=bb.max.Z-bb.min.Z>eps and amax-amin<eps and bmax-bmin<eps
+  top_end=at_end and abs(bb.min.Z-seat_z-HALF_T)<eps and abs(bb.max.Z-seat_z-HALF_T)<eps
+  if bb.min.Z>=seat_z-eps and ((on_outer and in_span) or (on_inner and at_end and vertical) or top_end):
+   chosen.append(e)
+ assert len(chosen)>=5, 'Opening edge selection incomplete'
+ counts.append(len(chosen))
+ opening_edges.extend(chosen)
+print('Rounded edges per opening (volume, bottom, power, shutter):',counts)
+body=fillet(opening_edges,radius=opening_soft)
+
 assert plate-glue_depth>=1.2
 assert len(body.solids())==1
 publish('back_cover',body,'01 开边胶接背盖')

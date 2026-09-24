@@ -7,7 +7,7 @@
     {
       "id": "phone_fit",
       "kind": "internal_fit",
-      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，按本轮要求切掉铰链侧残留竖边，保留其余弹性扣边及相机、按键避空。未标注的机械细节为可调默认。 折叠外屏正视：左铰链边直且左角近直角，右侧两角圆滑，前背盖及内腔一致。",
+      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，按本轮要求切掉铰链侧残留竖边，保留其余弹性扣边及相机、按键避空。未标注的机械细节为可调默认。 折叠外屏正视：左铰链边直且左角近直角，右侧两角圆滑，前背盖及内腔一致。 标记的四处开口触手边缘修圆；前后壳铰链侧各两角做小圆角。",
       "source": "user_requested",
       "required": true
     },
@@ -115,6 +115,30 @@
       "source": "user_requested",
       "description": "前盖背面/独立盖板的嵌件排布及配色参考。",
       "path": "product/references/uploads/20260924T132742363Z-1-image.png"
+    },
+    {
+      "id": "comfort_edge_mark_1",
+      "source": "user_requested",
+      "description": "按键与接口开口圆滑边缘标记",
+      "path": "product/references/uploads/20260924T200915518Z-1-mark.png"
+    },
+    {
+      "id": "comfort_edge_mark_2",
+      "source": "user_requested",
+      "description": "按键与接口开口圆滑边缘标记",
+      "path": "product/references/uploads/20260924T200915518Z-2-mark.png"
+    },
+    {
+      "id": "comfort_edge_mark_3",
+      "source": "user_requested",
+      "description": "前后壳铰链侧小圆角标记",
+      "path": "product/references/uploads/20260924T200915518Z-3-mark.png"
+    },
+    {
+      "id": "comfort_edge_mark_4",
+      "source": "user_requested",
+      "description": "前后壳铰链侧小圆角标记",
+      "path": "product/references/uploads/20260924T200915518Z-4-mark.png"
     }
   ],
   "assembly_story": {
@@ -159,7 +183,11 @@
           "front_storage_mark",
           "wide_shield_request",
           "pokedex_front_reference",
-          "pokedex_inner_reference"
+          "pokedex_inner_reference",
+          "comfort_edge_mark_1",
+          "comfort_edge_mark_2",
+          "comfort_edge_mark_3",
+          "comfort_edge_mark_4"
         ]
       }
     ]

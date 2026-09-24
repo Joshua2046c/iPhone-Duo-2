@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "e77e40f20cd91d02df390b891f0e0b5ea3255fa656d166842b45d6b2cc759eac",
+  "requirements_digest": "74449c1a10d5f8b2897651f6db5e4a2be90788e758d72a617f210106858b6fdb",
   "items": [
     {
       "id": "back_cover",
@@ -10,12 +10,12 @@
       "name": "弹性半包背盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-BACK_COVER-R6",
+      "part_number": "DUO-BACK_COVER-R7",
       "source": "default",
-      "description": "TPU背盖3.4厚；铰链侧上下残留竖边及该向内扣去除至贴机面，顶底回边与右角保留；8.3×115深1.2胶槽。",
+      "description": "TPU背盖3.4厚；铰链侧上下残留竖边及该向内扣去除至贴机面，顶底回边与右角保留；8.3×115深1.2胶槽。 顶部、底部和两侧开口触手棱边R0.3；铰链侧两外角R1.0。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "207b874ae88b7eef"
+      "part_identity": "c93c38baa7a58b16"
     },
     {
       "id": "spine",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT-COVER-R8",
+      "part_number": "DUO-FRONT-COVER-R9",
       "source": "default",
-      "description": "PETG红色上盖87.8×121.5×4；保留内侧收纳腔及压盖座；五个嵌件浅座与34×2.4胶囊浅槽均深0.2，局部剩余底厚1.2。 内侧增加0.15深定位座，白块/左下黑块固定前盖；长黑块/蓝块跨缝部分为干配。",
+      "description": "PETG红色上盖87.8×121.5×4；保留内侧收纳腔及压盖座；五个嵌件浅座与34×2.4胶囊浅槽均深0.2，局部剩余底厚1.2。 内侧增加0.15深定位座，白块/左下黑块固定前盖；长黑块/蓝块跨缝部分为干配。 铰链侧两外角R1.0，保留直边主体。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "5fe2ad6e72b255d7"
+      "part_identity": "958d54bec23c0a5c"
     },
     {
       "id": "camera_guard",

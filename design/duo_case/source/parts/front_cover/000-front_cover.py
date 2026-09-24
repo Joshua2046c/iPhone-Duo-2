@@ -34,7 +34,11 @@ slot_w=param('front_cover_lower_slot_width',2.4)
 slot_x=param('front_cover_lower_slot_x',0.0)
 slot_y=param('front_cover_lower_slot_y',-44.0)
 
+corner_soft=param('front_cover_left_corner_radius',1.0)
 outline=RectangleRounded(w,h,r)+Pos(-w/4,0)*Rectangle(w/2,h)
+left_vertices=[v for v in outline.vertices() if abs(v.X+w/2)<1e-6]
+assert len(left_vertices)==2
+outline=fillet(left_vertices,radius=corner_soft)
 body=extrude(outline,amount=t)
 for ll,hh,dd in ((seat_l,seat_h,seat_depth),(length,height,depth)):
  body-=Pos(-w/2+(ll-1)/2,0,(dd-1)/2)*Box(ll+1,hh,dd+1)

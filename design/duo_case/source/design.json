@@ -12,7 +12,7 @@
           "target": "back_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/back_cover/000-back_cover.py",
-          "sha256": "350d757ebd14dd217246aafc1bbd0b62dcc6b13c8f874d41376d37719ebdf81c"
+          "sha256": "dc43cbe83e213ad5a9be9cf3179c7a26252288f1a3e820916c6b24e3ffcbda94"
         }
       ],
       "dependencies": []
@@ -54,7 +54,7 @@
           "target": "front_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/front_cover/000-front_cover.py",
-          "sha256": "8f438fc96f8ee87673eae7bef2a76672daaef08097c4e002370545132d4fa658"
+          "sha256": "f22ba235e05a49b52a3603109ea8d8ab6ac0c8858b287ee42b76f8269197d23f"
         }
       ],
       "dependencies": []
@@ -192,7 +192,7 @@
       "target": "back_cover",
       "label": "01 开边胶接背盖",
       "kind": "generated",
-      "shapeHash": "49baa1edc26fc9c6516f8afe389099c13518d26b58006a915be9200017f743d3",
+      "shapeHash": "16d0524e8f2e4aabb5461c425f8af40c31b7b33a133e932de046bfe76ae99c56",
       "transform": {
         "positionMm": [
           0,
@@ -272,7 +272,7 @@
       "label": "04 上盖与装饰浅槽",
       "material": "petg",
       "kind": "generated",
-      "shapeHash": "ff27cae5895c7fdce96acb25b39679cc6e80ab6430b388d2d484b8f6e9c76aef",
+      "shapeHash": "39fdde062b7d54d6349737448edb7b4f939b78f09e632bdca3d8094aeb95fdd0",
       "transform": {
         "positionMm": [
           0,
@@ -673,7 +673,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T13:33:52.361Z",
+  "updatedAt": "2026-09-24T20:14:59.096Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -701,7 +701,9 @@
       "back_cover_glue_recess_length": 8.3,
       "back_cover_glue_recess_height": 115,
       "back_cover_glue_recess_depth": 1.2,
-      "back_cover_hinge_edge_cut_width": 2.2
+      "back_cover_hinge_edge_cut_width": 2.2,
+      "back_cover_left_corner_radius": 1,
+      "back_cover_opening_edge_radius": 0.3
     },
     "spine": {
       "spine_height": 114,
@@ -793,7 +795,8 @@
       "front_cover_inner_lower_width": 24,
       "front_cover_inner_lower_height": 10,
       "front_cover_inner_lower_y": -40,
-      "front_cover_inner_corner_radius": 0.8
+      "front_cover_inner_corner_radius": 0.8,
+      "front_cover_left_corner_radius": 1
     },
     "camera_guard": {
       "camera_guard_inner_width": 55,

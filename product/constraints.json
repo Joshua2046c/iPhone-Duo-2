@@ -48,8 +48,8 @@
     "phone_seat_z": 2.4,
     "outer_back_z": -1,
     "corner_radius_scope": "right_side_only",
-    "left_corner_radius": 0,
-    "left_corner_source": "default_square_interpretation_of_user_image",
+    "left_corner_radius": 1,
+    "left_corner_source": "default_radius_for_user_requested_soft_corners",
     "bond_recess": {
       "end_x": -35.6,
       "height": 115,
@@ -69,7 +69,8 @@
       "above_z": 2.4,
       "source": "default_interpretation_of_user_two_edges",
       "note": "去铰链侧竖边，非整个顶底横边"
-    }
+    },
+    "opening_edge_radius": 0.3
   },
   "slider": {
     "location": "inside_front",
@@ -152,7 +153,7 @@
     "outer_height": 121.5,
     "corner_radius": 11.6,
     "corner_radius_scope": "right_side_only",
-    "left_corner_radius": 0,
+    "left_corner_radius": 1,
     "thickness": 4,
     "closed_position": [
       0,
