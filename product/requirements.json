@@ -9,8 +9,8 @@
       "source": "user"
     },
     "part_count": {
-      "value": 5,
-      "source": "user"
+      "value": 10,
+      "source": "default"
     },
     "parts": {
       "value": [
@@ -18,7 +18,12 @@
         "中轴保护薄片",
         "滑动压盖",
         "完整前盖",
-        "独立胶粘摄像头保护圈"
+        "独立胶粘摄像头保护圈",
+        "蓝色半球与白色底座一体嵌件",
+        "向内三角嵌件",
+        "红色小球嵌件",
+        "黄色小球嵌件",
+        "绿色小球嵌件"
       ],
       "source": "user"
     },
@@ -85,11 +90,11 @@
       "source": "default"
     },
     "delivery": {
-      "value": "五个独立实体的参数化 STEP 试配模型；不宣称实机精确适配或折叠寿命已验证",
+      "value": "10个装配对象的参数化STEP试配模型；蓝白一体嵌件内含2个共面颜色区域，故STEP共11实体；不宣称实机精确适配或寿命已验证。",
       "source": "default"
     },
     "verification": {
-      "value": "检查五实体、参考外形、静态配合、导向槽容许行程；真实铰链运动及材料疲劳待实物试验",
+      "value": "检查装饰位置、浅槽、静态间隙及模型有效性；蓝白区域联合后为一个连续实体；真实铰链运动、粘接及疲劳待实物试验。",
       "source": "default"
     },
     "slider_location": {
@@ -102,11 +107,11 @@
     },
     "camera_guard_defaults": {
       "value": {
-        "assumed_camera_protrusion_from_phone_back_mm": 4.0,
+        "assumed_camera_protrusion_from_phone_back_mm": 4,
         "height_above_assumed_camera_mm": 0.5,
         "recess_depth_mm": 0.4,
         "bondline_mm": 0.15,
-        "radial_width_mm": 2.0,
+        "radial_width_mm": 2,
         "material": "PETG prototype"
       },
       "source": "default"
@@ -144,7 +149,8 @@
       "value": {
         "thickness_mm": 4,
         "pocket_depth_mm": 2.6,
-        "retainer_thickness_mm": 1
+        "retainer_thickness_mm": 1,
+        "remaining_roof_below_decor_mm": 1.2
       },
       "source": "default"
     },
@@ -170,6 +176,58 @@
         "sliding_tail_mm": 30,
         "flat_total_length_mm": 54.926548,
         "assumption": "按现有闭合壳堆叠和两段90度圆弧；薄片中性层取厚度中间，不代表真实TPU材料弯曲规律。"
+      },
+      "source": "default"
+    },
+    "front_decoration": {
+      "value": "上盖正面右侧中部放置向内三角形；下半部两端圆形长条浅凹槽；左上蓝色半球加白色小底座一体嵌件；其右侧三个等距小球，顶部对齐。所有嵌件在上盖对应位置留浅凹槽。",
+      "source": "user"
+    },
+    "front_decoration_defaults": {
+      "value": {
+        "recess_depth_mm": 0.2,
+        "edge_clearance_mm": 0.15,
+        "adhesive_gap_mm": 0.05,
+        "remaining_storage_roof_mm": 1.2,
+        "lens_base_diameter_mm": 18,
+        "lens_base_thickness_mm": 1,
+        "hemisphere_radius_mm": 7,
+        "lens_xy_mm": [
+          -29,
+          44
+        ],
+        "ball_radius_mm": 1.8,
+        "ball_first_xy_mm": [
+          -10,
+          49.2
+        ],
+        "ball_pitch_mm": 7,
+        "ball_colours": [
+          "red",
+          "yellow",
+          "green"
+        ],
+        "arrow_size_mm": [
+          7,
+          9,
+          0.9
+        ],
+        "arrow_xy_mm": [
+          34,
+          0
+        ],
+        "lower_slot_mm": [
+          34,
+          2.4,
+          0.2
+        ],
+        "lower_slot_xy_mm": [
+          0,
+          -44
+        ],
+        "alignment": "正视图蓝色半球与小球轮廓顶边均为Y=51，不是球顶Z高度相等",
+        "attachment": "浅槽胶接定位；蓝白嵌件为共面双色区域，同次成形为一个零件",
+        "body_colour": "red"
       },
       "source": "default"
     }

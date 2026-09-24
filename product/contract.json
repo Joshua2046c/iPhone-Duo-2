@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "fit_check",
-  "summary": "五件前盖收纳式护轴壳；背盖胶端，前盖双销槽及压盖；打开两直边接触时自由片入前盖。",
+  "summary": "五件基础护轴壳加五个正面装饰嵌件；蓝白半球与底座为一体双色件。",
   "required_interfaces": [
     {
       "id": "phone_fit",
@@ -43,6 +43,13 @@
       "id": "closed_hinge_wrap",
       "kind": "internal_fit",
       "description": "护轴片沿铰链方向接近整机宽，助手计算闭合包覆路径和展开料长，同时保留前盖完整收纳；实际机身/铰链外廓待测。",
+      "source": "user_requested",
+      "required": true
+    },
+    {
+      "id": "front_decoration_seats",
+      "kind": "adhesive_joint",
+      "description": "右中向内三角、左上蓝白一体半球及三个等距小球均坐入浅座；下部胶囊浅槽不贯穿。",
       "source": "user_requested",
       "required": true
     }
@@ -89,6 +96,12 @@
       "source": "user_requested",
       "description": "本轮切边/加宽/长度计算的原文与标记百分比，含新截图未收到及切边默认说明",
       "path": "product/references/hinge-widening-request.md"
+    },
+    {
+      "id": "pokedex_front_reference",
+      "source": "user_requested",
+      "description": "正面配色与比例参考；三角位置按用户文字放在右侧中部。",
+      "path": "product/references/uploads/20260924T104558589Z-1-image.png"
     }
   ],
   "assembly_story": {
@@ -109,7 +122,7 @@
       {
         "role": "phone_case",
         "design_id": "duo_case",
-        "description": "五件前盖收纳式装配，验证闭合与直边接触打开端点",
+        "description": "五件基础壳加五个正面嵌件；蓝白件为双色共面区域",
         "delivery_target": "fit_check",
         "required_formats": [
           "step"
@@ -120,7 +133,8 @@
           "back_bond",
           "camera_guard_bond",
           "open_edge_meeting",
-          "closed_hinge_wrap"
+          "closed_hinge_wrap",
+          "front_decoration_seats"
         ],
         "reference_ids": [
           "dimensions_image",
@@ -129,7 +143,8 @@
           "inner_slider_mark",
           "straight_left_image",
           "front_storage_mark",
-          "wide_shield_request"
+          "wide_shield_request",
+          "pokedex_front_reference"
         ]
       }
     ]

@@ -1,7 +1,5 @@
 {
   "schemaVersion": 1,
-  "buildNumber": 85,
-  "sourceHash": "95ecb8ecbdebee95935b56baaa33adfe7c6635ce10467702f717c3986e24ad00",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
   "targets": [
@@ -56,7 +54,7 @@
           "target": "front_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/front_cover/000-front_cover.py",
-          "sha256": "da03c53583277d677c4c8e83cb913619535ee182b8d6609e2d587f170a041885"
+          "sha256": "10d22b0aa8fbc689c61a92a255eb7d35b2f4abfdb52ea72cf635751435ed9305"
         }
       ],
       "dependencies": []
@@ -71,6 +69,76 @@
           "order": 0,
           "path": "design/duo_case/source/parts/camera_guard/000-camera_guard.py",
           "sha256": "cb9cb22b359d7f54f8899dee81bc1be78aa93c5a6cde4f7d9dbc3329dd23b3b6"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "lens_insert",
+      "label": "lens_insert",
+      "cells": [
+        {
+          "id": "lens_insert",
+          "target": "lens_insert",
+          "order": 0,
+          "path": "design/duo_case/source/parts/lens_insert/000-lens_insert.py",
+          "sha256": "14218db52bcee52f068082b19358abba8153aba6295f68410b984820c2673e75"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "arrow_insert",
+      "label": "arrow_insert",
+      "cells": [
+        {
+          "id": "arrow_insert",
+          "target": "arrow_insert",
+          "order": 0,
+          "path": "design/duo_case/source/parts/arrow_insert/000-arrow_insert.py",
+          "sha256": "2d47517e87feca727588c521529e40417a095f52f6f75e72696bd66cd252d612"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "indicator_red",
+      "label": "indicator_red",
+      "cells": [
+        {
+          "id": "indicator_red",
+          "target": "indicator_red",
+          "order": 0,
+          "path": "design/duo_case/source/parts/indicator_red/000-indicator_red.py",
+          "sha256": "ea3c05ffec33ee416fc5e3707b975738d9407e10a32cfe02414ba10fbba66628"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "indicator_yellow",
+      "label": "indicator_yellow",
+      "cells": [
+        {
+          "id": "indicator_yellow",
+          "target": "indicator_yellow",
+          "order": 0,
+          "path": "design/duo_case/source/parts/indicator_yellow/000-indicator_yellow.py",
+          "sha256": "fe03239939bfb8b87012dc5318417a1ba7885c7e43c18c98488abe5c1bf5e15a"
+        }
+      ],
+      "dependencies": []
+    },
+    {
+      "id": "indicator_green",
+      "label": "indicator_green",
+      "cells": [
+        {
+          "id": "indicator_green",
+          "target": "indicator_green",
+          "order": 0,
+          "path": "design/duo_case/source/parts/indicator_green/000-indicator_green.py",
+          "sha256": "96ff5f15ac97da17896568bc25dd8d0443bf4e85fe626e59922e7471a989b687"
         }
       ],
       "dependencies": []
@@ -158,9 +226,10 @@
     {
       "id": "front_cover",
       "target": "front_cover",
-      "label": "04 前盖收纳腔",
+      "label": "04 上盖与装饰浅槽",
+      "material": "petg",
       "kind": "generated",
-      "shapeHash": "a8166f6b8c1d3312bd3aa219852354556279e836f0dce038bf1c28ea6f34334a",
+      "shapeHash": "7d673a9d546dde0f6dfa73356e3465c52836721a926c5d6d99668fd40e984f4f",
       "transform": {
         "positionMm": [
           0,
@@ -206,11 +275,146 @@
         ]
       },
       "datums": []
+    },
+    {
+      "id": "lens_insert",
+      "target": "lens_insert",
+      "label": "06 蓝白一体双色嵌件",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "bfc0011f1b27244c9ebd94ac59f90f0c2ac8941d2897cf0a285b5750b9e275ed",
+      "transform": {
+        "positionMm": [
+          -29,
+          44,
+          18.7
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "arrow_insert",
+      "target": "arrow_insert",
+      "label": "07 向内三角嵌件",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "59d9ad270876c767709f6b6bc427fd853efbace780762058a3a6c0b1942b6877",
+      "transform": {
+        "positionMm": [
+          34,
+          0,
+          18.7
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "indicator_red",
+      "target": "indicator_red",
+      "label": "08 红色小球",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "c488370651160bfd32bf1368a99a166621f39d0b2806ff1947793b3ac502f6e4",
+      "transform": {
+        "positionMm": [
+          -10,
+          49.2,
+          18.7
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "indicator_yellow",
+      "target": "indicator_yellow",
+      "label": "09 黄色小球",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "5edbdeb9c661f5bc12ffd8a66ac26d029d1cdaebe94cf4c04d306ac109a8d16b",
+      "transform": {
+        "positionMm": [
+          -3,
+          49.2,
+          18.7
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
+    },
+    {
+      "id": "indicator_green",
+      "target": "indicator_green",
+      "label": "10 绿色小球",
+      "material": "petg",
+      "kind": "generated",
+      "shapeHash": "fe3f02569295747549743000d16b4e7706815528fcac785953c0fc1f64a3a6a2",
+      "transform": {
+        "positionMm": [
+          4,
+          49.2,
+          18.7
+        ],
+        "rotationDeg": [
+          0,
+          0,
+          0
+        ],
+        "rotationOrder": "XYZ",
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "datums": []
     }
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T09:54:43.407Z",
+  "updatedAt": "2026-09-24T13:05:11.145Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -277,7 +481,24 @@
       "front_cover_pin_x": -18.9,
       "front_cover_pin_y1": -25,
       "front_cover_pin_y2": 25,
-      "front_cover_pin_tip": 1.3
+      "front_cover_pin_tip": 1.3,
+      "front_cover_decor_recess_depth": 0.2,
+      "front_cover_decor_edge_clearance": 0.15,
+      "front_cover_lens_seat_diameter": 18,
+      "front_cover_lens_seat_x": -29,
+      "front_cover_lens_seat_y": 44,
+      "front_cover_ball_seat_diameter": 3.6,
+      "front_cover_ball_first_x": -10,
+      "front_cover_ball_row_y": 49.2,
+      "front_cover_ball_pitch": 7,
+      "front_cover_arrow_width": 7,
+      "front_cover_arrow_height": 9,
+      "front_cover_arrow_x": 34,
+      "front_cover_arrow_y": 0,
+      "front_cover_lower_slot_length": 34,
+      "front_cover_lower_slot_width": 2.4,
+      "front_cover_lower_slot_x": 0,
+      "front_cover_lower_slot_y": -44
     },
     "camera_guard": {
       "camera_guard_inner_width": 55,
@@ -289,6 +510,28 @@
       "camera_guard_glue_thickness": 0.15,
       "camera_guard_assumed_camera_protrusion": 4,
       "camera_guard_protection_margin": 0.5
+    },
+    "lens_insert": {
+      "lens_insert_base_diameter": 18,
+      "lens_insert_base_thickness": 1,
+      "lens_insert_hemisphere_radius": 7
+    },
+    "arrow_insert": {
+      "arrow_insert_width": 7,
+      "arrow_insert_height": 9,
+      "arrow_insert_thickness": 0.9
+    },
+    "indicator_red": {
+      "indicator_red_radius": 1.8,
+      "indicator_red_seat_thickness": 0.25
+    },
+    "indicator_yellow": {
+      "indicator_yellow_radius": 1.8,
+      "indicator_yellow_seat_thickness": 0.25
+    },
+    "indicator_green": {
+      "indicator_green_radius": 1.8,
+      "indicator_green_seat_thickness": 0.25
     }
   }
 }

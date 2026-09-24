@@ -57,7 +57,7 @@
       "floor_z": 1.2,
       "sheet_z": [
         1.4,
-        2.0
+        2
       ],
       "bondline": 0.2,
       "source": "default"
@@ -172,7 +172,52 @@
     ],
     "source": "default",
     "cap_seat_height": 119,
-    "cap_seat_end_rim": 1.25
+    "cap_seat_end_rim": 1.25,
+    "decoration": {
+      "recess_depth_mm": 0.2,
+      "edge_clearance_mm": 0.15,
+      "adhesive_gap_mm": 0.05,
+      "remaining_storage_roof_mm": 1.2,
+      "lens_base_diameter_mm": 18,
+      "lens_base_thickness_mm": 1,
+      "hemisphere_radius_mm": 7,
+      "lens_xy_mm": [
+        -29,
+        44
+      ],
+      "ball_radius_mm": 1.8,
+      "ball_first_xy_mm": [
+        -10,
+        49.2
+      ],
+      "ball_pitch_mm": 7,
+      "ball_colours": [
+        "red",
+        "yellow",
+        "green"
+      ],
+      "arrow_size_mm": [
+        7,
+        9,
+        0.9
+      ],
+      "arrow_xy_mm": [
+        34,
+        0
+      ],
+      "lower_slot_mm": [
+        34,
+        2.4,
+        0.2
+      ],
+      "lower_slot_xy_mm": [
+        0,
+        -44
+      ],
+      "alignment": "正视图蓝色半球与小球轮廓顶边均为Y=51，不是球顶Z高度相等",
+      "attachment": "浅槽胶接定位；蓝白嵌件为共面双色区域，同次成形为一个零件",
+      "body_colour": "red"
+    }
   },
   "connections": [
     {
@@ -203,6 +248,12 @@
       "id": "camera_guard_to_back",
       "implementation": "free",
       "kind": "annular_recess_adhesive",
+      "status": "dimensioned_not_physically_tested"
+    },
+    {
+      "id": "front_decor_to_front",
+      "implementation": "free",
+      "kind": "five_shallow_adhesive_seats",
       "status": "dimensioned_not_physically_tested"
     }
   ],
@@ -268,7 +319,7 @@
     "ring_base_z": -0.75,
     "ring_crest_z": -2.1,
     "ring_thickness": 1.35,
-    "assumed_camera_protrusion_from_phone_back": 4.0,
+    "assumed_camera_protrusion_from_phone_back": 4,
     "assumed_camera_crest_z": -1.6,
     "protection_margin": 0.5,
     "radial_clearance": 0.2,

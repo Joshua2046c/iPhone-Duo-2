@@ -1,33 +1,31 @@
 {
   "designId": "duo_case",
-  "buildNumber": 85,
-  "sourceHash": "95ecb8ecbdebee95935b56baaa33adfe7c6635ce10467702f717c3986e24ad00",
+  "revision": "c0e1339305b1abc964e3cbc470d1615679f911ced305be13dfe8671e49fe87f8",
   "schemaVersion": 2,
-  "exportId": "export-b98e306649bd898b838626dff9a2f3e4",
-  "generatedAt": "2026-09-24T09:54:43.407Z",
-  "designSha256": "3cb4ca486437ed23ca75f0257adc0dcee5912e547e7fad6330568052995a1cb1",
+  "exportId": "export-071e1b9d148c6fc041075e1a3fac8f8a",
+  "generatedAt": "2026-09-24T13:05:11.145Z",
+  "designSha256": "7013c29b1a7ab4be3191dcb4193fa64ac8a35746a959c68399532f4e6e1ee210",
   "role": "phone_case",
-  "stateHash": "d6c22b673680f1df81d5537e472d9d9b6bc4781ab75802e88534ba7c85266f49",
+  "stateHash": "7de9c1297de93621e04ce409de3afcad20d3a51e6be3c51f978b27956a963e88",
   "stateManifest": {
-    "schemaVersion": 2,
+    "schemaVersion": 3,
     "designId": "duo_case",
     "role": "phone_case",
     "design": {
-      "buildNumber": 85,
-      "sourceHash": "95ecb8ecbdebee95935b56baaa33adfe7c6635ce10467702f717c3986e24ad00",
-      "designSha256": "02a80b79e728472e74fd8423e2061494e377d1473fe3e8e964d2c0c4a415f80a",
-      "manifestSha256": "3ceeee59a7881586f03d22c288f8c1a146b1844987713645eeac1dd35696f41d",
-      "stepSha256": "3d2c9644522bb3e9e4b719bc052761838f0a33b38e039f43231b3a45f516d7ee",
+      "revision": "c0e1339305b1abc964e3cbc470d1615679f911ced305be13dfe8671e49fe87f8",
+      "designSha256": "61b66f9a6f49397d6cc8e8a2b19ec8dd228c9e0cc8a02719f02bcf8cdaa7a302",
+      "manifestSha256": "b3fc1c06729807fee04275c6529330f045d4f1d39e0ab61d6655b19354e044c8",
+      "stepSha256": "e474a0b7da32b8c84aead0e8ee4e3b47283cb7b0b04682c100f1e0f23a2cb539",
       "pcbReleases": []
     },
     "brief": {
       "path": "design/duo_case/README.md",
-      "sha256": "b53c6602673afae6f597f44b339285e635ce4151da2058edf4a1bccc858a42f7"
+      "sha256": "3cfa6226dcfb20d5e1b1796d1f94e7bd6fc7e3dbae8d99cc0fdeb6c73403c790"
     },
     "requirement": {
       "artifactContractPath": "product/contract.json",
-      "artifactContractSha256": "73d75b9aef8ffda53db9e97da0e2566064228a5e39f8567a6766ae779ece0291",
-      "designRequirementSha256": "bf9bcf8d7f801fc6352e99b9242fcb54547ac08eb9a1a76cbcd1eea218a550df",
+      "artifactContractSha256": "aa901d720c88079372ab7a31b73192a809804eedd108af4d1409930db4a584da",
+      "designRequirementSha256": "946e7a04de35f46f9c921c70992d6405cac0878ac7221514b4fd66a04bc60e9a",
       "inputs": [
         {
           "role": "external-reference",
@@ -66,6 +64,13 @@
         },
         {
           "role": "external-reference",
+          "id": "pokedex_front_reference",
+          "path": "product/references/uploads/20260924T104558589Z-1-image.png",
+          "sha256": "ac428b128c4bf6638da97dc66eb996f3923cc6ba9cd20be79075b7738d71f1f2",
+          "sizeBytes": 85107
+        },
+        {
+          "role": "external-reference",
           "id": "straight_left_image",
           "path": "product/references/uploads/20260924T083904593Z-1-image.png",
           "sha256": "67eb5fa5eff69245ec5a5dad32e441e68d8d473e0fe0357cc47060b1759a784f",
@@ -86,53 +91,63 @@
         "step"
       ]
     },
-    "stateHash": "d6c22b673680f1df81d5537e472d9d9b6bc4781ab75802e88534ba7c85266f49"
+    "stateHash": "7de9c1297de93621e04ce409de3afcad20d3a51e6be3c51f978b27956a963e88"
   },
   "buildArtifacts": {
-    "manifestSha256": "3ceeee59a7881586f03d22c288f8c1a146b1844987713645eeac1dd35696f41d",
-    "stepSha256": "3d2c9644522bb3e9e4b719bc052761838f0a33b38e039f43231b3a45f516d7ee"
+    "manifestSha256": "b3fc1c06729807fee04275c6529330f045d4f1d39e0ab61d6655b19354e044c8",
+    "stepSha256": "e474a0b7da32b8c84aead0e8ee4e3b47283cb7b0b04682c100f1e0f23a2cb539"
   },
   "exportAlgorithm": {
     "version": 1,
-    "bootstrapSha256": "2bf557334c52ec5d092ce927635d10591a87b85e6c441c3f4aa3411ff2379a39"
+    "bootstrapSha256": "f4939328ef685300fcdaa250c860428f6b9e009d10931b20d36728e55e0029e4"
   },
   "sourceHashes": {
+    "arrow_insert/arrow_insert": "2d47517e87feca727588c521529e40417a095f52f6f75e72696bd66cd252d612",
     "back_cover/back_cover": "350d757ebd14dd217246aafc1bbd0b62dcc6b13c8f874d41376d37719ebdf81c",
     "camera_guard/camera_guard": "cb9cb22b359d7f54f8899dee81bc1be78aa93c5a6cde4f7d9dbc3329dd23b3b6",
-    "front_cover/front_cover": "da03c53583277d677c4c8e83cb913619535ee182b8d6609e2d587f170a041885",
+    "front_cover/front_cover": "10d22b0aa8fbc689c61a92a255eb7d35b2f4abfdb52ea72cf635751435ed9305",
+    "indicator_green/indicator_green": "96ff5f15ac97da17896568bc25dd8d0443bf4e85fe626e59922e7471a989b687",
+    "indicator_red/indicator_red": "ea3c05ffec33ee416fc5e3707b975738d9407e10a32cfe02414ba10fbba66628",
+    "indicator_yellow/indicator_yellow": "fe03239939bfb8b87012dc5318417a1ba7885c7e43c18c98488abe5c1bf5e15a",
+    "lens_insert/lens_insert": "14218db52bcee52f068082b19358abba8153aba6295f68410b984820c2673e75",
     "retainer/retainer": "0c97293fcb45a95deb8e4422ade206a2db2271e604856d21bed90f1f24a3311b",
     "spine/spine": "ce31de648986daf78717f280dac2c2166ea9c38fbc297d8bc5d105385926678f"
   },
   "assetHashes": {},
   "shapeHashes": {
+    "arrow_insert": "59d9ad270876c767709f6b6bc427fd853efbace780762058a3a6c0b1942b6877",
     "back_cover": "49baa1edc26fc9c6516f8afe389099c13518d26b58006a915be9200017f743d3",
     "camera_guard": "b88f43a91d9eda71dab1ce5599e73e62b838c3d5e63b97aaf40d87d2532e1baf",
-    "front_cover": "a8166f6b8c1d3312bd3aa219852354556279e836f0dce038bf1c28ea6f34334a",
+    "front_cover": "7d673a9d546dde0f6dfa73356e3465c52836721a926c5d6d99668fd40e984f4f",
+    "indicator_green": "fe3f02569295747549743000d16b4e7706815528fcac785953c0fc1f64a3a6a2",
+    "indicator_red": "c488370651160bfd32bf1368a99a166621f39d0b2806ff1947793b3ac502f6e4",
+    "indicator_yellow": "5edbdeb9c661f5bc12ffd8a66ac26d029d1cdaebe94cf4c04d306ac109a8d16b",
+    "lens_insert": "bfc0011f1b27244c9ebd94ac59f90f0c2ac8941d2897cf0a285b5750b9e275ed",
     "retainer": "4a722963a75122eb4cd248e136b4c4c41f04931baf436ab92deab1272795e003",
     "spine": "c16ee90eaddf41a4cf59a211b771a412724fd58aa009211ab685cce1294f3fde"
   },
   "runtime": {
-    "manifestHash": "db7eda9ca0f7599605893eccbedbf9d7a2eb682bb80418080536971a776aab33",
+    "manifestHash": "56a1de5d760e9f5c1dd991c57c86f24fbfb7da361b3d55b9d4cb65cdabe66a74",
     "pythonVersion": "3.12.13",
     "build123dVersion": "0.10.0",
     "ocpVersion": "7.8.1.1.post1",
-    "cadpyHash": "74f250de9b3dff3b5e0b94523625dd13c3710d3f81c487102225650971b064a6"
+    "cadpyHash": "e8b3788bab31d790595e4c3306dda85dfe057c87a4fc64f7ef3eab254239b7ba"
   },
   "artifacts": [
     {
-      "path": "manufacturing/duo_case/releases/export-b98e306649bd898b838626dff9a2f3e4/model.step",
+      "path": "manufacturing/duo_case/releases/export-071e1b9d148c6fc041075e1a3fac8f8a/model.step",
       "role": "model/step",
-      "sha256": "3d2c9644522bb3e9e4b719bc052761838f0a33b38e039f43231b3a45f516d7ee",
-      "sizeBytes": 405089
+      "sha256": "e474a0b7da32b8c84aead0e8ee4e3b47283cb7b0b04682c100f1e0f23a2cb539",
+      "sizeBytes": 523792
     }
   ],
   "interference": {
-    "summary": "No interference across 10 object pairs.",
+    "summary": "No interference across 45 object pairs.",
     "counts": {
-      "objects": 5,
-      "pairs": 10,
+      "objects": 10,
+      "pairs": 45,
       "exact": 0,
-      "cached": 2,
+      "cached": 7,
       "interference": 0,
       "undeclared": 0,
       "over_budget": 0,
@@ -145,14 +160,9 @@
     "algorithm": "hmac-sha256",
     "keyId": "6293cb717f4fe34d12238dabee613b05",
     "projectId": "991d92af-8dfa-49d2-9edb-b9c884fc07c9",
-    "receiptPath": "manufacturing/duo_case/releases/export-b98e306649bd898b838626dff9a2f3e4/receipt.json",
-    "payloadSha256": "b66f3ef56ea39e07ef2f2f171bb36a40391db823ed6981b6016fac95440c4c82",
-    "mac": "e66479ff726fd52b98a951da944f899fa423767392583d38dd9e5b778bff4665"
+    "receiptPath": "manufacturing/duo_case/releases/export-071e1b9d148c6fc041075e1a3fac8f8a/receipt.json",
+    "payloadSha256": "7eea1cb446f5d96aa86f4994dc63dadddac6468f649b0a30ebfecb233f454080",
+    "mac": "ba7706df6a5d37a685f03d5ab16ae150a422f2ebddc190e3c1f7b58c232bcdd9"
   },
-  "status": "reviewed",
-  "review": {
-    "reviewId": "review-85-7998534a-c47b-4f3a-81ee-2ee5bd2ccb12",
-    "path": ".work/builds/cad/duo_case/reviews/review-85-7998534a-c47b-4f3a-81ee-2ee5bd2ccb12/receipt.json",
-    "sha256": "34fc508d10d4bfba55027035a7bf040da71a1c0f50ae96f8ac9e4e994973e3bc"
-  }
+  "status": "handoff"
 }

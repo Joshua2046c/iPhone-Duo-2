@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "8dfe64e9b7e73b666683729907feb8eb2d39ff069db34a42d7c644bf050fb973",
+  "requirements_digest": "544ca61b059278ac394e738aecee9c92e3429a7982b3b6072b39faebdff24975",
   "items": [
     {
       "id": "back_cover",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT_COVER-R6",
+      "part_number": "DUO-FRONT_COVER-R7",
       "source": "default",
-      "description": "PETG4厚；49×115.4深2.6收纳腔，51.4×119深1.4台阶，底厚1.4，外廓87.8×121.5不变。",
+      "description": "PETG红色上盖87.8×121.5×4；保留内侧收纳腔及压盖座；五个嵌件浅座与34×2.4胶囊浅槽均深0.2，局部剩余底厚1.2。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "f553c44beb84f369"
+      "part_identity": "b6fa8997818ff106"
     },
     {
       "id": "camera_guard",
@@ -72,12 +72,77 @@
     {
       "id": "adhesive",
       "role": "assembly_consumable",
-      "name": "兼容TPU/PETG的胶：背盖固定端及前盖压盖0.2mm，镜头圈0.15mm；须粘接试样",
+      "name": "兼容TPU/PETG的装配胶（含正面嵌件）",
       "quantity": 1,
       "source": "default",
       "procurement_status": "external_procurement_required",
       "required_user_evidence": [],
-      "supply_risk": "胶接强度未验证；辅料不计入五个定制零件"
+      "supply_risk": "胶种及强度待试样；原有胶层不变，正面嵌件底部胶层0.05mm；辅料不计入10个定制零件"
+    },
+    {
+      "id": "lens_insert",
+      "role": "front_decoration",
+      "name": "蓝白一体半球嵌件",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-LENS-INSERT-R1",
+      "source": "default",
+      "description": "PETG白底Ø18×1，蓝色半球R7；两个共面颜色区域共同成形为一个零件，无装配间隙。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "c31ba9b7d9c12007"
+    },
+    {
+      "id": "arrow_insert",
+      "role": "front_decoration",
+      "name": "黄色向内三角形嵌件",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-ARROW-INSERT-R1",
+      "source": "default",
+      "description": "PETG 7×9×0.9；右侧中部，尖端朝左，嵌入0.15。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "66c6332c06c8c713"
+    },
+    {
+      "id": "indicator_red",
+      "role": "front_decoration",
+      "name": "红色小球嵌件",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INDICATOR-RED-R1",
+      "source": "default",
+      "description": "PETG R1.8半球头、平底座厚0.25、嵌入0.15。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "c4056c07e1dc7e7e"
+    },
+    {
+      "id": "indicator_yellow",
+      "role": "front_decoration",
+      "name": "黄色小球嵌件",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INDICATOR-YELLOW-R1",
+      "source": "default",
+      "description": "PETG R1.8半球头、平底座厚0.25、嵌入0.15。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "75de7e93bf64f75b"
+    },
+    {
+      "id": "indicator_green",
+      "role": "front_decoration",
+      "name": "绿色小球嵌件",
+      "quantity": 1,
+      "manufacturer": "Project custom",
+      "part_number": "DUO-INDICATOR-GREEN-R1",
+      "source": "default",
+      "description": "PETG R1.8半球头、平底座厚0.25、嵌入0.15。",
+      "procurement_status": "custom_fabrication",
+      "cad_relevance": true,
+      "part_identity": "fa04a943dbaed91f"
     }
   ],
   "unresolved_items": [],
