@@ -51,15 +51,15 @@
       "source": "user"
     },
     "hinge_mechanism": {
-      "value": "薄片前端胶粘前盖，后端在背盖凹槽内滑动；背盖两个凸点与薄片两条长槽导向，由独立压盖防脱；展开时向背盖缩回",
+      "value": "护轴片一端胶粘背盖，另一端以双长槽/双销在前盖内侧收纳腔滑动，由前盖内侧独立压盖防脱。",
       "source": "user"
     },
     "exposed_bridge": {
-      "value": "外露护轴段跨越手机厚度且略有余量；埋入背盖的滑动尾段及前盖胶接段另计",
+      "value": "闭合时护轴自由段跨过两盖间隙；打开时两条直角边并拢，同时护轴片完整滑入前盖收纳凹槽；允许改变薄片宽度。",
       "source": "user"
     },
     "front_cover": {
-      "value": "完整覆盖手机正面，仅设护轴片连接凹槽",
+      "value": "完整覆盖手机正面的前盖，内侧设置护轴片收纳凹槽及独立压盖。",
       "source": "user"
     },
     "front_cover_interpretation": {
@@ -67,7 +67,7 @@
       "source": "default"
     },
     "travel_mm": {
-      "value": 11.3,
+      "value": 16.926548,
       "source": "default"
     },
     "materials": {
@@ -93,7 +93,7 @@
       "source": "default"
     },
     "slider_location": {
-      "value": "滑槽、导向凸点和压盖均位于背盖内侧，外背面不露滑槽压盖",
+      "value": "滑槽、定位销、收纳固定结构和护轴片压盖全部位于前盖内侧；背盖改为直接胶接固定端。",
       "source": "user"
     },
     "camera_guard": {
@@ -115,8 +115,8 @@
       "value": {
         "plate_thickness_mm": 3.4,
         "phone_seat_z_mm": 2.4,
-        "retainer_top_z_mm": 2.2,
-        "outer_back_z_mm": -1.0
+        "outer_back_z_mm": -1,
+        "bond_recess_depth_mm": 1.2
       },
       "source": "default"
     },
@@ -126,6 +126,26 @@
     },
     "left_corner_implementation": {
       "value": "试配版左角采用方角名义轮廓；右侧圆角沿用现有默认，不由图片推算精确半径。",
+      "source": "default"
+    },
+    "open_edge_closure": {
+      "value": "两片壳打开后两条直边并拢，且完整护轴自由段和滑动尾片收纳在前盖内。",
+      "source": "user"
+    },
+    "retraction_interpretation": {
+      "value": "胶粘在背盖的固定段留在背盖；其余自由段/滑动尾片完整入前盖。静态端点验证与实机连续开合保证分开，后者需真实铰链/样件。",
+      "source": "default"
+    },
+    "sheet_width_mm": {
+      "value": 84,
+      "source": "default"
+    },
+    "front_storage_stack": {
+      "value": {
+        "thickness_mm": 4,
+        "pocket_depth_mm": 2.6,
+        "retainer_thickness_mm": 1
+      },
       "source": "default"
     }
   },

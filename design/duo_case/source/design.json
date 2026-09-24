@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "buildNumber": 54,
-  "sourceHash": "e68412e2d91407f17228a11b51c943f9ba84d7e010f35eabe0c3e0088c714b6a",
+  "buildNumber": 73,
+  "sourceHash": "8a192699520eb77a70477627d39c46d26957622462dfece3378eb4c600c3d255",
   "units": "mm",
   "coordinateFrame": "replicator-world-z-up",
   "targets": [
@@ -14,7 +14,7 @@
           "target": "back_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/back_cover/000-back_cover.py",
-          "sha256": "57eb003ce868f6c4d58cd5c1364ea04db37aae4bddc57180db3f54915e846439"
+          "sha256": "e8cba9b3f053dc96fe7f68f1f0e917da9a94a3fc6f2e3633cb34c65a3d0dddcb"
         }
       ],
       "dependencies": []
@@ -28,7 +28,7 @@
           "target": "spine",
           "order": 0,
           "path": "design/duo_case/source/parts/spine/000-spine.py",
-          "sha256": "76a971b8cdceed9e892e73175fa9f9b05222d2907a9977cfe9b614f0fa2d4bbd"
+          "sha256": "ce31de648986daf78717f280dac2c2166ea9c38fbc297d8bc5d105385926678f"
         }
       ],
       "dependencies": []
@@ -56,7 +56,7 @@
           "target": "front_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/front_cover/000-front_cover.py",
-          "sha256": "9ce9e49c185b26d6ae97479916e89970dc3c7881ea3f5be9be72b29ee96939a9"
+          "sha256": "da03c53583277d677c4c8e83cb913619535ee182b8d6609e2d587f170a041885"
         }
       ],
       "dependencies": []
@@ -80,9 +80,9 @@
     {
       "id": "back_cover",
       "target": "back_cover",
-      "label": "01 左直边背盖",
+      "label": "01 胶接背盖",
       "kind": "generated",
-      "shapeHash": "d46ec5ef4bc97b93e57a05ad759e9b59421812825ce2c4221e232d0639073602",
+      "shapeHash": "005086c1adba472547ef7c11404027681a96b80a4097959e8ba639332b47d471",
       "transform": {
         "positionMm": [
           0,
@@ -106,14 +106,14 @@
     {
       "id": "spine",
       "target": "spine",
-      "label": "02 滑动护轴片",
+      "label": "02 前滑后粘护轴片",
       "kind": "generated",
-      "shapeHash": "270d31652c56582e381ecef99c16a5d1738e81ece0d14fd0b96fa75c5327d664",
+      "shapeHash": "1c7da15d3d8d30a5ae0bf7fca575e2902ae3cea822f0bf1057b2a835c2396b41",
       "transform": {
         "positionMm": [
-          -43.7,
+          -43.9,
           0,
-          2.35
+          3.3
         ],
         "rotationDeg": [
           0,
@@ -134,16 +134,16 @@
       "target": "retainer",
       "label": "03 滑动压盖",
       "kind": "generated",
-      "shapeHash": "e9e5d6a5180c4809e64a0afafa4c4d0d1d363c73b0b0dc2f385899c0209f4f54",
+      "shapeHash": "cb38b10511a236df255a2ed4fc4d86f151c8f1d1e6b9e6da1873d1db6d92037e",
       "transform": {
         "positionMm": [
-          -27.25,
-          -11.5,
-          2.2
+          -69.5,
+          0,
+          3.45
         ],
         "rotationDeg": [
-          180,
           0,
+          180,
           0
         ],
         "rotationOrder": "XYZ",
@@ -158,18 +158,18 @@
     {
       "id": "front_cover",
       "target": "front_cover",
-      "label": "04 左直边前盖",
+      "label": "04 前盖收纳腔",
       "kind": "generated",
-      "shapeHash": "e7ee59c0539384a772ef35b5cc52364fce2cbb1e2fc2a8b5cc90a7f34688479b",
+      "shapeHash": "dccb65d3cd9bb2b0e458d21dcc1dbe796409548b09380296f7a5f172fe6cbcf2",
       "transform": {
         "positionMm": [
+          -87.8,
           0,
-          0,
-          14.85
+          3.65
         ],
         "rotationDeg": [
           0,
-          0,
+          180,
           0
         ],
         "rotationOrder": "XYZ",
@@ -210,7 +210,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T08:41:53.560Z",
+  "updatedAt": "2026-09-24T09:19:02.720Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -231,41 +231,31 @@
       "back_cover_shutter_y": -27,
       "back_cover_shutter_opening": 23,
       "back_cover_bottom_opening": 50,
-      "back_cover_channel_end_x": -12.7,
-      "back_cover_channel_center_y": -11.5,
-      "back_cover_channel_height": 75,
-      "back_cover_channel_depth": 2.2,
-      "back_cover_seat_border": 2,
-      "back_cover_seat_depth": 1.4,
-      "back_cover_pin_diameter": 2.4,
-      "back_cover_pin_x": -29.2,
-      "back_cover_pin_y1": -30,
-      "back_cover_pin_y2": 15,
-      "back_cover_pin_tip_z": 1.3,
       "back_cover_phone_seat_z": 2.4,
       "back_cover_camera_ring_width": 2,
       "back_cover_camera_ring_clearance": 0.2,
-      "back_cover_camera_recess_depth": 0.4
+      "back_cover_camera_recess_depth": 0.4,
+      "back_cover_glue_recess_length": 8.3,
+      "back_cover_glue_recess_height": 85,
+      "back_cover_glue_recess_depth": 1.2
     },
     "spine": {
-      "spine_height": 117.8,
+      "spine_height": 84,
       "spine_thickness": 0.6,
-      "spine_bridge_span": 11.4,
+      "spine_bridge_span": 11.9,
       "spine_bend_radius": 1.6,
-      "spine_tail_length": 18.5,
-      "spine_tail_height": 73,
-      "spine_tail_center_y": -11.5,
+      "spine_tail_length": 30,
       "spine_glue_tab_length": 8,
-      "spine_glue_tab_height": 104,
-      "spine_slot_length": 14.5,
+      "spine_slot_length": 22.5,
       "spine_slot_width": 3.2,
-      "spine_slot_center_from_bend": 9.25,
-      "spine_slot_y1": -30,
-      "spine_slot_y2": 15
+      "spine_slot_center_from_bend": 17,
+      "spine_slot_y1": -25,
+      "spine_slot_y2": 25,
+      "spine_flat_pose": true
     },
     "retainer": {
-      "retainer_width": 33.1,
-      "retainer_height": 78.6,
+      "retainer_width": 51,
+      "retainer_height": 90,
       "retainer_thickness": 1,
       "retainer_roof_relief": 0.2,
       "retainer_end_bond_land": 2.3,
@@ -274,12 +264,19 @@
     "front_cover": {
       "front_cover_width": 87.8,
       "front_cover_height": 121.5,
-      "front_cover_thickness": 2.2,
+      "front_cover_thickness": 4,
       "front_cover_corner_radius": 11.6,
-      "front_cover_groove_end_x": -35.4,
-      "front_cover_groove_height": 104.6,
-      "front_cover_groove_y": 0,
-      "front_cover_groove_depth": 1
+      "front_cover_storage_depth": 2.6,
+      "front_cover_storage_length": 49,
+      "front_cover_storage_height": 85.4,
+      "front_cover_cap_seat_length": 51.4,
+      "front_cover_cap_seat_height": 90.6,
+      "front_cover_cap_seat_depth": 1.4,
+      "front_cover_pin_diameter": 2.4,
+      "front_cover_pin_x": -18.9,
+      "front_cover_pin_y1": -25,
+      "front_cover_pin_y2": 25,
+      "front_cover_pin_tip": 1.3
     },
     "camera_guard": {
       "camera_guard_inner_width": 55,

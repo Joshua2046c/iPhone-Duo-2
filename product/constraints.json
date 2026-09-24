@@ -49,136 +49,150 @@
     "outer_back_z": -1,
     "corner_radius_scope": "right_side_only",
     "left_corner_radius": 0,
-    "left_corner_source": "default_square_interpretation_of_user_image"
+    "left_corner_source": "default_square_interpretation_of_user_image",
+    "bond_recess": {
+      "end_x": -35.6,
+      "height": 85,
+      "depth": 1.2,
+      "floor_z": 1.2,
+      "sheet_z": [
+        1.4,
+        2.0
+      ],
+      "bondline": 0.2,
+      "source": "default"
+    }
   },
   "slider": {
+    "location": "inside_front",
     "sheet_thickness": 0.6,
-    "nominal_travel": 11.3,
-    "slot_length": 14.5,
+    "sheet_width_y": 84,
+    "tail_length": 30,
+    "glue_tab_length": 8,
+    "bridge_span": 11.9,
+    "bend_radius": 1.6,
+    "nominal_travel": 16.926548245743668,
+    "slot_length": 22.5,
     "slot_width": 3.2,
+    "slot_center_from_bend": 17,
     "pin_diameter": 2.4,
-    "pin_center_x": -29.2,
+    "pin_center_x_front_local": -18.9,
     "pin_y": [
-      -30,
-      15
-    ],
-    "slot_center_x": -34.45,
-    "slot_y": [
-      -30,
-      15
-    ],
-    "closed_tail_x": [
-      -43.7,
-      -25.2
-    ],
-    "open_tail_x": [
-      -32.4,
-      -13.9
-    ],
-    "tail_y": [
-      -48,
+      -25,
       25
     ],
-    "pocket_x": [
-      -44,
-      -12.7
+    "closed_bend_x": -43.9,
+    "closed_lower_bend_z": 3.3,
+    "closed_upper_bend_z": 15.2,
+    "closed_tail_z": [
+      16.5,
+      17.1
+    ],
+    "pocket_front_local_x": [
+      -43.9,
+      5.1
     ],
     "pocket_y": [
-      -49,
-      26
+      -42.7,
+      42.7
     ],
-    "tail_z": [
-      0.45,
-      1.05
-    ],
-    "pin_tip_z": 1.3,
-    "cap_inner_roof_z": 1.4,
-    "bend_center_x": -43.7,
-    "bend_centerline_radius": 1.6,
-    "lower_bend_z": 2.35,
-    "upper_bend_z": 13.75,
-    "vertical_protection_height": 117.8,
-    "vertical_bridge_span": 11.4,
-    "source": "default_except_user_inner_location",
-    "location": "inside_back",
-    "pocket_floor_z": 0.2
+    "pocket_depth": 2.6,
+    "front_local_pin_tip_z": 1.3,
+    "forward_slot_limit": 18.05,
+    "remaining_slot_at_open": 1.1234517542563331,
+    "source": "default_geometry_user_front_location",
+    "validation": "static_edge_meeting_endpoints_not_real_phone_kinematics"
   },
   "retainer": {
-    "outer_x": [
-      -43.8,
-      -10.7
+    "width": 51,
+    "height": 90,
+    "thickness": 1,
+    "relief": 0.2,
+    "side_land": 2.1,
+    "end_land": 2.3,
+    "closed_position": [
+      -18.3,
+      0,
+      15.05
     ],
-    "outer_y": [
-      -50.8,
-      27.8
+    "closed_rotation": [
+      0,
+      0,
+      0
     ],
-    "base_z": [
-      1.2,
-      2.2
+    "open_position": [
+      -69.5,
+      0,
+      3.45
     ],
-    "sliding_roof_z": 1.4,
-    "bond_land_z": 1.2,
-    "back_seat_z": 1.0,
-    "bondline": 0.2,
-    "attachment": "内侧三边限胶胶接，左侧开口；先装压盖再装手机",
-    "source": "default",
-    "phone_clearance": 0.2
+    "open_rotation": [
+      0,
+      180,
+      0
+    ],
+    "glue_thickness": 0.2,
+    "front_seat_depth": 1.4,
+    "source": "default"
   },
   "front": {
     "outer_width": 87.8,
     "outer_height": 121.5,
     "corner_radius": 11.6,
-    "thickness": 2.2,
-    "bottom_z": 14.85,
-    "tab_x": [
-      -43.7,
-      -35.7
-    ],
-    "tab_y": [
-      -52,
-      52
-    ],
-    "tab_z": [
-      15.05,
-      15.65
-    ],
-    "bond_pocket_ceiling_z": 15.85,
-    "bondline": 0.2,
-    "source": "default",
     "corner_radius_scope": "right_side_only",
     "left_corner_radius": 0,
-    "left_corner_source": "default_square_interpretation_of_user_image"
+    "thickness": 4,
+    "closed_position": [
+      0,
+      0,
+      14.85
+    ],
+    "closed_rotation": [
+      0,
+      0,
+      0
+    ],
+    "open_position": [
+      -87.8,
+      0,
+      3.65
+    ],
+    "open_rotation": [
+      0,
+      180,
+      0
+    ],
+    "source": "default"
   },
   "connections": [
     {
       "id": "phone_to_back",
       "implementation": "free",
       "kind": "elastic_corner_lips",
-      "status": "modeled_default_not_physically_tested"
+      "status": "dimensioned_not_physically_tested"
     },
     {
       "id": "spine_to_back",
       "implementation": "free",
-      "kind": "two_pin_two_slot_slider",
-      "status": "dimensioned"
-    },
-    {
-      "id": "cap_to_back",
-      "implementation": "free",
-      "kind": "three_edge_adhesive",
-      "status": "dimensioned_adhesive_process_test_needed"
+      "kind": "recessed_adhesive_tab",
+      "status": "dimensioned_not_physically_tested"
     },
     {
       "id": "spine_to_front",
       "implementation": "free",
-      "kind": "recessed_adhesive_tab",
-      "status": "dimensioned_adhesive_process_test_needed"
+      "kind": "two_pin_two_slot_slider",
+      "status": "dimensioned_not_physically_tested"
+    },
+    {
+      "id": "cap_to_front",
+      "implementation": "free",
+      "kind": "three_edge_adhesive",
+      "status": "dimensioned_not_physically_tested"
     },
     {
       "id": "camera_guard_to_back",
       "implementation": "free",
       "kind": "annular_recess_adhesive",
-      "status": "dimensioned_adhesive_process_test_needed"
+      "status": "dimensioned_not_physically_tested"
     }
   ],
   "unresolved_roles": [],
@@ -191,7 +205,7 @@
     {
       "id": "kinematics",
       "severity": "prototype_limit",
-      "description": "11.3 mm为行程假设；真实铰链扫掠、柔性变形及自动回缩未验证"
+      "description": "直边接触终点按同料长展开设计；实机展开164.6mm与两壳并拢姿态不是同一运动学依据，不能保证真实铰链驱动/摩擦/连续轨迹。"
     },
     {
       "id": "sheet_life",
@@ -207,6 +221,11 @@
       "id": "camera_height",
       "severity": "prototype_limit",
       "description": "摄像头高出机背4mm为假定值；保护圈需实测校准"
+    },
+    {
+      "id": "coverage",
+      "severity": "prototype_limit",
+      "description": "护轴片缩窄至84mm居中，不覆盖全117.8mm铰链高度；用户授权改宽，需后续验证保护范围。"
     }
   ],
   "camera_guard": {
