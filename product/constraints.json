@@ -73,7 +73,19 @@
     "opening_edge_radius": 0.3,
     "opening_turn_radius": 1,
     "opening_extension_per_end": 1,
-    "opening_width_definition": "既有width/length为保留的矩形净空；上下轮廓R1，直立端面间距为净空尺寸+2 mm。"
+    "opening_width_definition": "既有width/length为保留的矩形净空；上下轮廓R1，直立端面间距为净空尺寸+2 mm。",
+    "logo": {
+      "outer_diameter_mm": 18,
+      "center_ring_outer_diameter_mm": 5.4,
+      "stroke_width_mm": 0.8,
+      "depth_mm": 0.3,
+      "center_xy_mm": [
+        0,
+        -45
+      ],
+      "bottom_edge_margin_mm": 6.75,
+      "remaining_plate_mm": 3.1
+    }
   },
   "slider": {
     "location": "inside_front",

@@ -2,7 +2,7 @@
   "version": 2,
   "artifact_level": "assembly",
   "deliverable_intent": "fit_check",
-  "summary": "五件基础护轴壳、五个正面装饰嵌件和八个背面/盖板嵌件；蓝白半球为一体双色件。",
+  "summary": "五件基础护轴壳、五个正面装饰嵌件和八个背面/盖板嵌件；蓝白半球为一体双色件。 背壳底部有小型精灵球凹刻。",
   "required_interfaces": [
     {
       "id": "phone_fit",
@@ -170,6 +170,18 @@
       "source": "user_requested",
       "description": "蓝色手绘圈定前盖上部窄折线凹槽的位置和形状。",
       "path": "product/references/uploads/20260924T225602106Z-1-image.png"
+    },
+    {
+      "id": "back_logo_reference",
+      "source": "user_requested",
+      "description": "精灵球凹刻图案参考",
+      "path": "product/references/uploads/20260928T142653760Z-1-ishot-2026-09-28-10-23-27.png"
+    },
+    {
+      "id": "back_logo_position",
+      "source": "user_requested",
+      "description": "用户圈定背壳外侧底部小logo位置",
+      "path": "product/references/uploads/20260928T142653760Z-2-mark.png"
     }
   ],
   "assembly_story": {
@@ -223,7 +235,9 @@
           "opening_turn_mark_1",
           "opening_turn_mark_2",
           "opening_turn_mark_3",
-          "front_divider_reference"
+          "front_divider_reference",
+          "back_logo_reference",
+          "back_logo_position"
         ]
       }
     ]

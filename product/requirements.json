@@ -357,6 +357,25 @@
         "remaining_roof_mm": 1.2
       },
       "source": "default"
+    },
+    "back_logo": {
+      "value": "按参考精灵球图案，在背壳外侧底部标记区域做一个小型凹刻logo，包含外圆环、中央圆环与横向分界线。",
+      "source": "user"
+    },
+    "back_logo_defaults": {
+      "value": {
+        "outer_diameter_mm": 18,
+        "center_ring_outer_diameter_mm": 5.4,
+        "stroke_width_mm": 0.8,
+        "depth_mm": 0.3,
+        "center_xy_mm": [
+          0,
+          -45
+        ],
+        "bottom_edge_margin_mm": 6.75,
+        "remaining_plate_mm": 3.1
+      },
+      "source": "default"
     }
   },
   "open_questions": []

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "132d7e0aff08dbfa067b3571ad1c9f40f55cde92a11e36b3e39ee5cc255735ac",
+  "requirements_digest": "894d95035d7936e5567b00ec11146669415da6869c21fb769029db596fdcb3d0",
   "items": [
     {
       "id": "back_cover",
@@ -10,12 +10,12 @@
       "name": "弹性半包背盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-BACK_COVER-R8",
+      "part_number": "DUO-BACK_COVER-R9",
       "source": "default",
-      "description": "TPU背盖3.4厚；铰链侧上下残留竖边及该向内扣去除至贴机面，顶底回边与右角保留；8.3×115深1.2胶槽。 顶部、底部和两侧开口上下轮廓R1，两端各加宽1保留原净空；触手外缘R0.3；铰链侧两外角R1.0。",
+      "description": "TPU背盖3.4厚；铰链侧上下残留竖边及该向内扣去除至贴机面，顶底回边与右角保留；8.3×115深1.2胶槽。 顶部、底部和两侧开口上下轮廓R1，两端各加宽1保留原净空；触手外缘R0.3；铰链侧两外角R1.0。 外背底部居中增加Ø18精灵球凹刻，线宽0.8、深0.3，中心(0,-45)，槽下3.1厚。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "adfe6d0d7e7dc637"
+      "part_identity": "87745d2007ceeb9c"
     },
     {
       "id": "spine",

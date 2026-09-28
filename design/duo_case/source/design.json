@@ -12,7 +12,7 @@
           "target": "back_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/back_cover/000-back_cover.py",
-          "sha256": "e48fa8903fafe738d2d71500db7e20836ea4c0753f2c78c44ec2709bcec6119b"
+          "sha256": "53de422d47269b442b31805c56f0bd3c7f40bc6e555885cf8da85068be03d65d"
         }
       ],
       "dependencies": []
@@ -192,7 +192,7 @@
       "target": "back_cover",
       "label": "01 开边胶接背盖",
       "kind": "generated",
-      "shapeHash": "c4cd282f0018739e1f179f12b74dbb241e52541d1d59c0f833a7da3500a0e77c",
+      "shapeHash": "27a752035889ef8a888549aadf0697cc3089d88b981c3daf5d254b3b7701bb2a",
       "transform": {
         "positionMm": [
           0,
@@ -673,7 +673,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-09-24T22:57:30.815Z",
+  "updatedAt": "2026-09-28T14:28:14.634Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -704,7 +704,13 @@
       "back_cover_hinge_edge_cut_width": 2.2,
       "back_cover_left_corner_radius": 1,
       "back_cover_opening_edge_radius": 0.3,
-      "back_cover_opening_turn_radius": 1
+      "back_cover_opening_turn_radius": 1,
+      "back_cover_logo_diameter": 18,
+      "back_cover_logo_hub_diameter": 5.4,
+      "back_cover_logo_stroke_width": 0.8,
+      "back_cover_logo_depth": 0.3,
+      "back_cover_logo_x": 0,
+      "back_cover_logo_y": -45
     },
     "spine": {
       "spine_height": 114,

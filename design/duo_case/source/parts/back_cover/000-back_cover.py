@@ -109,6 +109,23 @@ for axis,outer_side,inner_side,lo,upper in openings:
   access=Pos(center,outer_side,seat_z+HALF_T/2)*Box(span,2*wall+2,HALF_T)
  assert (body & access).volume<1e-6, 'Original rectangular button passage obstructed'
 
+
+# Small recessed Pokeball emblem on the exterior (-Z) back face.
+logo_d=param('back_cover_logo_diameter',18.0)
+logo_hub_d=param('back_cover_logo_hub_diameter',5.4)
+logo_stroke=param('back_cover_logo_stroke_width',0.8)
+logo_depth=param('back_cover_logo_depth',0.3)
+logo_x=param('back_cover_logo_x',0.0)
+logo_y=param('back_cover_logo_y',-45.0)
+assert 0<logo_stroke<logo_hub_d/2<logo_d/2
+outer_mark=Circle(logo_d/2)-Circle(logo_d/2-logo_stroke)
+hub_mark=Circle(logo_hub_d/2)-Circle(logo_hub_d/2-logo_stroke)
+divider=(Rectangle(logo_d,logo_stroke)&Circle(logo_d/2))-Circle(logo_hub_d/2-logo_stroke)
+mark=outer_mark+hub_mark+divider
+body-=Pos(logo_x,logo_y,outside_z-0.1)*extrude(mark,amount=logo_depth+0.1)
+assert plate-logo_depth>=1.2, 'Logo recess breaks through the rear plate'
+assert abs(logo_y)+logo_d/2<ho/2-wall, 'Logo too close to end wall'
+
 assert plate-glue_depth>=1.2
 assert len(body.solids())==1
 publish('back_cover',body,'01 开边胶接背盖')
