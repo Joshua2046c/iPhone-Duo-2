@@ -1,0 +1,8 @@
+{
+  "formatVersion": 4,
+  "name": "iPhone Duo  宝可梦图鉴机",
+  "title": "iPhone Duo 宝可梦图鉴风格前盖护轴壳",
+  "summary": "这是一套用于 iPhone Duo 宝可梦图鉴风格外壳设计的参数化模型，包含前背盖、滑动收纳护轴片、独立盖板、镜头圈及装饰嵌件，实机适配与运动表现尚待验证。",
+  "license": "MIT",
+  "artifacts": "rebuild"
+}
