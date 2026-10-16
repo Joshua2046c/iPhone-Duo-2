@@ -8,6 +8,7 @@ shift=reduction/2
 depth=param('front_cover_storage_depth',2.6)
 length=param('front_cover_storage_length',49.0)
 height=param('front_cover_storage_height',85.4)
+storage_y=param('front_cover_storage_y',13.7)
 seat_l=param('front_cover_cap_seat_length',51.4)
 seat_h=param('front_cover_cap_seat_height',90.6)
 seat_depth=param('front_cover_cap_seat_depth',1.4)
@@ -51,7 +52,7 @@ seat=fillet([v for v in seat.vertices() if abs(v.X+seat_l/2-shift)<1e-6],radius=
 body-=Pos(0,0,-0.1)*extrude(seat,amount=seat_depth+0.1)
 # Recess stays open at the hinge only at the sheet's sliding height.
 mouth_floor=seat_depth-bond_gap
-body-=Pos(shift-w/2+(length-1)/2,0,(mouth_floor+depth)/2)*Box(length+1,height,depth-mouth_floor)
+body-=Pos(shift-w/2+(length-1)/2,storage_y,(mouth_floor+depth)/2)*Box(length+1,height,depth-mouth_floor)
 for yy in (pin_y1,pin_y2):
  body+=Pos(pin_x,yy,(pin_tip+depth+0.05)/2)*Cylinder(pin_d/2,depth+0.05-pin_tip)
 def pocket(sketch,x,y):

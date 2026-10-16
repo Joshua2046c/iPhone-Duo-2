@@ -33,6 +33,7 @@ shutter_l=param('back_cover_shutter_opening',23.0)
 bottom_w=param('back_cover_bottom_opening',50.0)
 glue_l=param('back_cover_glue_recess_length',8.3)
 glue_h=param('back_cover_glue_recess_height',115.0)
+glue_y=param('back_cover_glue_recess_y',13.7)
 glue_depth=param('back_cover_glue_recess_depth',1.2)
 corner_soft=param('back_cover_left_corner_radius',1.0)
 opening_soft=param('back_cover_opening_edge_radius',0.3)
@@ -103,7 +104,7 @@ body-=Pos(cam_x,cam_y,seat_z)*extrude(offset(glass,amount=cam_inner_expand),amou
 # Ring seat follows the corrected external mouth; it is separate from the inside flare.
 body-=Pos(cam_x,cam_y,camera_mouth_z-0.1)*extrude(pad_profile,amount=cam_depth+0.1)
 assert abs((seat_z-camera_mouth_z)-cam_inner_depth)<1e-7
-body-=Pos(shift-wo/2+(glue_l-1)/2,0,seat_z-glue_depth+(glue_depth+1)/2)*Box(glue_l+1,glue_h,glue_depth+1)
+body-=Pos(shift-wo/2+(glue_l-1)/2,glue_y,seat_z-glue_depth+(glue_depth+1)/2)*Box(glue_l+1,glue_h,glue_depth+1)
 
 # Profile blends are independent of the small through-thickness edge roll.
 # Widen by one turn radius at each end so the original rectangular access remains clear.

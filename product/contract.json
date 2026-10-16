@@ -14,7 +14,7 @@
     {
       "id": "slider",
       "kind": "sliding_fit",
-      "description": "前盖内侧双销加粗并匹配加宽长槽，保留原轴向行程；整面盖板防脱，铰链侧留护轴片进出口；打开直边并拢时自由段及滑尾收纳。",
+      "description": "前盖内侧双销加粗并匹配加宽长槽，保留原轴向行程；整面盖板防脱，铰链侧留护轴片进出口；打开直边并拢时自由段及滑尾收纳。 护轴片按标记缩短，前盖收纳宽度、盖板让位区、双销及背盖胶座对应调整。",
       "source": "user_requested",
       "required": true
     },
@@ -200,6 +200,12 @@
       "source": "user_requested",
       "description": "两端圆滑摄像头玻璃/外壳开孔参考，并结合用户4 mm外扩、3.9 mm深内侧避让要求。",
       "path": "product/references/uploads/20261016T114613566Z-1-image.png"
+    },
+    {
+      "id": "shorter_shield_mark",
+      "source": "user_requested",
+      "description": "用户将护轴滑片整个平面标绿，要求缩短并同步收纳空间。",
+      "path": "product/references/uploads/20261016T121126090Z-1-mark-1.png"
     }
   ],
   "assembly_story": {
@@ -258,7 +264,8 @@
           "back_logo_position",
           "corrected_phone_outline_1",
           "corrected_phone_outline_2",
-          "camera_inside_relief_reference"
+          "camera_inside_relief_reference",
+          "shorter_shield_mark"
         ]
       }
     ]

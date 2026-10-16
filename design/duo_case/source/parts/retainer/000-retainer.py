@@ -4,6 +4,7 @@ t=param('retainer_thickness',1.0)
 relief=param('retainer_roof_relief',0.2)
 end_land=param('retainer_end_bond_land',2.3)
 side_land=param('retainer_side_bond_land',2.1)
+rail_y=param('retainer_rail_relief_y',13.7)
 # Centred full cover with asymmetrical shell outline and an open hinge-side rail relief.
 skin=param('retainer_decor_skin',0.2)
 corner_r=param('retainer_corner_radius',10.15)
@@ -13,7 +14,7 @@ outline=fillet([v for v in outline.vertices() if abs(v.X+w/2)<1e-6],radius=left_
 body=Pos(0,0,-skin)*extrude(outline,amount=t+skin)
 cut_left=-w/2-1
 cut_right=w/2-end_land
-body -= Pos((cut_left+cut_right)/2,0,t-relief/2+0.5)*Box(cut_right-cut_left,h-2*side_land,relief+1)
+body -= Pos((cut_left+cut_right)/2,rail_y,t-relief/2+0.5)*Box(cut_right-cut_left,h-2*side_land,relief+1)
 
 # Retainer is centred on the shortened outline; artwork stays in the fixed assembly datum.
 front_offset=param('retainer_front_x_offset',1.55)
