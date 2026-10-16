@@ -56,8 +56,8 @@
     "left_corner_radius": 1,
     "left_corner_source": "default_radius_for_user_requested_soft_corners",
     "bond_recess": {
-      "end_x": -32.5,
-      "height": 81.6,
+      "end_x": -35.5,
+      "height": 115,
       "depth": 1.2,
       "floor_z": 1.2,
       "sheet_z": [
@@ -66,7 +66,8 @@
       ],
       "bondline": 0.2,
       "source": "default",
-      "center_y": 13.7
+      "center_y": 0,
+      "length": 5.3
     },
     "hinge_edge_trim": {
       "width_x": 2.2,
@@ -113,20 +114,20 @@
   "slider": {
     "location": "inside_front",
     "sheet_thickness": 0.6,
-    "sheet_width_y": 80.6,
-    "tail_length": 26.9,
-    "glue_tab_length": 8,
+    "sheet_width_y": 114,
+    "tail_length": 13.079587134468353,
+    "glue_tab_length": 5,
     "bridge_span": 11.9,
     "bend_radius": 1.6,
     "nominal_travel": 16.926548245743668,
-    "slot_length": 23.3,
+    "slot_length": 9.479587134468355,
     "slot_width": 4.2,
-    "slot_center_from_bend": 13.9,
+    "slot_center_from_bend": 6.9897935672341776,
     "pin_diameter": 3.2,
-    "pin_center_x_front_local": -18.9,
+    "pin_center_x_front_local": -32.72041286553164,
     "pin_y": [
-      -11.3,
-      38.7
+      -25,
+      25
     ],
     "closed_bend_x": -40.8,
     "closed_lower_bend_z": 3.3,
@@ -137,27 +138,27 @@
     ],
     "pocket_front_local_x": [
       -40.8,
-      5.1
+      -8.720412865531642
     ],
     "pocket_y": [
-      -27.3,
-      54.7
+      -57.7,
+      57.7
     ],
     "pocket_depth": 2.6,
     "front_local_pin_tip_z": 1.3,
-    "forward_slot_limit": 18.05,
-    "remaining_slot_at_open": 1.1234517542563331,
+    "forward_slot_limit": 4.229587134468355,
+    "remaining_slot_at_open": -12.696961111275312,
     "source": "default_geometry_user_front_location",
-    "validation": "static_edge_meeting_endpoints_not_real_phone_kinematics",
-    "flat_total_length": 51.82654824574367,
+    "validation": "closed_fit_only_full_retraction_not_satisfied",
+    "flat_total_length": 35.00613538021203,
     "transverse_clearance_per_side": 0.5,
-    "axial_center_travel": 20.1,
-    "sheet_center_y": 13.7,
+    "axial_center_travel": 6.279587134468355,
+    "sheet_center_y": 0,
     "sheet_y_range": [
-      -26.6,
-      54
+      -57,
+      57
     ],
-    "pocket_height": 82,
+    "pocket_height": 115.4,
     "slot_y_local": [
       -25,
       25
@@ -168,8 +169,8 @@
     "height": 118.6,
     "thickness": 1,
     "relief": 0.2,
-    "side_land": 18.1,
-    "end_land": 37.6,
+    "side_land": 1.4,
+    "end_land": 51.420412865531645,
     "closed_position": [
       1.55,
       0,
@@ -202,10 +203,14 @@
     "side_clearance": 0.2,
     "attachment": "整面周边台阶及右侧承台胶接，铰链口与左侧滑动腔不施胶",
     "artwork_local_x_offset": -1.55,
-    "rail_relief_center_y": 13.7,
+    "rail_relief_center_y": 0,
     "rail_relief_y_range": [
-      -27.5,
-      54.9
+      -57.9,
+      57.9
+    ],
+    "rail_relief_x_range": [
+      -39.4,
+      -8.920412865531645
     ]
   },
   "front": {
@@ -352,8 +357,9 @@
       "remaining_roof_mm": 1.2
     },
     "outline_center_x": 1.55,
-    "storage_height": 82,
-    "storage_center_y": 13.7
+    "storage_height": 115.4,
+    "storage_center_y": 0,
+    "storage_length": 32.079587134468355
   },
   "connections": [
     {
@@ -430,12 +436,19 @@
     {
       "id": "coverage",
       "severity": "prototype_limit",
-      "description": "护轴片沿铰链覆盖80.6/117.8 mm，非全长包覆；尺寸按用户缩短要求，真实中轴外廓和疲劳未实测。"
+      "description": "沿铰链长边114对机身117.8，两端各1.9；短边已缩短，保持力及运动须实测。"
     },
     {
       "id": "rear_retention_after_trim",
       "severity": "prototype_limit",
       "description": "删除铰链侧竖边后夹持力下降；顶底回边及右侧扣边保留，需实物拉脱试验。"
+    },
+    {
+      "id": "short_slot_full_retraction_conflict",
+      "severity": "prototype_limit",
+      "status": "user_choice_required",
+      "requirement_id": "open_edge_closure",
+      "description": "现有完整收纳要求保留；需要16.926548 mm行程，短槽配Ø3.2柱最多6.279587 mm，从当前闭合位置可滑4.229587 mm。短版几何可用作审阅，不能称完整收纳已满足。"
     }
   ],
   "camera_guard": {

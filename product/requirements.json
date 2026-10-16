@@ -150,7 +150,7 @@
       "source": "default"
     },
     "sheet_width_mm": {
-      "value": 80.6,
+      "value": 114,
       "source": "default"
     },
     "front_storage_stack": {
@@ -168,11 +168,11 @@
       "source": "default"
     },
     "wide_shield": {
-      "value": "护轴片按标记缩短，并同步修改前盖内部预留空间。",
+      "value": "缩短护轴滑片51.83 mm短边方向并缩短凹槽，上盖内部空间配套修改。",
       "source": "user"
     },
     "shield_width_interpretation": {
-      "value": "沿铰链Y向尺寸由114缩至80.6，Y负端减30.4、Y正端减3，中心Y13.7；横向展开长度51.826548及双槽行程保留。",
+      "value": "沿铰链Y长边114 mm恢复不缩；横向X展开短边缩到35.006135，开槽端裁13.820413、胶接端裁3。",
       "source": "default"
     },
     "shield_length_calculation": {
@@ -181,9 +181,9 @@
         "neutral_radius_mm": 1.6,
         "straight_span_mm": 11.9,
         "free_developed_length_mm": 16.926548,
-        "bond_tab_mm": 8,
-        "sliding_tail_mm": 26.9,
-        "flat_total_length_mm": 51.826548,
+        "bond_tab_mm": 5,
+        "sliding_tail_mm": 13.079587134468353,
+        "flat_total_length_mm": 35.00613538021203,
         "assumption": "按现有闭合壳堆叠和两段90度圆弧；薄片中性层取厚度中间，不代表真实TPU材料弯曲规律。"
       },
       "source": "default"
@@ -333,9 +333,9 @@
         "bondline_mm": 0.2,
         "pin_diameter_mm": 3.2,
         "slot_width_mm": 4.2,
-        "slot_length_mm": 23.3,
+        "slot_length_mm": 9.479587134468355,
         "transverse_clearance_per_side_mm": 0.5,
-        "axial_center_travel_mm": 20.1,
+        "axial_center_travel_mm": 6.279587134468355,
         "hinge_mouth_floor_front_local_z_mm": 1.2
       },
       "source": "default"
@@ -436,32 +436,30 @@
       "source": "default"
     },
     "rail_shortening": {
-      "value": "滑轨不用那么长，减去长度的三分之零点八，从左侧缩减，另一侧缩减3 mm，上盖内部预留空间对应修改。",
+      "value": "缩51.83 mm短边方向，一端减去原长的0.8/3、另一端减3 mm；滑轨凹槽同步缩短，上盖内部预留空间对应修改。",
       "source": "user"
     },
     "rail_shortening_defaults": {
       "value": {
-        "interpretation": "按114 mm沿铰链长边缩减，0.8/3=26.6667%；方向问询未获答，选择保留封闭长槽及行程的长边方案。",
-        "axis": "Y",
-        "first_end_cut_mm": 30.4,
-        "opposite_end_cut_mm": 3,
-        "remaining_span_mm": 80.6,
-        "center_y_mm": 13.7,
-        "world_y_range_mm": [
-          -26.6,
-          54
-        ],
-        "storage_span_mm": 82,
-        "storage_y_range_mm": [
-          -27.3,
-          54.7
-        ],
+        "axis": "X",
+        "long_side_mm": 114,
+        "original_short_side_mm": 51.82654824574367,
+        "left_cut_mm": 13.820412865531646,
+        "right_cut_mm": 3,
+        "short_side_mm": 35.00613538021203,
+        "sliding_tail_mm": 13.079587134468353,
+        "bond_tab_mm": 5,
+        "slot_length_mm": 9.479587134468355,
+        "slot_width_mm": 4.2,
+        "slot_center_from_bend_mm": 6.9897935672341776,
+        "storage_length_mm": 32.079587134468355,
+        "pin_x_mm": -32.72041286553164,
         "pin_y_mm": [
-          -11.3,
-          38.7
+          -25,
+          25
         ],
-        "retainer_relief_span_mm": 82.4,
-        "back_bond_span_mm": 81.6
+        "maximum_axial_stroke_mm": 6.279587134468355,
+        "from_closed_stroke_mm": 4.229587134468355
       },
       "source": "default"
     }

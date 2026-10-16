@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "7bdd2845be15fca5a4a17316db95339a53c080640735aaf56f85c6278ade548f",
+  "requirements_digest": "bf2653bffd8bd4c8bc93eb88b2fc4e228be5c80e16d93afa72c02f5aaaa45869",
   "items": [
     {
       "id": "back_cover",
@@ -10,12 +10,12 @@
       "name": "弹性半包背盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-BACK_COVER-R12",
+      "part_number": "DUO-BACK_COVER-R13",
       "source": "default",
-      "description": "TPU84.7×121.5、主体背板3.4；外摄像头孔57.5×23.5，两端R11.75/10.8，相切直边微收拢；贴机面处内孔等距外扩4，深3.9，连续曲面收至外孔。局部外口毛坯补厚0.5，保护圈浅座深0.4。转轴侧减宽3.1、按键圆角和底部凹刻均保留。 护轴片胶接座沿Y改为81.6，中心13.7。",
+      "description": "TPU84.7×121.5、主体背板3.4；外摄像头孔57.5×23.5，两端R11.75/10.8，相切直边微收拢；贴机面处内孔等距外扩4，深3.9，连续曲面收至外孔。局部外口毛坯补厚0.5，保护圈浅座深0.4。转轴侧减宽3.1、按键圆角和底部凹刻均保留。 护轴片胶接座改为5.3×115深1.2，中心Y0。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "5cd00ee02111f6ec"
+      "part_identity": "09285065e0faed75"
     },
     {
       "id": "spine",
@@ -23,12 +23,12 @@
       "name": "滑动护轴薄片",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-SPINE-R9",
+      "part_number": "DUO-SPINE-R10",
       "source": "default",
-      "description": "TPU片51.826548×80.6×0.6；沿轴Y负端减30.4、正端减3，中心Y13.7；双槽23.3×4.2、局部Y±25，封闭槽和轴向行程20.1保留。",
+      "description": "TPU滑片35.006135×114×0.6；开槽端裁13.820413、胶接端裁3；胶端5、自由段16.926548、滑尾13.079587。两槽9.479587×4.2，局部槽心距弯端6.989794、Y±25；最大销中心行程6.279587，未满足原完整收纳行程。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "16adbcda03af888b"
+      "part_identity": "beaa3d188ba0fd93"
     },
     {
       "id": "retainer",
@@ -36,12 +36,12 @@
       "name": "整面护轴片盖板",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-RETAINER-R11",
+      "part_number": "DUO-RETAINER-R12",
       "source": "default",
-      "description": "PETG整面盖板81.9×118.6×1.2，右R12.15/左R0.6，中心X1.55；周边间隙0.2、胶层0.2，内侧八个浅槽全部保留原装配坐标，槽下最薄0.85。 背面滑动让位区Y范围[-27.5,54.9]，中心13.7，外形及八个装饰槽保留。",
+      "description": "PETG整面盖板81.9×118.6×1.2，中心X1.55，外R12.15/左R0.6；背面让位X[-39.4,-8.920413]、Y±57.9，浅槽下最薄0.85，八个装饰座保留。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "a4a8ad68243bcd43"
+      "part_identity": "8170b5f0c09f7104"
     },
     {
       "id": "front_cover",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT-COVER-R13",
+      "part_number": "DUO-FRONT-COVER-R14",
       "source": "default",
-      "description": "PETG 84.7×121.5×4，转轴边X-40.8、右边X43.9；外侧R13.6。台阶82.3×119深1.4，外侧R12.35，收纳45.9×82深2.6，双销Ø3.2；正面装饰与0.7×0.2分界线保留。 收纳空间改为45.9×82、Y中心13.7；定位柱Y=-11.3/38.7。",
+      "description": "PETG84.7×121.5×4；收纳32.079587×115.4，X[-40.8,-8.720413]、Y±57.7，深2.6；双销Ø3.2、X-32.720413、Y±25。整面盖板台阶及外侧装饰、窄凹线保留。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "ebf2e5763370d9fe"
+      "part_identity": "fd13bdbccdb86665"
     },
     {
       "id": "camera_guard",
