@@ -28,13 +28,13 @@
     "camera_opening": {
       "width": 57.5,
       "height": 23.5,
-      "outer_end_radius": 6,
-      "hinge_end_radius": 11.75,
+      "outer_end_radius": 11.75,
+      "hinge_end_radius": 10.8,
       "center": [
         10,
         43
       ],
-      "profile": "asymmetric_glass_silhouette"
+      "profile": "two_tangent_round_ends_slightly_tapered_glass"
     },
     "volume_opening": {
       "center_x": 6,
@@ -93,7 +93,21 @@
     },
     "inner_left_corner_radius": 1,
     "outer_width": 84.7,
-    "hinge_side_reduction": 3.1
+    "hinge_side_reduction": 3.1,
+    "camera_inside": {
+      "offset": 4,
+      "envelope": [
+        65.5,
+        31.5
+      ],
+      "depth": 3.9,
+      "phone_face_z": 2.4,
+      "small_mouth_datum_z": -1.5,
+      "transition": "smooth_loft",
+      "blank_extension": 0.5,
+      "depth_geometry_assertion": "funnel exact Z range equals 3.9",
+      "offset_geometry_assertion": "inner-minus-outer XY envelope is 8 mm in both directions"
+    }
   },
   "slider": {
     "location": "inside_front",
@@ -425,18 +439,18 @@
       27.9
     ],
     "recess_depth": 0.4,
-    "recess_floor_z": -0.6,
+    "recess_floor_z": -1.1,
     "bondline": 0.15,
-    "ring_base_z": -0.75,
-    "ring_crest_z": -2.1,
+    "ring_base_z": -1.25,
+    "ring_crest_z": -2.6,
     "ring_thickness": 1.35,
     "assumed_camera_protrusion_from_phone_back": 4,
     "assumed_camera_crest_z": -1.6,
-    "protection_margin": 0.5,
+    "protection_margin": 1,
     "radial_clearance": 0.2,
     "source": "default_geometry_user_requested_separate_glued_ring",
-    "profile": "asymmetric_glass_silhouette",
-    "outer_end_inner_radius": 6,
-    "hinge_end_inner_radius": 11.75
+    "profile": "two_tangent_round_ends_slightly_tapered_glass",
+    "outer_end_inner_radius": 11.75,
+    "hinge_end_inner_radius": 10.8
   }
 }

@@ -60,7 +60,7 @@
       "source": "user"
     },
     "camera_access": {
-      "value": "摄像头孔及保护圈内孔沿图2标记的整片摄像头玻璃阴影轮廓避空，靠外侧端为较小圆角、靠转轴端较圆。",
+      "value": "外部摄像头孔按完整玻璃轮廓，两端圆滑、上下边轻微收拢；内侧对应位置做比外孔更大的空间，轮廓大约均匀向外扩4 mm、深3.9 mm，衔接用圆滑弧面。",
       "source": "user"
     },
     "hinge_mechanism": {
@@ -116,7 +116,7 @@
     "camera_guard_defaults": {
       "value": {
         "assumed_camera_protrusion_from_phone_back_mm": 4,
-        "height_above_assumed_camera_mm": 0.5,
+        "height_above_assumed_camera_mm": 1,
         "recess_depth_mm": 0.4,
         "bondline_mm": 0.15,
         "radial_width_mm": 2,
@@ -398,13 +398,40 @@
         "outer_radius_mm": 13.6,
         "camera_width_mm": 57.5,
         "camera_height_mm": 23.5,
-        "camera_outer_end_radius_mm": 6,
-        "camera_hinge_end_radius_mm": 11.75,
+        "camera_outer_end_radius_mm": 11.75,
+        "camera_hinge_end_radius_mm": 10.8,
         "camera_xy_mm": [
           10,
           43
         ],
         "geometry_basis": "3.1 mm为用户明确缩减量；圆角和玻璃尺寸由图像比例拟合，81 mm为缩减后的CAD试配包络，非新增实机测量。"
+      },
+      "source": "default"
+    },
+    "camera_internal_relief": {
+      "value": {
+        "expansion_mm": 4,
+        "depth_mm": 3.9,
+        "transition": "圆滑弧线过渡"
+      },
+      "source": "user"
+    },
+    "camera_relief_defaults": {
+      "value": {
+        "depth_datum": "贴机面Z2.4向外至外孔基准Z-1.5",
+        "external_width_mm": 57.5,
+        "external_height_mm": 23.5,
+        "outer_end_radius_mm": 11.75,
+        "hinge_end_radius_mm": 10.8,
+        "internal_envelope_mm": [
+          65.5,
+          31.5
+        ],
+        "blend": "沿平行偏置轮廓放样，采用平缓增大的五次曲线截面；无直角台阶",
+        "local_blank_extension_mm": 0.5,
+        "ring_base_z_mm": -1.25,
+        "ring_crest_z_mm": -2.6,
+        "ring_seat_floor_z_mm": -1.1
       },
       "source": "default"
     }

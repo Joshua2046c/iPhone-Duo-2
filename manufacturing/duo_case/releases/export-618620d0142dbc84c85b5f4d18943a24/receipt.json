@@ -1,31 +1,31 @@
 {
   "designId": "duo_case",
-  "revision": "9a03081a5c3412d504ee6f46aed14e720cd117024e8081f80caec42c3cbd67c0",
+  "revision": "98fecb98a4c0c5ffaa9a700db5ee7081581f710538b4cf7b6980f6acd4e4c7f5",
   "schemaVersion": 2,
-  "exportId": "export-736a9389f48bb33ff2520416e0af1b84",
-  "generatedAt": "2026-10-16T11:24:54.195Z",
-  "designSha256": "fb5d0104d7d7fa1eff87d0eebfecce14a6ef33d04663df4dec209dbb9ca75df1",
+  "exportId": "export-618620d0142dbc84c85b5f4d18943a24",
+  "generatedAt": "2026-10-16T11:52:13.217Z",
+  "designSha256": "46f4eea80974b98f273f557ee4fe1f94e1ef5901cde0a6e112de7ee48d592375",
   "role": "phone_case",
-  "stateHash": "dc59537953221cf97957285e9aa948076a5353e52b4fbc10700f8587d280e8c2",
+  "stateHash": "63869f4d2473edc48e219c5b9b6f15e8803f91c9098bc5294ac263d75edd4328",
   "stateManifest": {
     "schemaVersion": 3,
     "designId": "duo_case",
     "role": "phone_case",
     "design": {
-      "revision": "9a03081a5c3412d504ee6f46aed14e720cd117024e8081f80caec42c3cbd67c0",
-      "designSha256": "cca8c187ab590eec53d01216ccb92a8a92495ded011cbdc18e4d699f35028828",
-      "manifestSha256": "ef7a24d70d1f9129c72696ce1b4ac8e4b2062ef1343f780a92fef3530abdb146",
-      "stepSha256": "652907e7026723edd63373a12b7cc3e06ab48286ad4343aab1c38cf2d5be0364",
+      "revision": "98fecb98a4c0c5ffaa9a700db5ee7081581f710538b4cf7b6980f6acd4e4c7f5",
+      "designSha256": "96ea8b748a7b0a38cc917914089156d83c26895a627f452808172c58f4b05bc5",
+      "manifestSha256": "4fa1be7e209ad85bfd6de06d7b8d3ff3a471c3e31ed78ab1406c195933318528",
+      "stepSha256": "1738d693be0632109a20935f79967088c46bd80851bd8fd0f53fe804ba8b2de1",
       "pcbReleases": []
     },
     "brief": {
       "path": "design/duo_case/README.md",
-      "sha256": "b823dd759b9f78219753fc019d6d9d56eb00b43fabfb1167f9a51ac2708398c0"
+      "sha256": "f6109cfdc873da7017ee65b210bdc18f425826aa5d61da1d3ce0cea204b0db82"
     },
     "requirement": {
       "artifactContractPath": "product/contract.json",
-      "artifactContractSha256": "600729809e4a03d1c0e819381fc20dacd155b7bb64d9056fa74dd4457ecbdb3a",
-      "designRequirementSha256": "78e57323ad30539ae142e109fcc3c17dd85dba4e46b7c9f3cd078be1f81ab4e8",
+      "artifactContractSha256": "6cb06c6ea5595bf553f1aa4f0cc99e467d86b09383a2f7668d302f5091b7b206",
+      "designRequirementSha256": "4d1f2663064e93b15cf879eb03525120ce7304ddaf9062527bb73b77799f8161",
       "inputs": [
         {
           "role": "external-reference",
@@ -47,6 +47,13 @@
           "path": "product/references/uploads/20260924T033602794Z-3-ishot-2026-09-24-11-27-23.png",
           "sha256": "f4452964392359fcba2b8cba0a82c98b5ddf1cddcfe69b9217347b159529d83b",
           "sizeBytes": 114818
+        },
+        {
+          "role": "external-reference",
+          "id": "camera_inside_relief_reference",
+          "path": "product/references/uploads/20261016T114613566Z-1-image.png",
+          "sha256": "0927c9c30d44af9672f3381e822fd16ce72441e803d406ba9ea73c12332eb9e9",
+          "sizeBytes": 290667
         },
         {
           "role": "external-reference",
@@ -182,11 +189,11 @@
         "step"
       ]
     },
-    "stateHash": "dc59537953221cf97957285e9aa948076a5353e52b4fbc10700f8587d280e8c2"
+    "stateHash": "63869f4d2473edc48e219c5b9b6f15e8803f91c9098bc5294ac263d75edd4328"
   },
   "buildArtifacts": {
-    "manifestSha256": "ef7a24d70d1f9129c72696ce1b4ac8e4b2062ef1343f780a92fef3530abdb146",
-    "stepSha256": "652907e7026723edd63373a12b7cc3e06ab48286ad4343aab1c38cf2d5be0364"
+    "manifestSha256": "4fa1be7e209ad85bfd6de06d7b8d3ff3a471c3e31ed78ab1406c195933318528",
+    "stepSha256": "1738d693be0632109a20935f79967088c46bd80851bd8fd0f53fe804ba8b2de1"
   },
   "exportAlgorithm": {
     "version": 1,
@@ -194,8 +201,8 @@
   },
   "sourceHashes": {
     "arrow_insert/arrow_insert": "2d47517e87feca727588c521529e40417a095f52f6f75e72696bd66cd252d612",
-    "back_cover/back_cover": "b928c1e6322f7dc01daab62f050eddd1de84ad9fa45cc041381635fd487b05d8",
-    "camera_guard/camera_guard": "18f2586569ff06dc4873d6400f4593fc660c148a04d04e9b0bb4178872a364d0",
+    "back_cover/back_cover": "191bf483befe1ea0a21347f1d1d336c604833d8fec1ad1381ed2a4c40e848cd0",
+    "camera_guard/camera_guard": "81f2175d8c766d932e316117754a11d231df626b6dd28959b915d5c051f354b9",
     "front_cover/front_cover": "d6a3f397883bd0356b5c5039381f520c5bfcc7d81e0eb96db98936cbd4a60932",
     "indicator_green/indicator_green": "96ff5f15ac97da17896568bc25dd8d0443bf4e85fe626e59922e7471a989b687",
     "indicator_red/indicator_red": "ea3c05ffec33ee416fc5e3707b975738d9407e10a32cfe02414ba10fbba66628",
@@ -210,8 +217,8 @@
   "assetHashes": {},
   "shapeHashes": {
     "arrow_insert": "59d9ad270876c767709f6b6bc427fd853efbace780762058a3a6c0b1942b6877",
-    "back_cover": "867edd8ee9af4c3761be12bf02f7118c694907939a7dde41585bd909f90011c6",
-    "camera_guard": "a0372031d03b0e96d337cc8589685538c1b4a3be5ac226724e2d5547ccbe3f0b",
+    "back_cover": "cfe47c1f22eb79c0036589e6bcfdd7d3f1c31de8c41fe838c5a426e3f86c67f9",
+    "camera_guard": "9176192e6ee72b0d40dd385ae10421caa4db7f6ec45abb84445d33b9d750bf5e",
     "front_cover": "1b9893a21290d826fed31e0fa397ac19dbd4c1b73ff26671fb00880ce668a683",
     "indicator_green": "fe3f02569295747549743000d16b4e7706815528fcac785953c0fc1f64a3a6a2",
     "indicator_red": "c488370651160bfd32bf1368a99a166621f39d0b2806ff1947793b3ac502f6e4",
@@ -237,10 +244,10 @@
   },
   "artifacts": [
     {
-      "path": "manufacturing/duo_case/releases/export-736a9389f48bb33ff2520416e0af1b84/model.step",
+      "path": "manufacturing/duo_case/releases/export-618620d0142dbc84c85b5f4d18943a24/model.step",
       "role": "model/step",
-      "sha256": "652907e7026723edd63373a12b7cc3e06ab48286ad4343aab1c38cf2d5be0364",
-      "sizeBytes": 1491586
+      "sha256": "1738d693be0632109a20935f79967088c46bd80851bd8fd0f53fe804ba8b2de1",
+      "sizeBytes": 1531183
     }
   ],
   "interference": {
@@ -248,8 +255,8 @@
     "counts": {
       "objects": 18,
       "pairs": 153,
-      "exact": 21,
-      "cached": 2,
+      "exact": 0,
+      "cached": 22,
       "interference": 0,
       "undeclared": 0,
       "over_budget": 0,
@@ -262,9 +269,9 @@
     "algorithm": "hmac-sha256",
     "keyId": "6293cb717f4fe34d12238dabee613b05",
     "projectId": "991d92af-8dfa-49d2-9edb-b9c884fc07c9",
-    "receiptPath": "manufacturing/duo_case/releases/export-736a9389f48bb33ff2520416e0af1b84/receipt.json",
-    "payloadSha256": "86a9f785aee7bda639d1c343c719abfde7250c005ddfc18171a93084867a3eff",
-    "mac": "c734ecd1a87ebb7b1c80d38bd2ec7ef04cccc4b1e600d4725b5f537e9edda588"
+    "receiptPath": "manufacturing/duo_case/releases/export-618620d0142dbc84c85b5f4d18943a24/receipt.json",
+    "payloadSha256": "4eaaa9e8c17639b16db33ebc4701e4f1038896825a905584affcbb9324029d1c",
+    "mac": "3d6f317c4e87335aa2b693ab4120ba2ad9ee50a07896ec8a06c7b9ecb860d04b"
   },
   "status": "handoff"
 }

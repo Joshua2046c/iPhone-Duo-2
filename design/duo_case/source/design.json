@@ -12,7 +12,7 @@
           "target": "back_cover",
           "order": 0,
           "path": "design/duo_case/source/parts/back_cover/000-back_cover.py",
-          "sha256": "b928c1e6322f7dc01daab62f050eddd1de84ad9fa45cc041381635fd487b05d8"
+          "sha256": "191bf483befe1ea0a21347f1d1d336c604833d8fec1ad1381ed2a4c40e848cd0"
         }
       ],
       "dependencies": []
@@ -68,7 +68,7 @@
           "target": "camera_guard",
           "order": 0,
           "path": "design/duo_case/source/parts/camera_guard/000-camera_guard.py",
-          "sha256": "18f2586569ff06dc4873d6400f4593fc660c148a04d04e9b0bb4178872a364d0"
+          "sha256": "81f2175d8c766d932e316117754a11d231df626b6dd28959b915d5c051f354b9"
         }
       ],
       "dependencies": []
@@ -192,7 +192,7 @@
       "target": "back_cover",
       "label": "01 开边胶接背盖",
       "kind": "generated",
-      "shapeHash": "867edd8ee9af4c3761be12bf02f7118c694907939a7dde41585bd909f90011c6",
+      "shapeHash": "cfe47c1f22eb79c0036589e6bcfdd7d3f1c31de8c41fe838c5a426e3f86c67f9",
       "transform": {
         "positionMm": [
           0,
@@ -298,12 +298,12 @@
       "target": "camera_guard",
       "label": "05 镜头保护圈",
       "kind": "generated",
-      "shapeHash": "a0372031d03b0e96d337cc8589685538c1b4a3be5ac226724e2d5547ccbe3f0b",
+      "shapeHash": "9176192e6ee72b0d40dd385ae10421caa4db7f6ec45abb84445d33b9d750bf5e",
       "transform": {
         "positionMm": [
           10,
           43,
-          -0.75
+          -1.25
         ],
         "rotationDeg": [
           0,
@@ -673,7 +673,7 @@
   ],
   "assets": [],
   "fits": [],
-  "updatedAt": "2026-10-16T11:24:54.195Z",
+  "updatedAt": "2026-10-16T11:52:13.217Z",
   "parameters": {
     "back_cover": {
       "back_cover_fit_clearance": 0.25,
@@ -714,7 +714,10 @@
       "back_cover_phone_width": 81,
       "back_cover_hinge_side_reduction": 3.1,
       "back_cover_inner_left_radius": 1,
-      "back_cover_camera_outer_end_radius": 6
+      "back_cover_camera_outer_end_radius": 11.75,
+      "back_cover_camera_hinge_end_radius": 10.8,
+      "back_cover_camera_inner_expansion": 4,
+      "back_cover_camera_inner_depth": 3.9
     },
     "spine": {
       "spine_height": 114,
@@ -837,7 +840,9 @@
       "camera_guard_glue_thickness": 0.15,
       "camera_guard_assumed_camera_protrusion": 4,
       "camera_guard_protection_margin": 0.5,
-      "camera_guard_outer_end_radius": 6
+      "camera_guard_outer_end_radius": 11.75,
+      "camera_guard_hinge_end_radius": 10.8,
+      "camera_guard_inner_cavity_depth": 3.9
     },
     "lens_insert": {
       "lens_insert_base_diameter": 18,

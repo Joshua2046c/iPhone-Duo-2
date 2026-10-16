@@ -4,7 +4,10 @@ PHONE_W=param('back_cover_phone_width',81.0)
 reduction=param('back_cover_hinge_side_reduction',3.1)
 shift=reduction/2
 inner_left_r=param('back_cover_inner_left_radius',1.0)
-cam_end_r=param('back_cover_camera_outer_end_radius',6.0)
+cam_end_r=param('back_cover_camera_outer_end_radius',11.75)
+cam_hinge_r=param('back_cover_camera_hinge_end_radius',10.8)
+cam_inner_expand=param('back_cover_camera_inner_expansion',4.0)
+cam_inner_depth=param('back_cover_camera_inner_depth',3.9)
 clearance=param('back_cover_fit_clearance',0.25)
 wall=param('back_cover_wall',1.6)
 plate=param('back_cover_plate',3.4)
@@ -61,11 +64,45 @@ for sx in (-1,1):
   zone_w=corner_zone-reduction if sx<0 else corner_zone
   zone=Pos(shift+sx*(wo/2-zone_w/2),sy*(ho/2-corner_zone/2),lip_h/2)*Box(zone_w,corner_zone,lip_h+2)
   body+=Pos(0,0,seat_z+HALF_T-lip_h)*(lip_ring&zone)
-# Glass silhouette: rounded hinge end, straighter outer end with smaller corner radii.
-glass=SlotOverall(cam_w,cam_h)+Pos((cam_w-cam_h)/4,0)*Rectangle((cam_w+cam_h)/2,cam_h)
-glass=fillet([v for v in glass.vertices() if abs(v.X-cam_w/2)<1e-6],radius=cam_end_r)
-body-=Pos(cam_x,cam_y,outside_z-1)*extrude(glass,amount=plate+HALF_T+2)
-body-=Pos(cam_x,cam_y,outside_z-1)*extrude(offset(glass,amount=cam_land+cam_clearance),amount=1+cam_depth)
+# External tangents of two round glass ends give the slight photographed taper.
+rr=cam_end_r
+rl=cam_hinge_r
+xr=cam_w/2-rr
+xl=-cam_w/2+rl
+nx=(rl-rr)/(xr-xl)
+ny=(1-nx*nx)**0.5
+tl=(xl+rl*nx,rl*ny)
+tr=(xr+rr*nx,rr*ny)
+glass=(Pos(xl,0)*Circle(rl)+Pos(xr,0)*Circle(rr)+
+       Polygon(tl,(tl[0],-tl[1]),(tr[0],-tr[1]),tr,align=None))
+
+# The inside funnel is 3.9 deep from the phone seating plane and +4 at its inner mouth.
+camera_mouth_z=seat_z-cam_inner_depth
+camera_extension=max(0.0,outside_z-camera_mouth_z)
+pad_profile=offset(glass,amount=cam_land+cam_clearance)
+if camera_extension>1e-6:
+ body+=Pos(cam_x,cam_y,camera_mouth_z)*extrude(pad_profile,amount=camera_extension+0.05)
+sections=[]
+for u in (0.0,0.1,0.25,0.5,0.75,0.9,1.0):
+ amount=cam_inner_expand*(6*u**5-15*u**4+10*u**3)
+ lt=(xl+(rl+amount)*nx,(rl+amount)*ny)
+ rt=(xr+(rr+amount)*nx,(rr+amount)*ny)
+ sk=(Pos(xl,0)*Circle(rl+amount)+Pos(xr,0)*Circle(rr+amount)+
+     Polygon(lt,(lt[0],-lt[1]),(rt[0],-rt[1]),rt,align=None))
+ assert len(sk.faces())==1 and len(sk.wires())==1, 'Camera station must be one closed profile'
+ sections.append((Pos(cam_x,cam_y,camera_mouth_z+u*cam_inner_depth)*sk).faces()[0])
+funnel=loft(sections,ruled=False)
+fb=funnel.bounding_box()
+assert abs(fb.min.Z-camera_mouth_z)<1e-5 and abs(fb.max.Z-seat_z)<1e-5, 'Camera funnel depth differs from 3.9 mm'
+ib=offset(glass,amount=cam_inner_expand).bounding_box().size
+gb=glass.bounding_box().size
+assert abs(ib.X-gb.X-2*cam_inner_expand)<1e-5 and abs(ib.Y-gb.Y-2*cam_inner_expand)<1e-5, 'Inside opening offset differs from 4 mm'
+body-=funnel
+body-=Pos(cam_x,cam_y,camera_mouth_z-0.1)*extrude(glass,amount=0.15)
+body-=Pos(cam_x,cam_y,seat_z)*extrude(offset(glass,amount=cam_inner_expand),amount=HALF_T+2)
+# Ring seat follows the corrected external mouth; it is separate from the inside flare.
+body-=Pos(cam_x,cam_y,camera_mouth_z-0.1)*extrude(pad_profile,amount=cam_depth+0.1)
+assert abs((seat_z-camera_mouth_z)-cam_inner_depth)<1e-7
 body-=Pos(shift-wo/2+(glue_l-1)/2,0,seat_z-glue_depth+(glue_depth+1)/2)*Box(glue_l+1,glue_h,glue_depth+1)
 
 # Profile blends are independent of the small through-thickness edge roll.

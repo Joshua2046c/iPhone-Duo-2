@@ -28,7 +28,7 @@
     {
       "id": "camera_guard_bond",
       "kind": "adhesive_joint",
-      "description": "背壳开孔、保护圈内孔按图2完整玻璃区同形避空；外圈及浅座作等距偏置配套胶接，仍按假定凸高保留保护余高。",
+      "description": "外孔和保护圈按参考玻璃的两端圆滑轮廓；贴机侧另开相对外孔大约等距外扩4 mm、深3.9 mm的避让空间，连续圆滑弧面衔接外孔；保护圈浅座配套胶接。",
       "source": "user_requested",
       "required": true
     },
@@ -194,6 +194,12 @@
       "source": "user_requested",
       "description": "图2红线圈定完整摄像头玻璃开孔区域",
       "path": "product/references/uploads/20261016T111812979Z-2-ishot-2026-10-16-7-14-28.png"
+    },
+    {
+      "id": "camera_inside_relief_reference",
+      "source": "user_requested",
+      "description": "两端圆滑摄像头玻璃/外壳开孔参考，并结合用户4 mm外扩、3.9 mm深内侧避让要求。",
+      "path": "product/references/uploads/20261016T114613566Z-1-image.png"
     }
   ],
   "assembly_story": {
@@ -251,7 +257,8 @@
           "back_logo_reference",
           "back_logo_position",
           "corrected_phone_outline_1",
-          "corrected_phone_outline_2"
+          "corrected_phone_outline_2",
+          "camera_inside_relief_reference"
         ]
       }
     ]

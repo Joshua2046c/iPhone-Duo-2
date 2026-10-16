@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "f0a605147387488dc7f180d5908230a5cf1a478a73c9ab84e6accdba8d68e5aa",
+  "requirements_digest": "1c1c0402ed6ad7c8fd8120f59754b28f429449e64d8d7b1f2b7360f0ddb581e5",
   "items": [
     {
       "id": "back_cover",
@@ -10,12 +10,12 @@
       "name": "弹性半包背盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-BACK_COVER-R10",
+      "part_number": "DUO-BACK_COVER-R11",
       "source": "default",
-      "description": "TPU外宽84.7、高121.5；转轴侧缩3.1，内包络名义81+0.5间隙，内外侧R12/转轴内R1，外侧壳R13.6。玻璃避空57.5×23.5，外端R6/转轴端半圆，中心(10,43)，浅座向外偏2.2。胶座8.3×115深1.2跟随转轴边；背面Ø18凹刻中心(1.55,-45)。",
+      "description": "TPU84.7×121.5、主体背板3.4；外摄像头孔57.5×23.5，两端R11.75/10.8，相切直边微收拢；贴机面处内孔等距外扩4，深3.9，连续曲面收至外孔。局部外口毛坯补厚0.5，保护圈浅座深0.4。转轴侧减宽3.1、按键圆角和底部凹刻均保留。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "35a37364850a6dee"
+      "part_identity": "99234b99a49c74eb"
     },
     {
       "id": "spine",
@@ -62,12 +62,12 @@
       "name": "独立胶粘镜头保护圈",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-CAMERA-GUARD-R2",
+      "part_number": "DUO-CAMERA-GUARD-R3",
       "source": "default",
-      "description": "PETG异形玻璃轮廓环；内孔57.5×23.5，外侧端R6/转轴侧端半圆；外轮廓等距偏2，包络61.5×27.5；座深0.4、胶层0.15、厚1.35，中心(10,43)，保护余高仍按4 mm镜头假设+0.5。",
+      "description": "PETG匹配外孔的近胶囊微收拢轮廓，内包络57.5×23.5、端半径11.75/10.8，环宽2、厚1.35；放置底面Z-1.25、外缘Z-2.6，胶层0.15，配合内侧4 mm外扩/3.9 mm深曲面避让。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "648e6f1e82e97086"
+      "part_identity": "d2bf5d7ba1703fe8"
     },
     {
       "id": "adhesive",
