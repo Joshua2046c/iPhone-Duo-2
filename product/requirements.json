@@ -60,7 +60,7 @@
       "source": "user"
     },
     "camera_access": {
-      "value": "参考图片的横向胶囊形整组摄像头避空",
+      "value": "摄像头孔及保护圈内孔沿图2标记的整片摄像头玻璃阴影轮廓避空，靠外侧端为较小圆角、靠转轴端较圆。",
       "source": "user"
     },
     "hinge_mechanism": {
@@ -138,7 +138,7 @@
       "source": "user"
     },
     "left_corner_implementation": {
-      "value": "前背盖铰链侧原方角各两处改为R1.0 mm小圆角；直边主体保留，右侧大圆角沿用。",
+      "value": "转轴侧外角R1，内侧近直角R1；外侧圆滑端内R12、壳外R13.6，均为依照片拟合默认。",
       "source": "default"
     },
     "open_edge_closure": {
@@ -182,8 +182,8 @@
         "straight_span_mm": 11.9,
         "free_developed_length_mm": 16.926548,
         "bond_tab_mm": 8,
-        "sliding_tail_mm": 30,
-        "flat_total_length_mm": 54.926548,
+        "sliding_tail_mm": 26.9,
+        "flat_total_length_mm": 51.826548,
         "assumption": "按现有闭合壳堆叠和两段90度圆弧；薄片中性层取厚度中间，不代表真实TPU材料弯曲规律。"
       },
       "source": "default"
@@ -321,12 +321,12 @@
     },
     "full_retainer_defaults": {
       "value": {
-        "panel_width_mm": 85,
+        "panel_width_mm": 81.9,
         "panel_height_mm": 118.6,
         "panel_total_thickness_mm": 1.2,
-        "panel_right_radius_mm": 10.15,
+        "panel_right_radius_mm": 12.15,
         "panel_left_radius_mm": 0.6,
-        "seat_width_mm": 85.4,
+        "seat_width_mm": 82.3,
         "seat_height_mm": 119,
         "seat_depth_mm": 1.4,
         "side_clearance_mm": 0.2,
@@ -369,11 +369,42 @@
         "stroke_width_mm": 0.8,
         "depth_mm": 0.3,
         "center_xy_mm": [
-          0,
+          1.55,
           -45
         ],
         "bottom_edge_margin_mm": 6.75,
         "remaining_plate_mm": 3.1
+      },
+      "source": "default"
+    },
+    "hinge_side_reduction": {
+      "value": 3.1,
+      "source": "user"
+    },
+    "internal_corner_profile": {
+      "value": "壳体内侧R角按上传手机轮廓调整，前后盖及配套盖板一致跟随；转轴侧保持近直边。",
+      "source": "user"
+    },
+    "revised_fit_defaults": {
+      "value": {
+        "case_width_mm": 84.7,
+        "cavity_phone_nominal_width_mm": 81,
+        "reference_phone_width_mm": 84.1,
+        "coordinate_left_x_mm": -40.8,
+        "coordinate_right_x_mm": 43.9,
+        "outline_center_x_mm": 1.55,
+        "inner_outer_side_radius_mm": 12,
+        "inner_hinge_side_radius_mm": 1,
+        "outer_radius_mm": 13.6,
+        "camera_width_mm": 57.5,
+        "camera_height_mm": 23.5,
+        "camera_outer_end_radius_mm": 6,
+        "camera_hinge_end_radius_mm": 11.75,
+        "camera_xy_mm": [
+          10,
+          43
+        ],
+        "geometry_basis": "3.1 mm为用户明确缩减量；圆角和玻璃尺寸由图像比例拟合，81 mm为缩减后的CAD试配包络，非新增实机测量。"
       },
       "source": "default"
     }

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_concept_fit_check",
   "units": "mm",
-  "coordinate_system": "背盖中心XY，X负为铰链，Y正为顶部；手机贴合面仍Z2.4，外背面Z=-1；不导入虚构手机实体",
+  "coordinate_system": "保持原右侧/按键基准，X负为转轴；缩减后外廓X[-40.8,43.9]、中心X1.55，Y正顶部；贴机Z2.4、外背Z=-1。",
   "phone": {
     "height": 117.8,
     "closed_width": 84.1,
@@ -14,22 +14,27 @@
     "folded_outline": {
       "value": "left_straight_square_corners_right_rounded",
       "source": "user_image_and_statement"
-    }
+    },
+    "reference_closed_width": 84.1,
+    "cad_fit_nominal_width": 81,
+    "cad_fit_source": "default_derived_from_user_3p1_reduction"
   },
   "back": {
     "fit_clearance_per_side": 0.25,
-    "corner_radius": 10,
+    "corner_radius": 12,
     "wall": 1.6,
     "plate": 3.4,
     "corner_inward_lip": 0.4,
     "camera_opening": {
-      "width": 55,
-      "height": 23,
-      "radius": 11.5,
+      "width": 57.5,
+      "height": 23.5,
+      "outer_end_radius": 6,
+      "hinge_end_radius": 11.75,
       "center": [
         10,
-        42.5
-      ]
+        43
+      ],
+      "profile": "asymmetric_glass_silhouette"
     },
     "volume_opening": {
       "center_x": 6,
@@ -51,7 +56,7 @@
     "left_corner_radius": 1,
     "left_corner_source": "default_radius_for_user_requested_soft_corners",
     "bond_recess": {
-      "end_x": -35.6,
+      "end_x": -32.5,
       "height": 115,
       "depth": 1.2,
       "floor_z": 1.2,
@@ -64,8 +69,8 @@
     },
     "hinge_edge_trim": {
       "width_x": 2.2,
-      "from_x": -43.9,
-      "to_x": -41.7,
+      "from_x": -40.8,
+      "to_x": -38.6,
       "above_z": 2.4,
       "source": "default_interpretation_of_user_two_edges",
       "note": "去铰链侧竖边，非整个顶底横边"
@@ -80,32 +85,35 @@
       "stroke_width_mm": 0.8,
       "depth_mm": 0.3,
       "center_xy_mm": [
-        0,
+        1.55,
         -45
       ],
       "bottom_edge_margin_mm": 6.75,
       "remaining_plate_mm": 3.1
-    }
+    },
+    "inner_left_corner_radius": 1,
+    "outer_width": 84.7,
+    "hinge_side_reduction": 3.1
   },
   "slider": {
     "location": "inside_front",
     "sheet_thickness": 0.6,
     "sheet_width_y": 114,
-    "tail_length": 30,
+    "tail_length": 26.9,
     "glue_tab_length": 8,
     "bridge_span": 11.9,
     "bend_radius": 1.6,
     "nominal_travel": 16.926548245743668,
     "slot_length": 23.3,
     "slot_width": 4.2,
-    "slot_center_from_bend": 17,
+    "slot_center_from_bend": 13.9,
     "pin_diameter": 3.2,
     "pin_center_x_front_local": -18.9,
     "pin_y": [
       -25,
       25
     ],
-    "closed_bend_x": -43.9,
+    "closed_bend_x": -40.8,
     "closed_lower_bend_z": 3.3,
     "closed_upper_bend_z": 15.2,
     "closed_tail_z": [
@@ -113,7 +121,7 @@
       17.1
     ],
     "pocket_front_local_x": [
-      -43.9,
+      -40.8,
       5.1
     ],
     "pocket_y": [
@@ -126,19 +134,19 @@
     "remaining_slot_at_open": 1.1234517542563331,
     "source": "default_geometry_user_front_location",
     "validation": "static_edge_meeting_endpoints_not_real_phone_kinematics",
-    "flat_total_length": 54.92654824574367,
+    "flat_total_length": 51.82654824574367,
     "transverse_clearance_per_side": 0.5,
     "axial_center_travel": 20.1
   },
   "retainer": {
-    "width": 85,
+    "width": 81.9,
     "height": 118.6,
     "thickness": 1,
     "relief": 0.2,
     "side_land": 1.4,
     "end_land": 37.6,
     "closed_position": [
-      0,
+      1.55,
       0,
       15.05
     ],
@@ -148,7 +156,7 @@
       0
     ],
     "open_position": [
-      -87.8,
+      -83.15,
       0,
       3.45
     ],
@@ -164,15 +172,16 @@
     "total_thickness": 1.2,
     "decor_recess_depth": 0.15,
     "minimum_remaining_thickness": 0.85,
-    "corner_radius": 10.15,
+    "corner_radius": 12.15,
     "left_corner_radius": 0.6,
     "side_clearance": 0.2,
-    "attachment": "整面周边台阶及右侧承台胶接，铰链口与左侧滑动腔不施胶"
+    "attachment": "整面周边台阶及右侧承台胶接，铰链口与左侧滑动腔不施胶",
+    "artwork_local_x_offset": -1.55
   },
   "front": {
-    "outer_width": 87.8,
+    "outer_width": 84.7,
     "outer_height": 121.5,
-    "corner_radius": 11.6,
+    "corner_radius": 13.6,
     "corner_radius_scope": "right_side_only",
     "left_corner_radius": 1,
     "thickness": 4,
@@ -187,7 +196,7 @@
       0
     ],
     "open_position": [
-      -87.8,
+      -81.6,
       0,
       3.65
     ],
@@ -297,8 +306,8 @@
       "round_disk_colour": "yellow",
       "attachment": "八个内侧嵌件均完整胶接整面盖板，无跨分件缝；盖板可带八件整体拆下。"
     },
-    "cap_seat_width": 85.4,
-    "cap_seat_radius": 10.35,
+    "cap_seat_width": 82.3,
+    "cap_seat_radius": 12.35,
     "cap_seat_left_radius": 0.8,
     "hinge_mouth_floor": 1.2,
     "divider": {
@@ -311,7 +320,8 @@
       "bend_radius_mm": 4,
       "ends": "延伸至左右外缘",
       "remaining_roof_mm": 1.2
-    }
+    },
+    "outline_center_x": 1.55
   },
   "connections": [
     {
@@ -398,21 +408,21 @@
   ],
   "camera_guard": {
     "inner_size": [
-      55,
-      23
+      57.5,
+      23.5
     ],
     "outer_size": [
-      59,
-      27
+      61.5,
+      27.5
     ],
     "radial_width": 2,
     "center": [
       10,
-      42.5
+      43
     ],
     "recess_outer_size": [
-      59.4,
-      27.4
+      61.9,
+      27.9
     ],
     "recess_depth": 0.4,
     "recess_floor_z": -0.6,
@@ -424,6 +434,9 @@
     "assumed_camera_crest_z": -1.6,
     "protection_margin": 0.5,
     "radial_clearance": 0.2,
-    "source": "default_geometry_user_requested_separate_glued_ring"
+    "source": "default_geometry_user_requested_separate_glued_ring",
+    "profile": "asymmetric_glass_silhouette",
+    "outer_end_inner_radius": 6,
+    "hinge_end_inner_radius": 11.75
   }
 }

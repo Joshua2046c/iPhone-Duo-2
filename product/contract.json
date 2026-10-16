@@ -7,7 +7,7 @@
     {
       "id": "phone_fit",
       "kind": "internal_fit",
-      "description": "参考闭合117.8×84.1×11.3 mm，背半机厚5.2 mm，按本轮要求切掉铰链侧残留竖边，保留其余弹性扣边及相机、按键避空。未标注的机械细节为可调默认。 折叠外屏正视：左铰链边直且左角近直角，右侧两角圆滑，前背盖及内腔一致。 标记的四处开口触手边缘修圆；前后壳铰链侧各两角做小圆角。 开口上下折角圆弧稍加大，保留既有矩形避让范围。",
+      "description": "按用户要求从转轴开口侧单侧缩减3.1 mm，前后盖与配套承载件同步缩减，内侧R角按手机图片轮廓拟合；保留按键通道和转轴出片口。此前84.1 mm手机宽为参考图值，缩减后的81 mm名义试配包络是派生默认，非实测认证。",
       "source": "user_requested",
       "required": true
     },
@@ -28,7 +28,7 @@
     {
       "id": "camera_guard_bond",
       "kind": "adhesive_joint",
-      "description": "独立胶囊保护圈粘入背盖外侧浅凹座，略高于摄像头；凸高按4mm可调假设加0.5mm余高，需实测核验。",
+      "description": "背壳开孔、保护圈内孔按图2完整玻璃区同形避空；外圈及浅座作等距偏置配套胶接，仍按假定凸高保留保护余高。",
       "source": "user_requested",
       "required": true
     },
@@ -182,6 +182,18 @@
       "source": "user_requested",
       "description": "用户圈定背壳外侧底部小logo位置",
       "path": "product/references/uploads/20260928T142653760Z-2-mark.png"
+    },
+    {
+      "id": "corrected_phone_outline_1",
+      "source": "user_requested",
+      "description": "手机玻璃和壳内圆角轮廓参考",
+      "path": "product/references/uploads/20261016T111812979Z-1-ishot-2026-10-16-7-14-40.png"
+    },
+    {
+      "id": "corrected_phone_outline_2",
+      "source": "user_requested",
+      "description": "图2红线圈定完整摄像头玻璃开孔区域",
+      "path": "product/references/uploads/20261016T111812979Z-2-ishot-2026-10-16-7-14-28.png"
     }
   ],
   "assembly_story": {
@@ -237,7 +249,9 @@
           "opening_turn_mark_3",
           "front_divider_reference",
           "back_logo_reference",
-          "back_logo_position"
+          "back_logo_position",
+          "corrected_phone_outline_1",
+          "corrected_phone_outline_2"
         ]
       }
     ]

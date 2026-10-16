@@ -15,7 +15,8 @@ cut_left=-w/2-1
 cut_right=w/2-end_land
 body -= Pos((cut_left+cut_right)/2,0,t-relief/2+0.5)*Box(cut_right-cut_left,h-2*side_land,relief+1)
 
-# Retainer and front cover now share the same XY centre.
+# Retainer is centred on the shortened outline; artwork stays in the fixed assembly datum.
+front_offset=param('retainer_front_x_offset',1.55)
 seat_depth=param('retainer_decor_recess_depth',0.15)
 seat_gap=param('retainer_decor_seat_clearance',0.15)
 long_w=param('retainer_inner_long_width',62.0)
@@ -41,7 +42,7 @@ white_h=param('retainer_inner_white_height',9.0)
 white_u=param('retainer_inner_white_u',-20.0)
 white_y=param('retainer_inner_white_y',-18.0)
 def inner_cut(sk,u,y):
- return Pos(-u,y,-skin-0.1)*extrude(sk,amount=seat_depth+0.1)
+ return Pos(-u-front_offset,y,-skin-0.1)*extrude(sk,amount=seat_depth+0.1)
 for uu,yy,ww,hh in ((0,top_y,long_w,black_h),(0,blue_y,long_w,blue_h),
                      (lower_u,lower_y,lower_w,lower_h),
                      (-lower_u,lower_y,lower_w,lower_h),

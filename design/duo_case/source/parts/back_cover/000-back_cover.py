@@ -1,5 +1,10 @@
 # User-reference envelope; hinge-side short walls removed, top/bottom returns retained.
-PHONE_W, PHONE_H, HALF_T = 84.1,117.8,5.2
+PHONE_H, HALF_T = 117.8,5.2  # User reference height and rear-half thickness.
+PHONE_W=param('back_cover_phone_width',81.0)
+reduction=param('back_cover_hinge_side_reduction',3.1)
+shift=reduction/2
+inner_left_r=param('back_cover_inner_left_radius',1.0)
+cam_end_r=param('back_cover_camera_outer_end_radius',6.0)
 clearance=param('back_cover_fit_clearance',0.25)
 wall=param('back_cover_wall',1.6)
 plate=param('back_cover_plate',3.4)
@@ -34,28 +39,34 @@ def outline(w,h,r):
 wi,hi=PHONE_W+2*clearance,PHONE_H+2*clearance
 wo,ho=wi+2*wall,hi+2*wall
 outside_z=seat_z-plate
-outer,inner=outline(wo,ho,radius+wall),outline(wi,hi,radius)
-left_vertices=[v for v in outer.vertices() if abs(v.X+wo/2)<1e-6]
+outer=Pos(shift,0)*outline(wo,ho,radius+wall)
+inner=Pos(shift,0)*outline(wi,hi,radius)
+inner=fillet([v for v in inner.vertices() if abs(v.X+wi/2-shift)<1e-6],radius=inner_left_r)
+left_vertices=[v for v in outer.vertices() if abs(v.X+wo/2-shift)<1e-6]
 assert len(left_vertices)==2
 outer=fillet(left_vertices,radius=corner_soft)
 body=Pos(0,0,outside_z)*extrude(outer,amount=plate)
 ring=extrude(outer,amount=HALF_T)-extrude(inner,amount=HALF_T)
 # The continuous hinge-side cut removes both former corner wall stubs, not the back plate.
-ring-=Pos(-wo/2+(trim-1)/2,0,HALF_T/2)*Box(trim+1,ho+2,HALF_T+2)
+ring-=Pos(shift-wo/2+(trim-1)/2,0,HALF_T/2)*Box(trim+1,ho+2,HALF_T+2)
 ring-=Pos(vol_x,ho/2,HALF_T/2)*Box(vol_w+2*turn,2*wall+2,HALF_T+2)
-ring-=Pos(wo/2,power_y,HALF_T/2)*Box(2*wall+2,power_l+2*turn,HALF_T+2)
-ring-=Pos(wo/2,shutter_y,HALF_T/2)*Box(2*wall+2,shutter_l+2*turn,HALF_T+2)
+ring-=Pos(shift+wo/2,power_y,HALF_T/2)*Box(2*wall+2,power_l+2*turn,HALF_T+2)
+ring-=Pos(shift+wo/2,shutter_y,HALF_T/2)*Box(2*wall+2,shutter_l+2*turn,HALF_T+2)
 ring-=Pos(0,-ho/2,HALF_T/2)*Box(bottom_w+2*turn,2*wall+2,HALF_T+2)
 body+=Pos(0,0,seat_z)*ring
-lip_ring=extrude(outer,amount=lip_h)-extrude(outline(wi-2*lip,hi-2*lip,radius-lip),amount=lip_h)
-lip_ring-=Pos(-wo/2+(trim-1)/2,0,lip_h/2)*Box(trim+1,ho+2,lip_h+2)
+lip_ring=extrude(outer,amount=lip_h)-extrude(Pos(shift,0)*outline(wi-2*lip,hi-2*lip,radius-lip),amount=lip_h)
+lip_ring-=Pos(shift-wo/2+(trim-1)/2,0,lip_h/2)*Box(trim+1,ho+2,lip_h+2)
 for sx in (-1,1):
  for sy in (-1,1):
-  zone=Pos(sx*(wo/2-corner_zone/2),sy*(ho/2-corner_zone/2),lip_h/2)*Box(corner_zone,corner_zone,lip_h+2)
+  zone_w=corner_zone-reduction if sx<0 else corner_zone
+  zone=Pos(shift+sx*(wo/2-zone_w/2),sy*(ho/2-corner_zone/2),lip_h/2)*Box(zone_w,corner_zone,lip_h+2)
   body+=Pos(0,0,seat_z+HALF_T-lip_h)*(lip_ring&zone)
-body-=Pos(cam_x,cam_y,outside_z-1)*extrude(SlotOverall(cam_w,cam_h),amount=plate+HALF_T+2)
-body-=Pos(cam_x,cam_y,outside_z-1)*extrude(SlotOverall(cam_w+2*(cam_land+cam_clearance),cam_h+2*(cam_land+cam_clearance)),amount=1+cam_depth)
-body-=Pos(-wo/2+(glue_l-1)/2,0,seat_z-glue_depth+(glue_depth+1)/2)*Box(glue_l+1,glue_h,glue_depth+1)
+# Glass silhouette: rounded hinge end, straighter outer end with smaller corner radii.
+glass=SlotOverall(cam_w,cam_h)+Pos((cam_w-cam_h)/4,0)*Rectangle((cam_w+cam_h)/2,cam_h)
+glass=fillet([v for v in glass.vertices() if abs(v.X-cam_w/2)<1e-6],radius=cam_end_r)
+body-=Pos(cam_x,cam_y,outside_z-1)*extrude(glass,amount=plate+HALF_T+2)
+body-=Pos(cam_x,cam_y,outside_z-1)*extrude(offset(glass,amount=cam_land+cam_clearance),amount=1+cam_depth)
+body-=Pos(shift-wo/2+(glue_l-1)/2,0,seat_z-glue_depth+(glue_depth+1)/2)*Box(glue_l+1,glue_h,glue_depth+1)
 
 # Profile blends are independent of the small through-thickness edge roll.
 # Widen by one turn radius at each end so the original rectangular access remains clear.
@@ -63,8 +74,8 @@ eps=1e-5
 openings=(
  ('y',ho/2,hi/2,vol_x-vol_w/2-turn,vol_x+vol_w/2+turn),
  ('y',-ho/2,-hi/2,-bottom_w/2-turn,bottom_w/2+turn),
- ('x',wo/2,wi/2,power_y-power_l/2-turn,power_y+power_l/2+turn),
- ('x',wo/2,wi/2,shutter_y-shutter_l/2-turn,shutter_y+shutter_l/2+turn))
+ ('x',shift+wo/2,shift+wi/2,power_y-power_l/2-turn,power_y+power_l/2+turn),
+ ('x',shift+wo/2,shift+wi/2,shutter_y-shutter_l/2-turn,shutter_y+shutter_l/2+turn))
 turn_edges=[]
 for axis,outer_side,inner_side,lo,upper in openings:
  chosen=[]

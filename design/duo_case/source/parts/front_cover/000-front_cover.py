@@ -3,6 +3,8 @@ w=param('front_cover_width',87.8)
 h=param('front_cover_height',121.5)
 t=param('front_cover_thickness',4.0)
 r=param('front_cover_corner_radius',11.6)
+reduction=param('front_cover_hinge_side_reduction',3.1)
+shift=reduction/2
 depth=param('front_cover_storage_depth',2.6)
 length=param('front_cover_storage_length',49.0)
 height=param('front_cover_storage_height',85.4)
@@ -38,18 +40,18 @@ slot_x=param('front_cover_lower_slot_x',0.0)
 slot_y=param('front_cover_lower_slot_y',-44.0)
 
 corner_soft=param('front_cover_left_corner_radius',1.0)
-outline=RectangleRounded(w,h,r)+Pos(-w/4,0)*Rectangle(w/2,h)
-left_vertices=[v for v in outline.vertices() if abs(v.X+w/2)<1e-6]
+outline=Pos(shift,0)*(RectangleRounded(w,h,r)+Pos(-w/4,0)*Rectangle(w/2,h))
+left_vertices=[v for v in outline.vertices() if abs(v.X+w/2-shift)<1e-6]
 assert len(left_vertices)==2
 outline=fillet(left_vertices,radius=corner_soft)
 body=extrude(outline,amount=t)
 # Full inset cover seat, matching the asymmetrical outline.
-seat=RectangleRounded(seat_l,seat_h,seat_r)+Pos(-seat_l/4,0)*Rectangle(seat_l/2,seat_h)
-seat=fillet([v for v in seat.vertices() if abs(v.X+seat_l/2)<1e-6],radius=seat_left_r)
+seat=Pos(shift,0)*(RectangleRounded(seat_l,seat_h,seat_r)+Pos(-seat_l/4,0)*Rectangle(seat_l/2,seat_h))
+seat=fillet([v for v in seat.vertices() if abs(v.X+seat_l/2-shift)<1e-6],radius=seat_left_r)
 body-=Pos(0,0,-0.1)*extrude(seat,amount=seat_depth+0.1)
 # Recess stays open at the hinge only at the sheet's sliding height.
 mouth_floor=seat_depth-bond_gap
-body-=Pos(-w/2+(length-1)/2,0,(mouth_floor+depth)/2)*Box(length+1,height,depth-mouth_floor)
+body-=Pos(shift-w/2+(length-1)/2,0,(mouth_floor+depth)/2)*Box(length+1,height,depth-mouth_floor)
 for yy in (pin_y1,pin_y2):
  body+=Pos(pin_x,yy,(pin_tip+depth+0.05)/2)*Cylinder(pin_d/2,depth+0.05-pin_tip)
 def pocket(sketch,x,y):
@@ -70,7 +72,7 @@ line_high=param('front_cover_divider_right_y',48.0)
 line_start=param('front_cover_divider_rise_start_x',-8.0)
 line_end=param('front_cover_divider_rise_end_x',14.0)
 line_r=param('front_cover_divider_bend_radius',4.0)
-path=Polyline((-w/2-1,line_low),(line_start,line_low),(line_end,line_high),(w/2+1,line_high))
+path=Polyline((shift-w/2-1,line_low),(line_start,line_low),(line_end,line_high),(shift+w/2+1,line_high))
 path=fillet(path.vertices(),radius=line_r)
 groove_face=trace(path,line_width=line_w)
 body-=Pos(0,0,t-line_d)*extrude(groove_face,amount=line_d+0.1)

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "status": "ready_for_fit_check",
   "bom_ready": true,
-  "requirements_digest": "894d95035d7936e5567b00ec11146669415da6869c21fb769029db596fdcb3d0",
+  "requirements_digest": "f0a605147387488dc7f180d5908230a5cf1a478a73c9ab84e6accdba8d68e5aa",
   "items": [
     {
       "id": "back_cover",
@@ -10,12 +10,12 @@
       "name": "弹性半包背盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-BACK_COVER-R9",
+      "part_number": "DUO-BACK_COVER-R10",
       "source": "default",
-      "description": "TPU背盖3.4厚；铰链侧上下残留竖边及该向内扣去除至贴机面，顶底回边与右角保留；8.3×115深1.2胶槽。 顶部、底部和两侧开口上下轮廓R1，两端各加宽1保留原净空；触手外缘R0.3；铰链侧两外角R1.0。 外背底部居中增加Ø18精灵球凹刻，线宽0.8、深0.3，中心(0,-45)，槽下3.1厚。",
+      "description": "TPU外宽84.7、高121.5；转轴侧缩3.1，内包络名义81+0.5间隙，内外侧R12/转轴内R1，外侧壳R13.6。玻璃避空57.5×23.5，外端R6/转轴端半圆，中心(10,43)，浅座向外偏2.2。胶座8.3×115深1.2跟随转轴边；背面Ø18凹刻中心(1.55,-45)。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "87745d2007ceeb9c"
+      "part_identity": "35a37364850a6dee"
     },
     {
       "id": "spine",
@@ -23,12 +23,12 @@
       "name": "滑动护轴薄片",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-SPINE-R7",
+      "part_number": "DUO-SPINE-R8",
       "source": "default",
-      "description": "整片沿轴宽114，厚0.6；中性展开总长54.926548=胶端8+自由段16.926548+滑尾30；双槽23.3×4.2配Ø3.2销，轴向中心行程20.1。",
+      "description": "沿轴114、厚0.6，展开总长51.826548=胶端8+自由段16.926548+滑尾26.9；双槽23.3×4.2，中心距弯端13.9，配Ø3.2销，保留轴向总行程20.1。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "ec72696ed8d1a3af"
+      "part_identity": "cea2b9c9f3c2df99"
     },
     {
       "id": "retainer",
@@ -36,12 +36,12 @@
       "name": "整面护轴片盖板",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-RETAINER-R9",
+      "part_number": "DUO-RETAINER-R10",
       "source": "default",
-      "description": "PETG 85×118.6×1.2，右圆角10.15/左圆角0.6；比前盖边缘缩进约1.4；侧向间隙0.2、台阶胶层0.2。八个内侧浅槽均深0.15，槽下最薄0.85；滑道让位0.2，盖板中心与前盖重合。",
+      "description": "PETG整面盖板81.9×118.6×1.2，右R12.15/左R0.6，中心X1.55；周边间隙0.2、胶层0.2，内侧八个浅槽全部保留原装配坐标，槽下最薄0.85。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "6739aea2d1a7bed2"
+      "part_identity": "df68054c0bb8aa39"
     },
     {
       "id": "front_cover",
@@ -49,12 +49,12 @@
       "name": "整面前盖",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-FRONT-COVER-R11",
+      "part_number": "DUO-FRONT-COVER-R12",
       "source": "default",
-      "description": "PETG红色前盖87.8×121.5×4；整面台阶座85.4×119深1.4；左侧49×115.4收纳腔顶深2.6，铰链口底高1.2；双销Ø3.2。保留正面装饰浅槽和左侧R1外角；八个内侧装饰槽全部移至盖板。 正面增加宽0.7深0.2的圆滑折线分界槽，槽下保留至少1.2厚。",
+      "description": "PETG 84.7×121.5×4，转轴边X-40.8、右边X43.9；外侧R13.6。台阶82.3×119深1.4，外侧R12.35，收纳45.9×115.4深2.6，双销Ø3.2；正面装饰与0.7×0.2分界线保留。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "d334f890efccb102"
+      "part_identity": "d3dfe719a73f8d24"
     },
     {
       "id": "camera_guard",
@@ -62,12 +62,12 @@
       "name": "独立胶粘镜头保护圈",
       "quantity": 1,
       "manufacturer": "Project custom",
-      "part_number": "DUO-CAMERA-GUARD-R1",
+      "part_number": "DUO-CAMERA-GUARD-R2",
       "source": "default",
-      "description": "PETG胶囊形环；内孔55×23mm，外廓59×27mm；座深0.4mm，胶层0.15mm；按假定镜头凸高4mm留0.5mm保护余高。",
+      "description": "PETG异形玻璃轮廓环；内孔57.5×23.5，外侧端R6/转轴侧端半圆；外轮廓等距偏2，包络61.5×27.5；座深0.4、胶层0.15、厚1.35，中心(10,43)，保护余高仍按4 mm镜头假设+0.5。",
       "procurement_status": "custom_fabrication",
       "cad_relevance": true,
-      "part_identity": "703814ad228eff3a"
+      "part_identity": "648e6f1e82e97086"
     },
     {
       "id": "adhesive",

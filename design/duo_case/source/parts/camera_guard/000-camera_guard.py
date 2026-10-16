@@ -8,12 +8,15 @@ recess=param('camera_guard_recess_depth',0.4)
 glue=param('camera_guard_glue_thickness',0.15)
 cam_height=param('camera_guard_assumed_camera_protrusion',4.0)
 margin=param('camera_guard_protection_margin',0.5)
+end_r=param('camera_guard_outer_end_radius',6.0)
 # Model local bond face at Z0, with outward crest in -Z. Placement binds to recess.
 base_z=phone_z-back_plate+recess-glue
 crest_z=phone_z-cam_height-margin
 thickness=base_z-crest_z
 assert wall>=1.2 and thickness>=0.8 and margin>0
-profile=SlotOverall(w+2*wall,h+2*wall)-SlotOverall(w,h)
+glass=SlotOverall(w,h)+Pos((w-h)/4,0)*Rectangle((w+h)/2,h)
+glass=fillet([v for v in glass.vertices() if abs(v.X-w/2)<1e-6],radius=end_r)
+profile=offset(glass,amount=wall)-glass
 body=extrude(profile,amount=-thickness)
 assert len(body.solids())==1
 print('Ring axial thickness',thickness,'crest world Z',crest_z,'assumed lens Z',phone_z-cam_height)
